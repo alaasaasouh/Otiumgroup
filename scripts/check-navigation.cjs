@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict');
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright-core');
+(async()=>{
+  const browser=await chromium.launch({headless:true,channel:'chrome'});
+  const page=await browser.newPage({viewport:{width:1440,height:960},reducedMotion:'reduce'});
+  await page.goto('http://127.0.0.1:4173',{waitUntil:'networkidle'});
+  await page.keyboard.press('Tab');
+  assert.equal(await page.evaluate(()=>document.activeElement.className),'skip-link');
+  await page.keyboard.press('Enter');
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'main');
+  await page.locator('.footer-bottom a').click();
+  await page.waitForTimeout(100);
+  assert.equal(await page.evaluate(()=>scrollY),0);
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('.menu-toggle').click();
+  await page.keyboard.press('Shift+Tab');
+  assert.equal(await page.evaluate(()=>document.activeElement.className),'menu-toggle');
+  await page.keyboard.press('Shift+Tab');
+  assert.match(await page.evaluate(()=>document.activeElement.textContent),/Contact/);
+  await page.keyboard.press('Tab');
+  assert.equal(await page.evaluate(()=>document.activeElement.className),'menu-toggle');
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'false');
+  console.log('Navigation verified: skip link moves focus, Back to top scrolls to the document start, mobile keyboard focus stays within the open menu.');
+  await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

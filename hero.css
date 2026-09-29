@@ -1,0 +1,26 @@
+/* Homepage only. The remaining pages keep their original hero behavior. */
+.home-scroll.is-active { height: 250svh; }
+.home-scroll.is-active .group-hero { position: sticky; top: 0; }
+.home-scroll .group-hero { height: 100svh; min-height: 640px; max-height: none; }
+.home-scroll .hero-media img { animation: none; object-position: 60% center; }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .4s; }
+.home-scroll.has-frame .hero-canvas { opacity: 1; }
+.hero-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: #ffffff18; }
+.hero-progress::after { content: ''; display: block; height: 100%; background: #dfc394; transform: scaleX(var(--hero-progress, 0)); transform-origin: left; }
+.home-scroll .hero-content { padding-top: clamp(165px, 23svh, 260px); }
+@media (max-width: 600px) {
+  .home-scroll.is-active { height: 215svh; }
+  .home-scroll .hero-content { padding-top: max(155px, 20svh); }
+  .home-scroll .hero-media img { object-position: 60% center; }
+}
+@media (max-height: 680px) and (min-width: 601px) {
+  .home-scroll .group-hero { min-height: 520px; }
+  .home-scroll .hero-content { padding-top: 125px; }
+  .home-scroll .hero-title { font-size: 70px; margin: 18px 0; }
+  .home-scroll .hero-actions { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-scroll.is-active { height: auto; }
+  .home-scroll.is-active .group-hero { position: relative; }
+  .hero-canvas, .hero-progress { display: none; }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alaasaasouh.github.io/Otiumgroup/sitemap.xml
