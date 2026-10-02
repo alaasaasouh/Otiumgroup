@@ -132,6 +132,7 @@ for (const page of pages) {
   // Events is now an active destination in both navigation layouts.
   html = html.replace(/(<a href="(?:\.\.\/)?divisions\/index.html"[^>]*>Companies<\/a>)/g, `<a href="${page.base || ''}events/index.html"${page.active === 'events'?' aria-current="page"':''}>Events</a>$1`);
   fs.mkdirSync(path.dirname(path.join(root,page.file)),{recursive:true});
+  if (page.active === 'home') html = require('./home-intro-markup.cjs')(html);
   fs.writeFileSync(path.join(root,page.file),html);
   console.log(`Wrote ${page.file}`);
 }
