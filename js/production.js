@@ -4,6 +4,12 @@
   const slides = [...document.querySelectorAll('.hero-slide')];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (slides.length) {
+    // Warm only this three-image slideshow so rapid transitions stay complete.
+    slides.slice(1).forEach(slide => {
+      const image = slide.querySelector('img');
+      image.fetchPriority = 'low';
+      image.loading = 'eager';
+    });
     const current = document.querySelector('[data-current-slide]');
     const slideTitle = document.querySelector('[data-slide-title]');
     const slideCaption = document.querySelector('[data-slide-caption]');
@@ -12,13 +18,12 @@
     let index = 0;
     let timer;
     let userPaused = reducedMotion.matches;
-    let hovered = false;
     let focused = false;
     let visible = true;
     function restart() {
       clearTimeout(timer);
       progress.classList.remove('running', 'paused');
-      const shouldPlay = !userPaused && !hovered && !focused && visible && !document.hidden;
+      const shouldPlay = !userPaused && !focused && visible && !document.hidden;
       if (shouldPlay) {
         void progress.offsetWidth;
         progress.classList.add('running');
@@ -27,7 +32,7 @@
           const image=slides[next].querySelector('img');
           if(image.complete && image.naturalWidth)show(next);
           else { image.loading='eager'; restart(); }
-        }, 1000);
+        }, 1500);
       }
       pause.textContent = userPaused ? '▶' : 'Ⅱ';
       pause.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
@@ -48,10 +53,10 @@
     document.querySelector('[data-slide-prev]')?.addEventListener('click', () => show(index - 1));
     document.querySelector('[data-slide-next]')?.addEventListener('click', () => show(index + 1));
     pause.addEventListener('click', () => { userPaused = !userPaused; restart(); });
-    hero.addEventListener('mouseenter', () => { hovered = true; restart(); });
-    hero.addEventListener('mouseleave', () => { hovered = false; restart(); });
-    hero.addEventListener('focusin', () => { focused = true; restart(); });
-    hero.addEventListener('focusout', e => { if (!hero.contains(e.relatedTarget)) { focused = false; restart(); } });
+    // Keep cycling under the pointer and after using the controls. Only pause
+    // for a focused slide link, so it cannot disappear during keyboard use.
+    hero.addEventListener('focusin', e => { focused = !!e.target.closest('.hero-slide'); restart(); });
+    hero.addEventListener('focusout', e => { focused = !!e.relatedTarget?.closest?.('.hero-slide'); restart(); });
     hero.addEventListener('keydown', e => {
       if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); }
