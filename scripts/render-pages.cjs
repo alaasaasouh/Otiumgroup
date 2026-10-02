@@ -117,6 +117,7 @@ for (const page of pages) {
   if (process.argv.includes('--home-only') && page.active !== 'home') continue;
   if (process.argv.includes('--production-only') && page.active !== 'production') continue;
   page.extra = (page.extra || '') + `<link rel="stylesheet" href="${page.base || ''}brand.css">`;
+  if (page.active === 'production') require('./production-portfolio.cjs')(page, image);
   let html = simplifyPresentation(shell(page), page)
     .replace(/Otium Production\b/g, 'Otium Productions')
     .replace(/>Production<\/a>/g, '>Productions</a>')

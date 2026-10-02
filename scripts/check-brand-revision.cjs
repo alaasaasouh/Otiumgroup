@@ -7,6 +7,7 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
  for(const width of [1440,768,390,320]){
   const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
   page.on('pageerror',e=>errors.push(e.message));
+  await page.route('https://www.youtube-nocookie.com/embed/**',r=>r.fulfill({contentType:'text/html',body:'<button>Player test</button>'}));
   for(const route of ['','about','divisions','production','events','luxury','digital','experiences','travel','contact']){
    await page.goto(pathToFileURL(path.join(root,route,'index.html')).href);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${route} ${width}: overflow`);
@@ -16,7 +17,7 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
    if(route==='production'){
     await page.locator('[data-slide-next]').click();assert.equal(await page.locator('[data-current-slide]').textContent(),'02');
     await page.locator('.brand-accordions summary').first().click();assert(await page.locator('.brand-accordions details').first().evaluate(el=>el.open));
-    await page.locator('[data-project]').first().click();assert(await page.locator('dialog').evaluate(el=>el.open));await page.keyboard.press('Escape');
+    await page.locator('[data-video-id]').first().click();assert(await page.locator('dialog').evaluate(el=>el.open));await page.keyboard.press('Escape');
    }
    if(route==='events'){await page.locator('#event-capabilities summary').first().click();assert(await page.locator('#event-capabilities details').first().evaluate(el=>el.open));}
    await page.evaluate(()=>scrollTo(0,0));
