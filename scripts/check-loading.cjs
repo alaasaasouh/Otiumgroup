@@ -1,0 +1,36 @@
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright-core');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'chrome'});
+ const base='http://127.0.0.1:4173/';
+ const page=await browser.newPage({viewport:{width:390,height:844}});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ // Delay frames enough to inspect the real introduction and bypass control.
+ await page.route('**/frames/**/*.jpg',async route=>{await new Promise(r=>setTimeout(r,500));await route.continue().catch(()=>{});});
+ await page.goto(base,{waitUntil:'domcontentloaded'});
+ await page.waitForSelector('.home-intro[open]');
+ await page.waitForTimeout(350);
+ await page.screenshot({path:'preview/home-loading-mobile.png'});
+ await page.locator('.home-intro button').click();
+ assert.equal(await page.locator('.home-intro').count(),0);
+ assert.equal(await page.evaluate(()=>document.documentElement.classList.contains('intro-loading')),false);
+ await page.waitForFunction(()=>document.querySelector('.home-scroll').classList.contains('has-frame'));
+ await page.reload();await page.waitForTimeout(250);assert.equal(await page.locator('.home-intro').count(),0);
+ console.log('Introduction: mobile rendering, manual bypass and session skip passed');
+ const slow=await browser.newPage();
+ await slow.route('**/frames/**/*.jpg',r=>r.abort());await slow.goto(base);await slow.waitForTimeout(3300);
+ assert.equal(await slow.locator('.home-intro').count(),0);assert.equal(await slow.locator('.home-scroll.is-active').count(),0);
+ assert(await slow.locator('.hero-media img').evaluate(img=>img.naturalWidth>0),'Independent static poster must survive failed JPG frames');
+ console.log('Frame failure: introduction releases and static fallback remains');
+ const stalled=await browser.newPage();
+ await stalled.route('**/frames/**/*.jpg',async r=>{await new Promise(resolve=>setTimeout(resolve,4500));await r.abort().catch(()=>{});});
+ await stalled.goto(base,{waitUntil:'domcontentloaded'});await stalled.waitForSelector('.home-intro[open]');
+ await stalled.waitForFunction(()=>!document.querySelector('.home-intro'),{},{timeout:3400});
+ console.log('Stalled loading: automatic three-second release passed');
+ const reduced=await browser.newPage({reducedMotion:'reduce'});let frames=0;
+ reduced.on('request',r=>{if(/frame_\d+\.jpg/.test(r.url()))frames++;});await reduced.goto(base);await reduced.waitForTimeout(300);
+ assert.equal(await reduced.locator('.home-intro').count(),0);assert(frames<=1,'Reduced motion must not preload animation');
+ const plain=await browser.newPage({javaScriptEnabled:false});await plain.goto(base);assert.equal(await plain.locator('.home-intro').count(),0);
+ assert(await plain.locator('.hero-media img').evaluate(img=>img.naturalWidth>0));
+ assert.deepEqual(errors,[]);console.log('Reduced motion and JavaScript-disabled access passed');await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

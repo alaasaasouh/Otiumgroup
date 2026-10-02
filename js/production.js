@@ -22,7 +22,12 @@
       if (shouldPlay) {
         void progress.offsetWidth;
         progress.classList.add('running');
-        timer = setTimeout(() => show(index + 1), 4500);
+        timer = setTimeout(() => {
+          const next=(index+1)%slides.length;
+          const image=slides[next].querySelector('img');
+          if(image.complete && image.naturalWidth)show(next);
+          else { image.loading='eager'; restart(); }
+        }, 1000);
       }
       pause.textContent = userPaused ? '▶' : 'Ⅱ';
       pause.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');

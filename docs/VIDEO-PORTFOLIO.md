@@ -18,7 +18,7 @@ No actual YouTube videos were downloaded or stored. The 16 local thumbnail rendi
 
 Keyboard note: the native dialog traps page focus and supports Escape while focus is in the parent page/modal controls. A cross-origin YouTube iframe owns its own keyboard events; Escape pressed inside its player may be consumed by YouTube instead. The always-visible close button and outside-click target remain available. Autoplay does not move focus away from the close button.
 
-The opening image slideshow now uses 4.5-second intervals, a quicker reveal and text over each image. Pause, swipe, previous/next, keyboard focus pause and reduced-motion behavior remain. Inactive slide links are inert.
+The opening image slideshow now uses one-second intervals, a quicker reveal and text over each image. It waits when the next image is not ready. Pause, swipe, previous/next, keyboard focus pause and reduced-motion behavior remain. Inactive slide links are inert.
 
 ## Configuration and editing
 

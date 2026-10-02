@@ -1,0 +1,15 @@
+# Loading and mobile performance update
+
+The homepage introduction uses the logo and “The art of making things happen.” It appears only if the initial preparation takes more than 150ms, waits for the first nine decoded frames, and releases automatically after three seconds at most. “Enter website” and Escape bypass it immediately. Repeat visits in the same tab session, reduced-motion and supported data-saving preferences skip the introduction. JavaScript-disabled visitors see the normal poster and page. A loading screen cannot guarantee better field Core Web Vitals; its waiting time is deliberately bounded.
+
+The full 145-frame sequence is not downloaded before entry. The animation prioritizes the current scroll target, decodes frames before painting, and progressively warms 13 evenly spaced fallback frames. This improves large scroll jumps without loading every image into memory. Decoded cache limits are 36 frames on mobile and 44 on desktop, with three/four parallel image loads respectively. Reduced motion and data saving retain a static hero.
+
+The Production slideshow now advances every second while visible and unpaused. It waits if the next image has not loaded, so visitors do not see an empty slide. Hover, focus, manual pause, hidden tabs, offscreen visibility and reduced motion still suspend automatic movement. Transition durations are shortened to fit the interval.
+
+Existing fonts now load locally as WOFF2. The six compressed Latin/Latin-extended font files total about 122 KB versus about 320 KB for the prior six TTF files. DM Sans weights reuse the same compressed font resource. Original TTF files and licenses are retained. Fonts still use `font-display: swap`; no Google Fonts requests occur in the browser.
+
+Across mobile pages: touch controls have larger targets, inquiry inputs use 16px text to avoid iOS focus zoom, form fields stack in one column, and the mobile menu remains scrollable on short screens. Video portfolio players remain click-to-load; no initial YouTube media or iframe loading was introduced.
+
+Editing: `js/home-intro.js` (timeout and logo screen), `js/hero.js` (frame strategy), `js/production.js` (one-second interval), `hero.css`, `portfolio.css`, `brand.css` and `style.css`. Regenerate page markup using `scripts/render-pages.cjs`, then `scripts/configure-domain.cjs` for the GitHub Pages address. `scripts/prepare-fonts.cjs` is an optional authoring utility using the local archived Google Fonts CSS response.
+
+Checks cover slow/failing frame requests, bypass, repeat visits, reduced motion, JavaScript-disabled access, mobile layouts, video-player lifecycle and slideshow pause. Measurements are local browser checks, not real-user Core Web Vitals guarantees. This revision remains local for review.

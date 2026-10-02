@@ -35,9 +35,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright-core');
   assert.deepEqual(errors,[]);console.log(`${width}px: zero initial YouTube requests, 8 lazy players, filtering, keyboard, close/reopen, focus, scroll restore and responsive layout passed`);await page.close();
  }
  const page=await browser.newPage({viewport:{width:1440,height:900}});
- await page.goto('http://127.0.0.1:4173/production/');await page.waitForTimeout(4800);
- assert.notEqual(await page.locator('[data-current-slide]').textContent(),'01');
- await page.locator('.pause-slider').click();const paused=await page.locator('[data-current-slide]').textContent();await page.waitForTimeout(4700);assert.equal(await page.locator('[data-current-slide]').textContent(),paused);
+ await page.goto('http://127.0.0.1:4173/production/');
+ await page.waitForFunction(()=>document.querySelector('[data-current-slide]').textContent==='02',{},{timeout:3500});
+ await page.locator('.pause-slider').click();const paused=await page.locator('[data-current-slide]').textContent();await page.waitForTimeout(2200);assert.equal(await page.locator('[data-current-slide]').textContent(),paused);
  await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.locator('.hero-slide:not(.active) a:not([tabindex="-1"])').evaluateAll(items=>items.every(a=>a.closest('[inert]')!==null)),true);
- console.log('4.5-second slideshow, pause, and inactive-slide keyboard isolation passed');await browser.close();
+ console.log('One-second slideshow, pause, and inactive-slide keyboard isolation passed');await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

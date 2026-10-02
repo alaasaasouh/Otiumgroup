@@ -3,13 +3,24 @@
   const section = document.querySelector('.home-scroll');
   if (!section) return;
   const canvas = section.querySelector('canvas');
+  const poster=section.querySelector('.hero-media img');
+  function fallbackPoster(){
+    if(!poster || poster.dataset.fallback)return;
+    poster.dataset.fallback='true';
+    poster.closest('picture')?.querySelectorAll('source').forEach(source=>source.remove());
+    poster.src='assets/images/hero-800.webp';
+  }
+  poster?.addEventListener('error',fallbackPoster);
+  if(poster?.complete && !poster.naturalWidth)fallbackPoster();
   const context = canvas.getContext('2d', { alpha: false });
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const mobile = matchMedia('(max-width: 600px)').matches;
   const count = 145;
   const folder = mobile ? 'frames/mobile/' : 'frames/';
   const cache = new Map();
-  const limit = mobile ? 20 : 30;
+  const limit = mobile ? 36 : 44;
+  const milestones = Array.from({length:13},(_,i)=>i*12);
+  const concurrency = mobile ? 3 : 4;
   let target = 0, current = 0, tick = 0, active = 0, last = -1, generation = 0;
   let failed = false;
   const enabled = () => context && !failed && !motion.matches && !navigator.connection?.saveData;
@@ -17,9 +28,11 @@
 
   function draw() {
     const wanted = Math.round(current);
-    const ready = [...cache].filter(([, entry]) => entry.ready);
-    if (!ready.length) return;
-    const [index, entry] = ready.reduce((best, item) => Math.abs(item[0] - wanted) < Math.abs(best[0] - wanted) ? item : best);
+    let index=-1,entry,distance=Infinity;
+    for(const [candidate,item] of cache){
+      if(item.ready && Math.abs(candidate-wanted)<distance){index=candidate;entry=item;distance=Math.abs(candidate-wanted);}
+    }
+    if(!entry)return;
     if (last === index) return;
     const img = entry.image;
     const scale = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight);
@@ -32,26 +45,32 @@
 
   function loadNearby() {
     if (!enabled()) return;
-    const center = Math.round(current);
-    const desired = [center];
+    if (document.hidden) return;
+    const center = Math.round(target);
+    const desired = [center, Math.round(current)];
     for (let distance = 1; distance <= 8; distance++) {
       desired.push(center + distance, center - distance);
     }
+    desired.push(...milestones);
     for (const index of desired) {
-      if (index < 0 || index >= count || cache.has(index) || active >= 4) continue;
+      if (index < 0 || index >= count || cache.has(index) || active >= concurrency) continue;
       const image = new Image();
       const entry = { image, ready: false };
       const token = generation;
       cache.set(index, entry);
       active++;
-      image.onload = () => {
+      image.onload = async () => {
+        try { await image.decode(); } catch {}
         if (token !== generation) return;
         active--;
         entry.ready = true;
         draw();
+        const prepared=Array.from({length:9},(_,i)=>cache.get(i)?.ready).filter(Boolean).length;
+        window.OtiumIntro?.progress(prepared,9);
+        if(prepared===9)window.OtiumIntro?.finish();
         // Keep a bounded window of decoded images, including the displayed frame.
-        const removable = [...cache.keys()].filter(i => i !== last && cache.get(i).ready)
-          .sort((a, b) => Math.abs(b - current) - Math.abs(a - current));
+        const removable = [...cache.keys()].filter(i => i !== last && !milestones.includes(i) && cache.get(i).ready)
+          .sort((a, b) => Math.abs(b - target) - Math.abs(a - target));
         while (cache.size > limit && removable.length) cache.delete(removable.shift());
         loadNearby();
       };
@@ -97,6 +116,7 @@
     section.classList.toggle('is-active', !!enabled());
     if (enabled()) { resize(); loadNearby(); }
     else {
+      window.OtiumIntro?.finish();
       cancelAnimationFrame(tick); tick = 0;
       generation++; active = 0; cache.clear(); last = -1;
       section.classList.remove('has-frame');
@@ -105,5 +125,6 @@
   addEventListener('scroll', update, { passive: true });
   addEventListener('resize', resize);
   motion.addEventListener('change', configure);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)update();});
   configure();
 })();

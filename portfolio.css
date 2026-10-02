@@ -1,4 +1,10 @@
 /* Production only: cinematic slideshow + lightweight video portfolio. */
+.cinema-gallery .slider-progress.running::after{animation-duration:1s!important}
+.cinema-gallery .hero-slide{transition-duration:.35s,.4s!important}
+.cinema-gallery .hero-slide img{transition-duration:1s!important}
+.cinema-gallery .cinema-copy{transition-duration:.35s,.3s!important}
+.cinema-gallery .hero-slide.active .cinema-copy{transition-delay:.05s!important}
+@media(max-width:380px){.cinema-gallery .slider-controls{gap:8px}.cinema-gallery .slider-progress{min-width:16px}.cinema-gallery .slide-count{min-width:42px}}
 .production-opening.cinema-opening{display:block;padding:118px var(--gutter) 36px;background:#252a29}
 .cinema-gallery .production-gallery-window{height:clamp(470px,43vw,620px);border-radius:3px 100px 3px 3px}
 .cinema-gallery .hero-slide{transition:opacity .65s ease,clip-path .8s cubic-bezier(.22,1,.36,1)}
