@@ -9,5 +9,5 @@ window.OTIUM_SITE = {
   instagram: '',
   linkedin: '',
   formEndpoint: '',
-  showreel: { title: 'Otium Production — Showreel', category: 'Showreel', videoUrl: '', thumbnail: 'production', description: 'Our next frame is on its way. The official Otium Production showreel will appear here.' }
+  showreel: { title: 'Otium Productions — Showreel', category: 'Showreel', videoUrl: '', thumbnail: 'production', description: 'The official Otium Productions showreel will appear here.' }
 };

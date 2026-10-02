@@ -10,7 +10,7 @@ let base;
 try { base=new URL(input); if(base.protocol!=='https:' || base.search || base.hash || base.username || base.password) throw new Error(); }
 catch { console.error('Supply the approved HTTPS website address, including any deployment subdirectory.'); process.exit(1); }
 if(!base.pathname.endsWith('/'))base.pathname+='/';
-const pages=['','about/','divisions/','production/','travel/','events/','contact/'];
+const pages=['','about/','divisions/','production/','events/','luxury/','digital/','experiences/','contact/'];
 const xml=value=>value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 for(const page of pages){
   const file=path.join(root,page,'index.html');

@@ -46,7 +46,7 @@ const divisions = `${pageIntro('The Otium collective','One group.<br><em>Many wo
 
 const slideData = [
   {image:'production',alt:'Hands holding a clapperboard on a desert film location',title:'Every frame, a possibility.',caption:'Film & creative production'},
-  {image:'events',alt:'Crowd and stage lights at a live concert',title:'Make the moment matter.',caption:'Events & experiences'},
+  {image:'events',alt:'Crowd and stage lights at a live concert',title:'Culture, in focus.',caption:'Documentary & digital storytelling'},
   {image:'travel',alt:'Architectural villa beside a sunlit swimming pool',title:'See it differently.',caption:'Commercial & branded content'}
 ];
 const production = `<section class="hero production-hero" aria-label="Otium Production introduction slideshow" aria-roledescription="carousel"><div class="hero-slides">${slideData.map((s,i)=>`<div class="hero-slide ${i===0?'active':''}" data-title="${s.title}" data-caption="${s.caption}" aria-hidden="${i!==0}" role="group" aria-roledescription="slide" aria-label="${i+1} of ${slideData.length}">${image('../',s.image,s.alt,'',i===0)}</div>`).join('')}</div><div class="container hero-content"><p class="eyebrow">Otium Production / A division of Otium Group</p><h1 class="hero-title">Beyond<br>the <span class="serif">ordinary.</span></h1><div class="hero-actions"><a class="pill solid" href="#work">Explore our creative world ${arrow}</a><a class="hero-secondary" href="../contact/index.html?type=Production">Start a project ${arrow}</a></div></div><div class="hero-bottom"><div class="slider-bottom"><p class="slide-description"><strong data-slide-title>${slideData[0].title}</strong><span data-slide-caption>${slideData[0].caption}</span></p><div class="slider-controls"><p class="slide-count"><b data-current-slide>01</b> <span>/ ${String(slideData.length).padStart(2,'0')}</span></p><div class="slider-progress" aria-hidden="true"></div><button class="pause-slider" aria-label="Pause slideshow" aria-pressed="false">Ⅱ</button><button class="circle-button" data-slide-prev aria-label="Previous slide"><span class="arrow" aria-hidden="true">←</span></button><button class="circle-button" data-slide-next aria-label="Next slide"><span class="arrow" aria-hidden="true">→</span></button></div></div></div></section>
@@ -111,7 +111,26 @@ for (const page of pages) {
       .replace(image('','hero','Sculptural stone portal opening onto a golden Mediterranean horizon','',true), poster)
       .replace('</section><div class="manifesto-strip"', '<div class="hero-progress" aria-hidden="true"></div></section></div><div class="manifesto-strip"');
   }
+}
+const companies = require('./client-pages.cjs')(pages, {image, pageIntro});
+for (const page of pages) {
+  if (process.argv.includes('--home-only') && page.active !== 'home') continue;
+  if (process.argv.includes('--production-only') && page.active !== 'production') continue;
+  page.extra = (page.extra || '') + `<link rel="stylesheet" href="${page.base || ''}brand.css">`;
+  let html = simplifyPresentation(shell(page), page)
+    .replace(/Otium Production\b/g, 'Otium Productions')
+    .replace(/>Production<\/a>/g, '>Productions</a>')
+    .replace(/>Divisions<\/a>/g, '>Companies</a>')
+    .replace(/Our divisions/g, 'Our companies')
+    .replace(/\?type=Production\b/g, '?type=Productions')
+    .replace(/Different worlds\. One vision\./g, 'The art of making things happen.')
+    .replace(/People\. Ideas\. Businesses\.<br>A brighter tomorrow\./g, 'London · Doha · Beirut<br>International by nature.')
+    .replace(/<nav class="footer-nav" aria-label="Our companies">[\s\S]*?<\/nav>/, `<nav class="footer-nav" aria-label="Our companies"><h3>Our companies</h3>${companies.map(c=>`<a href="${page.base || ''}${c[1]}/index.html">Otium ${c[0]}${c[5]?'<span>Coming soon</span>':''}</a>`).join('')}</nav>`);
+  html = html.replace('Let’s create<br>what comes <em>next.</em>', 'Let’s create something<br><em>worth remembering.</em>')
+    .replace('Have a project<br><em>in mind?</em>', 'Let’s tell<br><em>a story.</em>');
+  // Events is now an active destination in both navigation layouts.
+  html = html.replace(/(<a href="(?:\.\.\/)?divisions\/index.html"[^>]*>Companies<\/a>)/g, `<a href="${page.base || ''}events/index.html"${page.active === 'events'?' aria-current="page"':''}>Events</a>$1`);
   fs.mkdirSync(path.dirname(path.join(root,page.file)),{recursive:true});
-  fs.writeFileSync(path.join(root,page.file),simplifyPresentation(shell(page), page));
+  fs.writeFileSync(path.join(root,page.file),html);
   console.log(`Wrote ${page.file}`);
 }

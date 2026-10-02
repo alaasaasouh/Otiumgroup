@@ -13,7 +13,7 @@
     notice.textContent = 'Your details will only be used to respond to your inquiry.';
   }
   const params = new URLSearchParams(window.location.search);
-  const requestedType = params.get('type');
+  const requestedType = params.get('type') === 'Production' ? 'Productions' : params.get('type');
   if (requestedType && [...form.elements.type.options].some(o => o.value === requestedType)) form.elements.type.value = requestedType;
 
   function status(heading, message, isError = false) {

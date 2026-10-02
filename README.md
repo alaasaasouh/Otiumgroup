@@ -1,6 +1,8 @@
 ﻿# Otium Group
 
-Seven-page static website using HTML, CSS and vanilla JavaScript. No build required.
+Static website using HTML, CSS and vanilla JavaScript. No build required.
+
+**Local client revision:** this branch contains the charcoal/grey redesign and updated company structure. The live website remains on `main`. See [review and rollback instructions](docs/CLIENT-REVISION.md).
 
 Open `index.html`, or run `node scripts/serve.cjs` and visit http://127.0.0.1:4173.
 
