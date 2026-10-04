@@ -5,6 +5,8 @@
 /presentation/
 /preview/
 /node_modules/
+/dist/
+/.vercel/
 /.codex/
 /.agents/
 .DS_Store

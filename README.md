@@ -18,6 +18,8 @@ See [folder and publishing guide](docs/FOLDER-GUIDE.md), [handover](docs/WEBSITE
 
 ## GitHub Pages
 
+Vercel is also connected to this repository. `vercel.json` runs `npm run build:vercel` and publishes `dist/`, containing all website pages and their original asset paths. The output must not be `public/`: that folder contains Production posters only. `scripts/build-site.cjs` stages the site after the player build, excluding source scripts, documentation, local originals, and dependencies. Run `npm run build:vercel` locally to check the deployment output.
+
 Keep `index.html` and `.nojekyll` at the repository root. In Settings > Pages, choose Deploy from a branch, your uploaded branch, and /(root). [Official instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 Exclude `_archive/`, `presentation/`, `preview/`, and `node_modules/` when uploading. Git ignores these automatically, but manual browser uploads do not. Keep all of `frames/`, including its mobile folder.

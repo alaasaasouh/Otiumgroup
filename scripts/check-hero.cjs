@@ -10,6 +10,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright-core');
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(url);
+    await page.locator('[data-language="en"]').click();
     await page.waitForFunction(() => document.querySelector('.home-scroll').dataset.frame === '1');
     const distance = await page.evaluate(() => {
       const s = document.querySelector('.home-scroll');
@@ -27,6 +28,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright-core');
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.waitForFunction(() => getComputedStyle(document.querySelector('.hero-canvas')).display === 'none');
     await page.reload();
+    await page.locator('[data-language="en"]').click();
     assert.equal(await page.locator('.home-scroll').evaluate(el => el.classList.contains('is-active')), false);
     assert.deepEqual(errors, []);
     console.log(`${width}px: forward/reverse frames, sticky hero, reduced motion, no overflow or JS errors passed`);

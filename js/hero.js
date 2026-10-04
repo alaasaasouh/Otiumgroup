@@ -67,7 +67,6 @@
         draw();
         const prepared=Array.from({length:9},(_,i)=>cache.get(i)?.ready).filter(Boolean).length;
         window.OtiumIntro?.progress(prepared,9);
-        if(prepared===9)window.OtiumIntro?.finish();
         // Keep a bounded window of decoded images, including the displayed frame.
         const removable = [...cache.keys()].filter(i => i !== last && !milestones.includes(i) && cache.get(i).ready)
           .sort((a, b) => Math.abs(b - target) - Math.abs(a - target));
@@ -116,7 +115,7 @@
     section.classList.toggle('is-active', !!enabled());
     if (enabled()) { resize(); loadNearby(); }
     else {
-      window.OtiumIntro?.finish();
+      window.OtiumIntro?.static();
       cancelAnimationFrame(tick); tick = 0;
       generation++; active = 0; cache.clear(); last = -1;
       section.classList.remove('has-frame');

@@ -12,6 +12,7 @@ This is a local review on branch `client-brand-revision`. The published GitHub P
 - About page: people, mission, vision, multidisciplinary approach, philosophy and seven values.
 - Updated navigation, inquiry categories, metadata and sitemap. Old Travel URL remains a page linking to Experiences. Old `?type=Production` inquiry links still select Productions.
 - Original homepage video-frame animation retained, including reduced-motion fallback.
+- Homepage loading screen now offers English, العربية, and Français while the animation prepares in the background. All three open the English site. Full Arabic and French translation is deferred until the website is finalized; see `HERO-ANIMATION.md`.
 
 ## Assumptions for review
 

@@ -13,6 +13,12 @@ The golden portal moves toward the event space as visitors scroll down and rever
 
 ## Changing it later
 
+The homepage loading screen offers English, العربية, and Français before entry. The animation loads and decodes its opening frames behind this screen; choosing any language reveals the same prepared English homepage without another request for the page. The picker remains until a choice is made, even after the first nine frames are ready. Visitors may enter while preparation continues. Reduced-motion and data-saving preferences keep the picker but use the static hero.
+
+**Translation plan (4 October 2026):** keep all website content in English for now. Translate the complete finalized website into Arabic and French in a later phase, including Arabic right-to-left layouts, then connect the three language buttons to the corresponding localized sites. No translations, locale redirects, or saved language preferences are currently enabled.
+
+The picker markup is in `scripts/home-intro-markup.cjs`, its behavior in `js/home-intro.js`, and its styles in `hero.css`. Run `node scripts/check-loading.cjs` against the local preview server to check language entry, background loading, readiness, slow/failing frames, keyboard access, responsive layout, and static/script-failure fallbacks.
+
 Edit hero copy and links in `scripts/render-pages.cjs`, then run `node scripts/render-pages.cjs --home-only`. Generated markup lives in `index.html`. Appearance is in `hero.css`; behavior is in `js/hero.js`. Shared styles remain in `style.css`.
 
 To replace the footage, update the source and run `node scripts/extract-hero-frames.cjs`. This development helper uses the already-installed `@ffmpeg-installer/ffmpeg`, or an executable path supplied through `FFMPEG_PATH`. Update `count` in `js/hero.js` if the frame count changes. Verify the first and last frames, crop, contrast, and file sizes after replacing footage. The source video and extraction tools are not required on the public website; the JPG folders are.
