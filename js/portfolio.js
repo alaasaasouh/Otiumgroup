@@ -7,32 +7,46 @@
   const stage=dialog.querySelector('.portfolio-stage');
   const mount=dialog.querySelector('.portfolio-mount');
   const loading=dialog.querySelector('.portfolio-loading');
-  const external=dialog.querySelector('[data-video-external]');
-  let trigger, dispose, timeout, scrollPosition=0, previousStyles, generation=0;
-  const providers=new Map();
-  providers.set('youtube', (project, ready) => {
-    if(!/^[\w-]{11}$/.test(project.videoId))throw Error('Invalid video ID');
-    const iframe=document.createElement('iframe');
-    iframe.title=project.title;
-    iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-    iframe.allowFullscreen=true;
-    iframe.referrerPolicy='strict-origin-when-cross-origin';
-    iframe.addEventListener('load',ready,{once:true});
-    iframe.src=`https://www.youtube-nocookie.com/embed/${project.videoId}?autoplay=1&playsinline=1&rel=0`;
-    mount.append(iframe);
-    return ()=>{iframe.src='about:blank';iframe.remove();};
-  });
-  // Future provider contract: mount(project, ready) => dispose().
-  // A Mux adapter can lazy-import its player here only when explicitly selected.
-  window.OtiumPortfolio={registerProvider(name,factory){if(typeof factory!=='function')throw TypeError('Provider must be a function');providers.set(name,(project,ready)=>factory({project,container:mount,onReady:ready}));}};
-  function ready(){clearTimeout(timeout);stage.classList.add('is-ready');stage.setAttribute('aria-busy','false');loading.hidden=true;}
-  function clearPlayer(){generation++;clearTimeout(timeout);dispose?.();dispose=undefined;mount.replaceChildren();stage.classList.remove('is-ready');stage.setAttribute('aria-busy','false');loading.hidden=true;}
-  function open(project,button){
-    clearPlayer();trigger=button;
+  const retry=dialog.querySelector('[data-video-retry]');
+  const bundleUrl=new URL('generated/otium-video-player.js',document.currentScript.src).href;
+  let trigger, dispose, timeout, scrollPosition=0, previousStyles, generation=0, activeProject;
+  let playerModule;
+  function loadPlayer(){
+    if(window.OtiumMuxPlayer)return Promise.resolve(window.OtiumMuxPlayer);
+    // A classic deferred script also works for file:// previews; module imports do not.
+    if(playerModule)return playerModule;
+    playerModule=new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=bundleUrl;script.async=true;
+      script.onload=()=>{
+        if(window.OtiumMuxPlayer)resolve(window.OtiumMuxPlayer);
+        else{script.remove();reject(Error('Player bundle did not initialize'));}
+      };
+      script.onerror=()=>{script.remove();reject(Error('Player bundle could not load'));};
+      document.head.append(script);
+    }).catch(error=>{playerModule=null;throw error;});
+    return playerModule;
+  }
+  function failed(error,phase='stream'){
+    // Recoverable HLS events must not cover a working player with a failure screen.
+    if(error?.fatal===false)return;
+    clearTimeout(timeout);stage.setAttribute('aria-busy','false');loading.hidden=false;
+    const reasons={1:'Playback was interrupted.',2:'The stream request failed.',3:'Your browser could not decode this video.',4:'The stream format is unavailable in this browser.'};
+    const reason=reasons[error?.code]||'The stream could not be opened.';
+    loading.textContent=phase==='loader'?'The video player could not load. Please try again.':`${reason} ${error?.message||''} ${error?.code?`(Code ${error.code})`:''} Please try again.`;
+    if(phase==='stream'){
+      stage.classList.add('is-ready');
+      loading.classList.add('is-error');
+    }
+    retry.hidden=false;
+    console.error('[Otium video]',phase,error?.message||error?.code||error);
+  }
+  function ready(){clearTimeout(timeout);stage.classList.add('is-ready');stage.setAttribute('aria-busy','false');loading.hidden=true;loading.classList.remove('is-error');}
+  function clearPlayer(){generation++;clearTimeout(timeout);dispose?.();dispose=undefined;mount.replaceChildren();stage.classList.remove('is-ready');stage.setAttribute('aria-busy','false');loading.hidden=true;loading.classList.remove('is-error');}
+  async function open(project,button){
+    clearPlayer();trigger=button;activeProject=project;retry.hidden=true;
     dialog.querySelector('#portfolio-modal-title').textContent=project.title;
     dialog.querySelector('[data-video-category]').textContent=project.category;
-    external.hidden=project.provider!=='youtube';
-    if(project.provider==='youtube')external.href=`https://www.youtube.com/watch?v=${project.videoId}`;
     if(!dialog.open){
       scrollPosition=scrollY;
       previousStyles={position:document.body.style.position,top:document.body.style.top,width:document.body.style.width,paddingRight:document.body.style.paddingRight};
@@ -42,14 +56,15 @@
       document.body.classList.add('portfolio-locked');dialog.showModal();
     }
     loading.textContent='Opening your film…';loading.hidden=false;stage.setAttribute('aria-busy','true');
-    timeout=setTimeout(()=>{stage.setAttribute('aria-busy','false');loading.textContent='Taking longer than expected. You can also watch on YouTube below.';},12000);
+    const session=generation;
+    timeout=setTimeout(()=>{if(session===generation){loading.textContent='Taking longer than expected. You can retry this film.';retry.hidden=false;}},15000);
     try{
-      const provider=providers.get(project.provider);
-      if(!provider)throw Error('Unsupported provider');
-      const session=generation;
-      dispose=provider(project,()=>{if(session===generation&&dialog.open)ready();});
-    }catch{clearTimeout(timeout);stage.setAttribute('aria-busy','false');loading.textContent='This player is unavailable. Please use the video link below.';}
+      const {mountPlayer}=await loadPlayer();
+      if(session!==generation||!dialog.open)return;
+      dispose=mountPlayer({container:mount,project,onReady:()=>{if(session===generation&&dialog.open){retry.hidden=true;ready();}},onError:error=>{if(session===generation&&dialog.open)failed(error);}});
+    }catch(error){if(session===generation&&dialog.open)failed(error,'loader');}
   }
+  retry.addEventListener('click',()=>{if(activeProject)open(activeProject,trigger);});
   document.querySelectorAll('[data-video-id]').forEach(button=>button.addEventListener('click',()=>{
     const project=entries.find(p=>p.id===button.dataset.videoId);if(project)open(project,button);
   }));

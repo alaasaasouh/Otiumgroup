@@ -38,6 +38,10 @@
 .portfolio-close{flex-shrink:0;display:grid;place-items:center;width:44px;height:44px;border:1px solid #ffffff55;border-radius:50%;font-size:30px;color:#eeeae2}.portfolio-close:hover{background:#c5aa80;color:#171b1b}
 .portfolio-stage{position:relative;aspect-ratio:16/9;background:#050907}.portfolio-mount,.portfolio-mount iframe,.portfolio-mount video{position:absolute;inset:0;width:100%;height:100%;border:0}
 .portfolio-mount{opacity:0;transition:opacity .35s}.is-ready .portfolio-mount{opacity:1}
+.portfolio-mount mux-player{display:block;width:100%;height:100%;--media-object-fit:contain;--media-object-position:center}
+.portfolio-loading[hidden],[data-video-retry][hidden]{display:none}
+.portfolio-loading.is-error{inset:auto 0 0;z-index:3;padding:12px;background:#101a16ed;animation:none;font-size:12px;overflow-wrap:anywhere}
+.portfolio-close:focus-visible,[data-video-retry]:focus-visible{outline:2px solid #c5aa80;outline-offset:4px}
 .portfolio-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:25px;text-align:center;color:#c5cbbf;font-size:13px;pointer-events:none;background:linear-gradient(110deg,#0d1511,#1d2a22,#0d1511);background-size:200% 100%;animation:portfolio-loading 2s ease-in-out infinite}
 .portfolio-modal-footer{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;gap:20px;font-size:11px;color:#b6bcb4}.portfolio-modal-footer .text-link{font-size:10px}.portfolio-locked{overflow:hidden}
 @keyframes portfolio-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
