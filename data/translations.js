@@ -1,5 +1,7 @@
 /* English source text -> [professional French, Modern Standard Arabic]. No remote translation service. */
 window.OTIUM_TRANSLATIONS = {
+  "Email delivery is being activated.": ["L’envoi par e-mail est en cours d’activation.","جارٍ تفعيل إرسال الرسائل عبر البريد الإلكتروني."],
+  "Please email us directly while we finish setting up the form. Your details are still here.": ["Veuillez nous écrire directement par e-mail pendant la finalisation du formulaire. Vos informations sont conservées ici.","يرجى مراسلتنا مباشرة عبر البريد الإلكتروني إلى حين اكتمال إعداد النموذج. لا تزال بياناتكم محفوظة هنا."],
   "Otium Group — The art of making things happen.": [
     "Otium Group — L’art de concrétiser les idées.",
     "مجموعة أوتيوم — فن تحويل الأفكار إلى واقع."

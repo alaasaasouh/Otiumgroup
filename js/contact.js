@@ -67,11 +67,21 @@
       if (config.formEndpoint) {
         const endpoint = new URL(config.formEndpoint, window.location.href);
         if (endpoint.protocol !== 'https:') throw new Error('This inquiry service is not available yet.');
+        const isFormSubmit=endpoint.hostname==='formsubmit.co';
+        const payload=isFormSubmit?{...data,_subject:'Otium Group — '+data.type+' inquiry',_template:'table',_url:location.href,language:document.documentElement.lang}:data;
         const response = await fetch(endpoint.href, {
           method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(data), signal: AbortSignal.timeout(20000)
+          body: JSON.stringify(payload), signal: AbortSignal.timeout(20000)
         });
         if (!response.ok) throw new Error('Your inquiry could not be sent. Please try again.');
+        if(isFormSubmit){
+          const receipt=await response.json();
+          if(/activat|confirm.*email|verify.*email/i.test(receipt.message||'')){
+            status('Email delivery is being activated.', 'Please email us directly while we finish setting up the form. Your details are still here.',true);
+            return;
+          }
+          if(receipt.success!==true&&receipt.success!=='true')throw new Error('Inquiry service rejected the submission.');
+        }
         status('Your inquiry is on its way.', 'Thank you for sharing your idea. The Otium team will be in touch.');
         form.reset();
       } else {
@@ -96,6 +106,9 @@
     } catch (error) {
       status('Let’s try that again.', error.name === 'TimeoutError' ? 'The request took too long. Your details are still here; please try again.' : 'We could not send your inquiry. Your details are still here; please try again later.', true);
     } finally {
+      if(result.classList.contains('error')&&config.email){
+        const direct=document.createElement('a');direct.href=`mailto:${config.email}`;direct.textContent=config.email;direct.dir='ltr';result.append(direct);
+      }
       button.disabled = false;
       buttonText.textContent = config.formEndpoint ? 'Send inquiry' : 'Prepare inquiry';
       form.removeAttribute('aria-busy');

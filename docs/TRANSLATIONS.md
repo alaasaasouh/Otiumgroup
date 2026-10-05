@@ -10,7 +10,7 @@ The homepage animation prepares behind the picker. Choosing a language translate
 - `js/i18n.js`: local translation, dynamic UI updates, saved choice, and internal links. `?lang=en`, `?lang=fr`, or `?lang=ar` takes priority over `localStorage` (`otium-language`). Links preserve the language even when storage is unavailable.
 - `i18n.css`: language controls, responsive typography, and Arabic layout adjustments.
 - `scripts/localization-markup.cjs`: shared translation hooks and language selectors, used by the page generator.
-- `js/contact.js`: localized validation and downloadable inquiry briefs. Visitor-entered content remains unchanged. No delivery service has been added.
+- `js/contact.js`: localized validation and downloadable inquiry briefs. Visitor-entered content remains unchanged. Email delivery is configured through FormSubmit; see [CONTACT.md](CONTACT.md) for activation.
 - `src/media-ar.js`: Arabic video-control translations. French controls use the bundled Media Chrome translation. Rebuild the player after editing these files. Video audio, artwork, and embedded text remain the original media.
 
 English remains the source HTML and the fallback when JavaScript or translation files are unavailable. Translations run in the browser; this change does not introduce separately rendered search-indexable locale pages or alter existing canonical URLs. No external translation service is used.

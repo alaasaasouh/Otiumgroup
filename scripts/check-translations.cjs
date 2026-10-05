@@ -22,6 +22,8 @@ console.log('French and Arabic coverage verified for every static page string an
  try{
   for(const language of ['en','fr','ar']){
    const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1440,height:900}});
+   // Exercise the optional local-brief mode without sending test inquiries.
+   await context.route('**/data/site.js',async route=>{const response=await route.fetch();await route.fulfill({response,body:(await response.text()).replace(/formEndpoint: '[^']*'/,"formEndpoint: ''")});});
    const page=await context.newPage();
    page.on('pageerror',error=>errors.push(error.message));
    for(const route of routes){

@@ -4,11 +4,11 @@
  */
 window.OTIUM_SITE = {
   localizationEnabled: true, // Set false to return every language choice to the English site.
-  email: '',
+  email: 'asonyxmedia@gmail.com',
   phone: '',
   address: '',
   instagram: '',
   linkedin: '',
-  formEndpoint: '',
+  formEndpoint: 'https://formsubmit.co/ajax/asonyxmedia@gmail.com',
   showreel: { title: 'Otium Productions — Showreel', category: 'Showreel', videoUrl: '', thumbnail: 'production', description: 'The official Otium Productions showreel will appear here.' }
 };
