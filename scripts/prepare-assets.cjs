@@ -1,4 +1,4 @@
-/* Development utility only. The website itself has no build step or dependencies. */
+/* Refresh optimized website images from preserved originals. Fonts use prepare-fonts.cjs. */
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const sharp = require('sharp');
@@ -21,15 +21,6 @@ async function main() {
       await fs.writeFile(path.join(originals, `${name}.jpg`), Buffer.from(await response.arrayBuffer()));
       console.log(`Downloaded ${name}`);
     }));
-    const css = await fs.readFile(path.join(root, 'assets/fonts/google-fonts.css'), 'utf8');
-    const urls = [...css.matchAll(/url\((https:[^)]+)\)/g)].map(m => m[1]);
-    const names = ['dm-sans-400.ttf','dm-sans-500.ttf','dm-sans-600.ttf','dm-sans-700.ttf','instrument-serif-italic.ttf','instrument-serif.ttf'];
-    await Promise.all(urls.map(async (url, i) => {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`Font ${response.status}`);
-      await fs.writeFile(path.join(root, 'assets/fonts', names[i]), Buffer.from(await response.arrayBuffer()));
-    }));
-    console.log('Fonts saved locally');
   }
   const sources = { hero: 'otium-architecture-original.png', ...Object.fromEntries(Object.keys(photos).map(k => [k, `${k}.jpg`])) };
   for (const [name, source] of Object.entries(sources)) {

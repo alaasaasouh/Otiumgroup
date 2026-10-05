@@ -7,9 +7,9 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
  for(const width of [1440,768,390,320]){
   const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
   page.on('pageerror',e=>errors.push(e.message));
-  await page.route('https://www.youtube-nocookie.com/embed/**',r=>r.fulfill({contentType:'text/html',body:'<button>Player test</button>'}));
   for(const route of ['','about','divisions','production','events','luxury','digital','experiences','travel','contact']){
    await page.goto(pathToFileURL(path.join(root,route,'index.html')).href);
+   if(!route)await page.locator('[data-language="en"]').click();
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${route} ${width}: overflow`);
    assert.equal(await page.locator('h1').count(),1,`${route}: heading`);
    const links=await page.locator('a[href]').evaluateAll(items=>items.map(a=>a.getAttribute('href')));

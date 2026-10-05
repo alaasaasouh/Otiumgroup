@@ -1,5 +1,7 @@
 # Client brand revision — 2 October 2026
 
+> Historical snapshot. For current setup, use the [project README](../../README.md) and [current documentation](../README.md).
+
 This is a local review on branch `client-brand-revision`. The published GitHub Pages site remains on `main` and has not been changed.
 
 ## Implemented

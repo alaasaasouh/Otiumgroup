@@ -1,9 +1,11 @@
 # Production page opening
 
-The Production page opens with a compact editorial layout: a short introduction, a curved image slideshow, captions, slide counter, pause/play and previous/next controls. Direct links lead to the visual portfolio, capabilities, and contact page. The original portfolio, service accordions, and project previews remain available below.
+The Production page uses a cinematic three-image slideshow with overlaid titles, captions, a slide counter, pause/play, previous/next controls, and links to the portfolio.
 
-The slideshow uses the existing local placeholder images. It advances every seven seconds, pauses on hover or keyboard focus, stops when offscreen, and supports swipe and arrow-key navigation. Reduced-motion preferences disable automatic playback.
+The slideshow advances every 1.5 seconds with cinematic transitions. It waits when the next image is not ready. Focus on a slide link, manual pause, offscreen visibility, hidden tabs, and reduced-motion preferences suspend automatic movement. Hovering or using the controls does not stop cycling. Swipe and arrow-key navigation remain available.
 
-To replace images or captions, edit `slideData` in `scripts/render-pages.cjs`. Image names refer to the corresponding `assets/images/NAME-800.webp` and `NAME-1600.webp` files. Then run `node scripts/render-pages.cjs --production-only`.
+Edit `sceneData` in `scripts/production-portfolio.cjs` to change the images and overlaid copy. Images refer to `assets/images/NAME-800.webp` and `NAME-1600.webp`. Run `node scripts/render-pages.cjs --production-only`, then `node scripts/configure-domain.cjs https://alaasaasouh.github.io/Otiumgroup/` to restore hosting metadata.
 
-Edit the opening copy in the Production-specific block near the end of that generator. Styling lives in `production.css`; slideshow behavior is in `js/production.js`. The homepage video-scroll animation is independent.
+The underlying Production sections come from `scripts/client-pages.cjs` and the shared page generator. Slideshow behavior is in `js/production.js`; styling spans `production.css`, `portfolio.css`, and `brand.css`.
+
+Run `node scripts/check-production-opening.cjs` for responsive slideshow checks. See [MUX-PROJECTS.md](MUX-PROJECTS.md) for the current video portfolio.

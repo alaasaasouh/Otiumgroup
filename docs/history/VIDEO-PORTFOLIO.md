@@ -1,5 +1,7 @@
 # Production video portfolio
 
+> Historical snapshot. For current setup, use the [project README](../../README.md) and [current documentation](../README.md).
+
 ## Current implementation
 
 This repository is plain HTML/CSS/JavaScript, not Next.js. It remains compatible with GitHub Pages and needs no React or player library. `Next/Image` cannot run in this codebase; its relevant benefits are supplied with pre-generated 480px/960px WebP thumbnails, `srcset`, responsive `sizes`, lazy loading, explicit dimensions and a reserved 16:9 frame.

@@ -1,5 +1,7 @@
 # Production project source audit
 
+The inspection results below describe the original 4 October audit. During the 5 October cleanup, its contact sheets and intermediate inspection files were preserved in `_archive/cleanup-2026-10-05/preview/source-inspection/`. New inspections still generate `preview/source-inspection/`. Current playback integration is documented in [MUX-PROJECTS.md](MUX-PROJECTS.md).
+
 Inspected 2026-10-04 using FFmpeg. Eight local MP4 files; all fully decoded without reported errors. SHA-256 checks confirm originals unchanged. Exact bytes and hashes are in [the manifest](production-source-manifest.json). Bitrates below are FFmpeg-reported estimates; MB/kB are decimal.
 
 **All sources are 360p, not 1080p, 1440p, or 4K.** Keep these files unchanged for upload if these are the available copies, but obtain higher-resolution masters (preferably 1080p or better) for premium desktop playback. Further compression would lose detail; upscaling cannot restore it. This recommendation applies to every file.

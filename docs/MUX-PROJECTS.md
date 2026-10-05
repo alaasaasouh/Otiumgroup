@@ -44,7 +44,7 @@ The player bundle is 1.36 MB uncompressed, approximately 398 KB gzip. It include
 - Mobile layouts were checked through browser viewports, not physical iOS/Android devices.
 - Original MP4s remain outside the repository; /local-videos/ and /Otium-Source-Videos/ are ignored. Git tracks no MP4s.
 
-Source quality remains 360p and will look soft on large displays. Future higher-resolution masters can replace the IDs and posters without redesigning the cards. Videos are scoped to Production Projects only. Nothing has been pushed or deployed by this implementation.
+Source quality remains 360p and will look soft on large displays. Future higher-resolution masters can replace the IDs and posters without redesigning the cards. Videos are scoped to Production Projects only. The integration is now deployed on GitHub Pages and Vercel; use the root README for current build and deployment commands.
 
 ## Files in this integration
 

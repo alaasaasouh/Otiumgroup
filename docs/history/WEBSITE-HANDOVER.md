@@ -1,5 +1,7 @@
 OTIUM GROUP — WEBSITE HANDOVER
 
+> Historical snapshot. For current setup, use the [project README](../../README.md) and [current documentation](../README.md).
+
 This guide describes the website delivered in this folder, how its parts work, what is temporary, and how to update it. It reflects the current files rather than every feature suggested in the original brief.
 
 **Current status:** the seven-page design and frontend are implemented. The project is a local website ready for content review. It has not been published to a public domain, connected to an actual inquiry service, or populated with approved Otium films and projects.

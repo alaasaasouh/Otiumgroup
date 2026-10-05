@@ -22,7 +22,7 @@ Exact generation prompt:
 
 ## Temporary photography
 
-These are illustrative stock photographs, not Otium projects. The portfolio explicitly identifies them as visual concepts. Replace them with approved client assets for the public portfolio.
+These are illustrative stock photographs used for website backgrounds and company imagery, not Otium projects. The current Production portfolio uses posters extracted from the supplied videos; see [the source audit](PRODUCTION-SOURCE-AUDIT.md) and [Mux guide](MUX-PROJECTS.md).
 
 | Local key | Subject | Source |
 | --- | --- | --- |
@@ -40,6 +40,9 @@ Each image has a local original JPG and optimized 800/1600-pixel WebP versions. 
 - **DM Sans**, weights 400, 500, 600, 700. Source: Google Fonts. License: `assets/fonts/DM-Sans-OFL.txt`.
 - **Instrument Serif**, normal and italic. Source: Google Fonts. License: `assets/fonts/Instrument-Serif-OFL.txt`.
 - Both are bundled locally with `font-display: swap`.
+- Runtime uses six WOFF2 files. The unused TTF originals and old download stylesheet are preserved in `_archive/cleanup-2026-10-05/assets/fonts/`.
+
+The superseded YouTube thumbnail set is preserved in `_archive/cleanup-2026-10-05/assets/portfolio/`. Current Production posters remain at `public/images/production/projects/`.
 
 No films or external video players are loaded unless an approved video URL has been supplied and the visitor opens it.
 
