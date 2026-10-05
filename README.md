@@ -18,16 +18,17 @@ Run `npm ci` for a fresh checkout, then `npm run dev`. Open http://127.0.0.1:417
 | Video titles, categories, posters, Mux IDs | `data/portfolio.js` |
 | Contact configuration | `data/site.js` |
 | Language screen | `scripts/home-intro-markup.cjs`, `js/home-intro.js`, `hero.css` |
-| Shared and page styling | The five root CSS files |
+| French and Arabic translations | `data/translations.js`, `js/i18n.js`, `i18n.css` |
+| Shared and page styling | Root CSS files |
 | Video player source | `src/otium-video-player.jsx` |
 
 Run `npm run build` after editing the player or Production portfolio. For page-copy changes, run `node scripts/render-pages.cjs` (optionally `--home-only` or `--production-only`), then restore deployment metadata with `node scripts/configure-domain.cjs https://alaasaasouh.github.io/Otiumgroup/`.
 
-English, Arabic, and French choices currently all open the English site. Full Arabic/French translation follows finalization of the website. The contact form currently prepares a local brief unless a delivery endpoint is configured.
+English, professional French, and Modern Standard Arabic are available across the site, with saved language selection and Arabic right-to-left layouts. See the [translation and rollback guide](docs/TRANSLATIONS.md). The contact form prepares a localized local brief unless a delivery endpoint is configured.
 
 ## Checks
 
-With the local server running: `npm run test:assets`, `npm run test:loading`, `npm run test:navigation`, and `npm run test:portfolio`. Run `npm run test:hero` for scroll animation checks and `npm run test:deployment` to check both live sites. Browser checks require Chrome.
+With the local server running: `npm run test:assets`, `npm run test:loading`, `npm run test:navigation`, `npm run test:i18n`, and `npm run test:portfolio`. Run `npm run test:hero` for scroll animation checks and `npm run test:deployment` to check both live sites after publishing the current branch. Browser checks require Chrome.
 
 ## Deployment
 

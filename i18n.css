@@ -1,0 +1,52 @@
+/* Translation layout layer. Remove/disable localization to restore the English design. */
+.language-switch{display:inline-flex;align-items:center;flex-shrink:0}
+.language-switch[hidden]{display:none}
+.language-switch select{min-height:44px;max-width:110px;padding:8px 10px;border:1px solid #ffffff38;border-radius:3px;background:#252a29;color:#eeeae2;font:inherit;font-size:12px;cursor:pointer}
+.language-switch option{background:#252a29;color:#eeeae2}
+.footer-language{display:flex;justify-content:flex-end;padding-block:20px;border-top:1px solid var(--line)}
+.site-header{gap:18px}
+.site-header .desktop-nav{margin-left:0}
+html[lang=fr] .heading,html[lang=fr] .page-intro h1{overflow-wrap:break-word}
+html[lang=fr] .hero-title{font-size:clamp(44px,6.5vw,92px)}
+html[lang=ar]{--sans:Tahoma,Arial,sans-serif;--serif:Tahoma,Arial,sans-serif}
+html[lang=ar] body{font-family:Tahoma,Arial,sans-serif}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] p,html[lang=ar] a,html[lang=ar] button,html[lang=ar] label,html[lang=ar] span{letter-spacing:normal}
+html[lang=ar] em,html[lang=ar] .serif,html[lang=ar] .company-line{font-family:Tahoma,Arial,sans-serif;font-style:normal}
+html[lang=ar] .hero-title{font-size:clamp(42px,6.2vw,88px);line-height:1.5}
+html[lang=ar] .hero-title em{font-size:1em}
+html[lang=ar] .heading,html[lang=ar] .page-intro h1,html[lang=ar] .event-opening h1,html[lang=ar] .intro-inner h2{line-height:1.5}
+html[lang=ar] .body-copy,html[lang=ar] .brand-copy,html[lang=ar] .brand-accordions details p{line-height:2}
+html[lang=ar] .brand,html[lang=ar] .intro-identity,html[lang=ar] .footer-wordmark{direction:ltr}
+html[lang=ar] .brand-name{font-family:'DM Sans',sans-serif;letter-spacing:.21em}
+html[lang=ar] .brand-name small{letter-spacing:.52em}
+html[dir=rtl] .company-state{text-align:left}
+html[dir=rtl] .hero-secondary{margin-left:0;margin-right:5px}
+html[dir=rtl] .cinema-copy{left:auto;right:5%;text-align:right}
+html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(13,19,15,.75),rgba(13,19,15,.18)),linear-gradient(0deg,rgba(13,19,15,.85),transparent 58%)}
+html[dir=rtl] .brand-process,html[dir=rtl] .company-list{text-align:right}
+html[dir=rtl] .form-result a,html[dir=rtl] .form-result button{margin-right:0;margin-left:22px}
+html[dir=rtl] .field input[type=email],html[dir=rtl] .field input[type=tel]{direction:ltr;text-align:right}
+html[dir=rtl] .portfolio-stage,html[dir=rtl] .slider-controls,html[dir=rtl] .intro-languages{direction:ltr}
+html[lang=ar] .portfolio-modal-header h2{line-height:1.6}
+html[lang=ar] .cinema-copy h2{font-family:Tahoma,Arial,sans-serif;font-size:clamp(40px,5vw,72px);line-height:1.4}
+html[lang=ar] .company-name{font-size:clamp(25px,2.6vw,42px)}
+html[lang=ar] .company-line{font-size:23px}
+@media(max-width:1100px){.site-header{gap:12px}.site-header .desktop-nav{gap:15px}.header-contact{padding-inline:15px;gap:12px}.language-switch select{max-width:96px}}
+@media(min-width:801px) and (max-width:1050px){html[lang=fr] .header-contact,html[lang=ar] .header-contact{display:none}}
+@media(max-width:800px){.site-header .language-switch{margin-inline-start:auto}.language-switch select{max-width:92px}.site-header{gap:12px}}
+@media(max-width:600px){
+ .site-header .menu-label{display:none}.site-header .menu-toggle{padding:10px;min-width:44px;min-height:44px}
+ .site-header .language-switch select{width:75px;padding:7px 3px;font-size:10px}.site-header{gap:8px}
+ html[lang=fr] .home-scroll .hero-title{font-size:clamp(36px,8.4vw,55px)}
+ html[lang=fr] .hero .eyebrow{letter-spacing:.04em}
+ html[lang=ar] .home-scroll .hero-title{font-size:clamp(32px,8vw,49px);line-height:1.55}
+ html[lang=ar] .page-intro h1{font-size:clamp(36px,9vw,60px)}
+ html[lang=ar] .intro-inner h2{font-size:30px}
+ html[dir=rtl] .cinema-copy{left:7%;right:7%}
+ html[lang=ar] .cinema-copy h2{font-size:40px}
+ html[lang=ar] .company-line{font-size:18px}
+ html[lang=ar] .company-name{font-size:24px}
+ html[lang=ar] .event-opening h1{font-size:clamp(34px,9vw,55px)}
+ html[lang=ar] .brand-band>.container,html[lang=fr] .brand-band>.container{flex-wrap:wrap}
+ .footer-bottom{flex-wrap:wrap;row-gap:15px}
+}

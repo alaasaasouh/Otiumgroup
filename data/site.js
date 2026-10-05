@@ -3,6 +3,7 @@
  * formEndpoint: an approved HTTPS form handler accepting JSON.
  */
 window.OTIUM_SITE = {
+  localizationEnabled: true, // Set false to return every language choice to the English site.
   email: '',
   phone: '',
   address: '',

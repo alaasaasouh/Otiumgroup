@@ -133,6 +133,7 @@ for (const page of pages) {
   html = html.replace(/(<a href="(?:\.\.\/)?divisions\/index.html"[^>]*>Companies<\/a>)/g, `<a href="${page.base || ''}events/index.html"${page.active === 'events'?' aria-current="page"':''}>Events</a>$1`);
   fs.mkdirSync(path.dirname(path.join(root,page.file)),{recursive:true});
   if (page.active === 'home') html = require('./home-intro-markup.cjs')(html);
+  html = require('./localization-markup.cjs')(html,page.base||'');
   fs.writeFileSync(path.join(root,page.file),html);
   console.log(`Wrote ${page.file}`);
 }

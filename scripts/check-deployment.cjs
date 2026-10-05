@@ -21,7 +21,7 @@ const sites = process.argv[2] ? [process.argv[2]] : ['https://otiumgroup.vercel.
         const origin = await page.evaluate(() => performance.timeOrigin);
         await page.locator('[data-language="' + language + '"]').click();
         assert.equal(await page.locator('.home-intro').count(), 0);
-        assert.equal(await page.locator('html').getAttribute('lang'), 'en');
+        assert.equal(await page.locator('html').getAttribute('lang'), language);
         assert.equal(await page.evaluate(() => performance.timeOrigin), origin);
         assert(await page.locator('main').isVisible());
       }

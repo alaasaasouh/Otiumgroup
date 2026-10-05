@@ -7,7 +7,35 @@
   const button = form.querySelector('[type=submit]');
   const buttonText = button.querySelector('span');
   const notice = document.querySelector('.form-notice');
+  const t=(text,vars)=>window.OtiumI18n?.t(text,vars)||text;
   let downloadUrl;
+  let currentBriefData;
+  function briefText(){
+    const data=currentBriefData;
+    return `${t('OTIUM GROUP — PROJECT INQUIRY')}\n\n${t('Name')}: ${data.name}\n${t('Company')}: ${data.company||'—'}\n${t('Email')}: ${data.email}\n${t('Phone')}: ${data.phone||'—'}\n${t('Inquiry')}: ${t(data.type)}\n\n${data.message}\n\n${t('This brief was prepared locally and has not been submitted to Otium Group.')}`;
+  }
+  function refreshBrief(){
+    if(!currentBriefData)return;
+    if(downloadUrl)URL.revokeObjectURL(downloadUrl);
+    downloadUrl=URL.createObjectURL(new Blob(['\uFEFF'+briefText()],{type:'text/plain;charset=utf-8'}));
+    const download=result.querySelector('a[download]');
+    if(download){download.href=downloadUrl;download.download=`otium-project-inquiry-${document.documentElement.lang}.txt`;}
+    const preview=result.querySelector('pre');if(preview)preview.textContent=briefText();
+  }
+  function localizeValidation(field){
+    if(!field.validity)return;
+    field.setCustomValidity('');
+    if(field.validity.valid)return;
+    const message=field.validity.valueMissing?'Please complete this field.':field.validity.typeMismatch&&field.type==='email'?'Please enter a valid email address.':field.validity.tooShort?'Please enter at least {min} characters.':'Please check this value.';
+    field.setCustomValidity(t(message,{min:field.minLength}));
+  }
+  form.addEventListener('invalid',event=>localizeValidation(event.target),true);
+  form.addEventListener('input',event=>event.target.setCustomValidity?.(''));
+  form.addEventListener('change',event=>event.target.setCustomValidity?.(''));
+  document.addEventListener('otium:languagechange',()=>{
+    refreshBrief();
+    for(const field of form.elements)if(field.validity?.customError)localizeValidation(field);
+  });
   if (config.formEndpoint) {
     buttonText.textContent = 'Send inquiry';
     notice.textContent = 'Your details will only be used to respond to your inquiry.';
@@ -47,23 +75,23 @@
         status('Your inquiry is on its way.', 'Thank you for sharing your idea. The Otium team will be in touch.');
         form.reset();
       } else {
-        const brief = `OTIUM GROUP — PROJECT INQUIRY\n\nName: ${data.name}\nCompany: ${data.company || '—'}\nEmail: ${data.email}\nPhone: ${data.phone || '—'}\nInquiry: ${data.type}\n\n${data.message}\n\nThis brief was prepared locally and has not been submitted to Otium Group.`;
-        if (downloadUrl) URL.revokeObjectURL(downloadUrl);
-        downloadUrl = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' }));
+        currentBriefData=data;
+        refreshBrief();
         status('Your brief is ready.', 'Download or copy your inquiry to keep it. Nothing has been sent; direct inquiries will open when the contact details are confirmed.');
         const download = document.createElement('a');
         download.href = downloadUrl; download.download = 'otium-project-inquiry.txt'; download.textContent = 'Download inquiry';
         const copy = document.createElement('button'); copy.type = 'button'; copy.textContent = 'Copy inquiry';
         copy.addEventListener('click', async () => {
-          try { await navigator.clipboard.writeText(brief); copy.textContent = 'Copied'; }
+          try { await navigator.clipboard.writeText(briefText()); copy.textContent = 'Copied'; }
           catch {
             if (!result.querySelector('pre')) {
-              const preview = document.createElement('pre'); preview.className = 'form-preview'; preview.textContent = brief;
+              const preview = document.createElement('pre'); preview.className = 'form-preview'; preview.textContent = briefText();
               result.append(preview); copy.textContent = 'Select and copy the text below';
             }
           }
         });
         result.append(download, copy);
+        refreshBrief();
       }
     } catch (error) {
       status('Let’s try that again.', error.name === 'TimeoutError' ? 'The request took too long. Your details are still here; please try again.' : 'We could not send your inquiry. Your details are still here; please try again later.', true);

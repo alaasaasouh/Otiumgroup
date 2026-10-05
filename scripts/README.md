@@ -9,6 +9,7 @@ Run scripts from the repository root. Keeping these helpers together preserves t
 | Vercel output | `build-site.cjs` (`npm run build:vercel` builds and stages the complete site) |
 | Page authoring | `render-pages.cjs`, `client-pages.cjs`, `home-intro-markup.cjs`, `production-portfolio.cjs`, `portfolio-component.cjs` |
 | Hosting metadata | `configure-domain.cjs` |
+| Localization markup and checks | `localization-markup.cjs`, `check-translations.cjs` (`npm run test:i18n`) |
 | Current assets and fonts | `prepare-assets.cjs`, `prepare-fonts.cjs` |
 | Homepage frame extraction | `extract-hero-frames.cjs` |
 | Original Production media inspection/posters | `inspect-production-sources.cjs`, `prepare-production-posters.cjs` |

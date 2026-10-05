@@ -10,7 +10,7 @@ fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output, { recursive: true });
 
 const entries = [
-  'index.html', 'style.css', 'brand.css', 'hero.css', 'production.css', 'portfolio.css',
+  'index.html', 'style.css', 'brand.css', 'hero.css', 'production.css', 'portfolio.css', 'i18n.css',
   'robots.txt', 'sitemap.xml',
   'about', 'contact', 'digital', 'divisions', 'events', 'experiences', 'luxury',
   'production', 'travel', 'assets', 'data', 'frames', 'js', 'public'

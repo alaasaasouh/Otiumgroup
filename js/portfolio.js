@@ -33,7 +33,7 @@
     clearTimeout(timeout);stage.setAttribute('aria-busy','false');loading.hidden=false;
     const reasons={1:'Playback was interrupted.',2:'The stream request failed.',3:'Your browser could not decode this video.',4:'The stream format is unavailable in this browser.'};
     const reason=reasons[error?.code]||'The stream could not be opened.';
-    loading.textContent=phase==='loader'?'The video player could not load. Please try again.':`${reason} ${error?.message||''} ${error?.code?`(Code ${error.code})`:''} Please try again.`;
+    loading.textContent=phase==='loader'?'The video player could not load. Please try again.':`${reason} Please try again.`;
     if(phase==='stream'){
       stage.classList.add('is-ready');
       loading.classList.add('is-error');

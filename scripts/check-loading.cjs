@@ -16,9 +16,10 @@ const assert=require('node:assert/strict');
   assert.equal(await page.locator('.home-intro').count(),0);
   assert.equal(await page.evaluate(()=>document.documentElement.classList.contains('intro-pending')),false);
   assert.equal(await page.locator('main').evaluate(el=>getComputedStyle(el).visibility),'visible');
-  assert.equal(await page.locator('html').getAttribute('lang'),'en');
+  assert.equal(await page.locator('html').getAttribute('lang'),language);
   assert.equal(await page.evaluate(()=>document.activeElement.id),'main');
-  assert.equal(page.url(),url,'A choice must reveal the prepared page without a redirect');
+  assert.equal(new URL(page.url()).pathname,new URL(url).pathname,'A choice must reveal the prepared page without a redirect');
+  assert.equal(new URL(page.url()).searchParams.get('lang'),language);
   assert.equal(await page.evaluate(()=>performance.timeOrigin),timeOrigin,'A choice must not reload the page');
  };
  try {
@@ -72,10 +73,10 @@ const assert=require('node:assert/strict');
   await ready.locator('[data-language="fr"]').focus();
   await ready.keyboard.press('Enter');
   assert.equal(await ready.locator('.home-intro').count(),0);
-  assert.equal(await ready.locator('html').getAttribute('lang'),'en');
+  assert.equal(await ready.locator('html').getAttribute('lang'),'fr');
   assert.equal(await ready.evaluate(()=>document.activeElement.id),'main');
   await ready.close();
-  console.log('Ready/repeat visits: picker persists; Arabic/French open English; desktop, narrow and landscape layouts passed');
+  console.log('Ready/repeat visits: picker persists; Arabic/French translate in place; desktop, narrow and landscape layouts passed');
 
   const failed=await newPage();
   await failed.route('**/frames/**/*.jpg',route=>route.abort());

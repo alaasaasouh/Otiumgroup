@@ -28,8 +28,10 @@
     }
   };
   if(!document.documentElement.classList.contains('intro-pending')){finish();return;}
-  // All three choices reveal the English site for now. Full Arabic/French localization follows final approval.
-  dialog.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',finish));
+  dialog.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>{
+    window.OtiumI18n?.setLanguage(button.dataset.language);
+    finish();
+  }));
   dialog.addEventListener('cancel',event=>event.preventDefault());
   dialog.showModal();
   clearTimeout(window.otiumIntroDeadline);
