@@ -33,7 +33,7 @@ const assert=require('node:assert/strict');
   });
   await page.goto(base,{waitUntil:'domcontentloaded'});
   await page.waitForSelector('.home-intro[open]');
-  assert.deepEqual(await page.locator('.intro-language').allTextContents(),['English','العربية','Français']);
+  assert.deepEqual(await page.locator('.intro-language').evaluateAll(buttons=>buttons.map(button=>button.dataset.language)),['en','fr','ar']);
   assert.equal(await page.locator('main').evaluate(el=>getComputedStyle(el).visibility),'hidden');
   await page.waitForFunction(()=>document.querySelector('.home-scroll').classList.contains('has-frame'));
   assert(await page.locator('progress').evaluate(el=>el.value>0&&el.value<1),'Progress must reflect background preparation');
@@ -41,7 +41,7 @@ const assert=require('node:assert/strict');
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('.home-intro').evaluate(el=>el.open),true,'Escape must not skip language selection');
   await page.locator('[data-language="en"]').focus();
-  for(const language of ['ar','fr']){
+  for(const language of ['fr','ar']){
    await page.keyboard.press('Tab');
    assert.equal(await page.evaluate(()=>document.activeElement.dataset.language),language,'Language choices are reachable by Tab');
   }

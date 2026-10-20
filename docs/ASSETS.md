@@ -5,9 +5,9 @@ All assets used at runtime are included locally. No remote fonts, remote image h
 ## Otium identity
 
 - Original: `_archive/otium logo.png`, supplied by the user.
-- Web copy: `assets/images/otium-logo.webp`.
-- The navigation uses a CSS view of the original mark alongside typeset OTIUM GROUP. The original artwork remains unchanged.
-- `assets/favicon.svg` is a small code-drawn circular-and-wave browser icon inspired by the supplied mark, rather than a replacement brand logo.
+- Web copy: `assets/images/otium-nexus-logo.png` (approved supplied artwork; preserve unchanged).
+- Headers, the opening screen, footers and the contact page use the complete supplied OTIUM NEXUS GROUP wordmark. Its artwork is unchanged.
+- `assets/favicon.png` is derived from the central I in the supplied logo by `scripts/build-brand.cjs`.
 
 ## Architectural hero
 

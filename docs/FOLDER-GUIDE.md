@@ -5,7 +5,7 @@ Keep the published page and asset paths stable: both hosts use the same static w
 | Location | Purpose |
 | --- | --- |
 | `index.html` and five page folders | Six published pages covering the group, Productions, Events, companies, about and contact |
-| Five root CSS files | Shared styles, brand theme, hero, Production, and portfolio |
+| Six root CSS files | Shared styles, brand theme, hero, Production, portfolio, and localization |
 | `assets/images/` | Current responsive website images and logo |
 | `assets/fonts/` | Six WOFF2 font files and their two licenses |
 | `frames/`, `frames/mobile/` | All 290 required animation JPGs |
@@ -32,3 +32,6 @@ Source-inspection material and old Mux verification metadata were preserved in t
 `data/projects.js` contains older concept data but is still read by the page generator; it must not be removed until that generator is refactored. Live Production entries are in `data/portfolio.js`.
 
 Archive contents are excluded from Git and deployments. Back them up separately. Files already tracked in Git remain recoverable from history after cleanup.
+## Current brand and company setup
+
+The approved logo is `assets/images/otium-nexus-logo.png`; `scripts/build-brand.cjs` derives its favicon. Active companies are configured in `scripts/companies.cjs`. Homepage cards and production-format cards have dedicated markup helpers. Removed company directories are not deployed. The superseded logo is preserved under `_archive/cleanup-2026-10-20/`.

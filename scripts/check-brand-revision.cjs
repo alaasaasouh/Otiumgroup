@@ -1,5 +1,5 @@
 const {chromium}=require(process.env.PLAYWRIGHT_PATH || 'playwright-core');
-const fs=require('node:fs');const path=require('node:path');const {pathToFileURL}=require('node:url');const assert=require('node:assert/strict');
+const fs=require('node:fs');const path=require('node:path');const {pathToFileURL,fileURLToPath}=require('node:url');const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'chrome'});
  const root=path.resolve(__dirname,'..');fs.mkdirSync(path.join(root,'preview'),{recursive:true});
@@ -13,10 +13,10 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${route} ${width}: overflow`);
    assert.equal(await page.locator('h1').count(),1,`${route}: heading`);
    const links=await page.locator('a[href]').evaluateAll(items=>items.map(a=>a.getAttribute('href')));
-   for(const href of links){if(!href||/^(https?:|mailto:|tel:|#)/.test(href))continue;assert(fs.existsSync(path.resolve(root,route,href.split(/[?#]/)[0])),`Missing link ${route}: ${href}`);}
+   for(const href of links){if(!href||/^(https?:|mailto:|tel:|#)/.test(href))continue;assert(fs.existsSync(href.startsWith('file:') ? fileURLToPath(new URL(href)) : path.resolve(root,route,href.split(/[?#]/)[0])),`Missing link ${route}: ${href}`);}
    if(route==='production'){
     await page.locator('[data-slide-next]').click();assert.equal(await page.locator('[data-current-slide]').textContent(),'02');
-    await page.locator('.brand-accordions summary').first().click();assert(await page.locator('.brand-accordions details').first().evaluate(el=>el.open));
+    await page.locator('[data-format-next]').click();await page.waitForFunction(()=>Math.abs(document.querySelector('.format-track').scrollLeft)>0);
     await page.locator('[data-video-id]').first().click();assert(await page.locator('dialog').evaluate(el=>el.open));await page.keyboard.press('Escape');
    }
    if(route==='events'){await page.locator('#event-capabilities summary').first().click();assert(await page.locator('#event-capabilities details').first().evaluate(el=>el.open));}

@@ -31,7 +31,6 @@ async function main() {
       await sharp(input).resize({width, withoutEnlargement: true}).webp({quality: 83}).toFile(path.join(root, `assets/images/${name}-${width}.webp`));
     }
   }
-  await sharp(path.join(root, '_archive/otium logo.png')).resize({width: 600}).webp({quality:90}).toFile(path.join(root, 'assets/images/otium-logo.webp'));
   console.log('Responsive images ready');
 }
 main().catch(e => {console.error(e);process.exitCode = 1;});
