@@ -3,11 +3,11 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const {chromium}=require('playwright-core');
 const base=process.env.TEST_BASE_URL||'http://127.0.0.1:4173/';
-const routes=['','about/','divisions/','production/','events/','luxury/','digital/','experiences/','travel/','contact/'];
+const routes=['','about/','divisions/','production/','events/','contact/'];
 const scope={window:{}};
 vm.runInNewContext(fs.readFileSync('data/translations.js','utf8'),scope);
 const catalog=scope.window.OTIUM_TRANSLATIONS;
-// Coverage comes from the actual ten pages, independently of the translation engine.
+// Coverage comes from the actual six pages, independently of the translation engine.
 for(const route of routes){
  const html=fs.readFileSync(route+'index.html','utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/g,'');
  const strings=[...html.matchAll(/>([^<]+)</g)].map(m=>m[1]);
@@ -71,7 +71,7 @@ console.log('French and Arabic coverage verified for every static page string an
     assert(restored.includes('PROJECT INQUIRY')&&restored.includes('Inquiry: Events'));
    }
    await context.close();
-   console.log(language+': ten pages, desktop/mobile layouts, navigation, form validation, translated downloads and English restoration passed.');
+   console.log(language+': six pages, desktop/mobile layouts, navigation, form validation, translated downloads and English restoration passed.');
   }
   // Starting from the neutral picker must preserve the decoded animation and remember the choice.
   const animated=await browser.newPage({viewport:{width:390,height:844}});

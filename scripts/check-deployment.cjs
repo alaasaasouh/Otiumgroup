@@ -32,7 +32,7 @@ const sites = process.argv[2] ? [process.argv[2]] : ['https://otiumgroup.vercel.
       const image = page.locator('.portfolio-poster img').first();
       await image.scrollIntoViewIfNeeded();
       await image.evaluate(img => img.decode());
-      for (const route of ['about/', 'contact/', 'digital/', 'divisions/', 'events/', 'experiences/', 'luxury/', 'travel/', 'js/generated/otium-video-player.js', 'frames/frame_0145.jpg', 'frames/mobile/frame_0145.jpg']) {
+      for (const route of ['about/', 'contact/', 'divisions/', 'events/', 'js/generated/otium-video-player.js', 'frames/frame_0145.jpg', 'frames/mobile/frame_0145.jpg']) {
         const response = await context.request.get(base + route);
         assert.equal(response.status(), 200, base + route);
         await response.dispose();

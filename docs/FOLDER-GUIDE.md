@@ -4,7 +4,7 @@ Keep the published page and asset paths stable: both hosts use the same static w
 
 | Location | Purpose |
 | --- | --- |
-| `index.html` and nine page folders | Ten published pages; Travel is the older route leading to Experiences |
+| `index.html` and five page folders | Six published pages covering the group, Productions, Events, companies, about and contact |
 | Five root CSS files | Shared styles, brand theme, hero, Production, and portfolio |
 | `assets/images/` | Current responsive website images and logo |
 | `assets/fonts/` | Six WOFF2 font files and their two licenses |

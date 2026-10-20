@@ -34,3 +34,34 @@ body{background:#252a29;color:var(--ink)}
 @media(max-width:600px){.field input,.field select,.field textarea{font-size:16px}.form-grid{grid-template-columns:1fr}.field{grid-column:1/-1}}
 @media(max-height:650px){.mobile-menu{padding-top:100px;gap:24px}.mobile-menu nav a{font-size:28px;padding-block:7px}}
 @media(prefers-reduced-motion:reduce){.company-row,.company-feature img,.brand-accordions summary span{transition:none}}
+/* Approved Nexus wordmark: full transparent lockup, never crop the ribbon I. */
+.brand { flex-shrink:0; }
+.brand-logo { display:block; width:180px; height:auto; object-fit:contain; }
+.intro-identity .brand-logo { width:min(360px,85vw); height:auto; }
+.footer-brand .brand-logo { width:190px; }
+.footer-wordmark { padding:35px 0; line-height:1; }
+.footer-wordmark img { display:block; width:100%; height:auto; }
+.contact-brand-art { padding:32px; }
+.contact-brand-art img { display:block; width:100%; height:auto; object-fit:contain; }
+@media(max-width:600px) { .brand-logo { width:140px; } .footer-brand .brand-logo { width:150px; } .footer-wordmark { padding:20px 0; } }
+/* Two cinematic square entrances to Otium's active companies. */
+.home-companies { padding-block:clamp(40px,7vw,110px); }
+.home-company-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.home-company-card { position:relative; isolation:isolate; display:flex; flex-direction:column; justify-content:space-between; aspect-ratio:1; overflow:hidden; padding:clamp(22px,3.2vw,48px); color:#f3efe7; background:#172625; border:1px solid #ffffff26; text-decoration:none; }
+.home-company-card::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,#101b1b40 0%,#101b1b18 20%,#101b1bc9 75%,#101b1bf2 100%); }
+.home-company-card::after { content:""; position:absolute; inset:12px; border:1px solid #e9d5b333; pointer-events:none; transition:inset .6s ease,border-color .6s ease; }
+.home-company-image { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; filter:saturate(.55) brightness(.7); transition:transform 1.1s cubic-bezier(.2,.65,.3,1),filter .8s ease; }
+.home-company-card--events { background:#30251f; }
+.home-company-top,.home-company-bottom { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:10px; text-transform:uppercase; letter-spacing:.16em; }
+.home-company-number { color:#dfc9a4; font-variant-numeric:tabular-nums; }
+.home-company-copy { margin-top:auto; padding-block:35px 28px; position:relative; transition:transform .65s ease; }
+.home-company-copy h2 { font-family:var(--serif); font-size:clamp(40px,5.8vw,88px); font-weight:400; letter-spacing:-.045em; line-height:1.05; margin:0 0 14px; }
+.home-company-card--events h2 { font-style:italic; }
+.home-company-copy p { font-family:var(--serif); font-style:italic; font-size:clamp(18px,2.1vw,30px); line-height:1.3; color:#dfc9a4; }
+.home-company-bottom { padding-top:18px; border-top:1px solid #f3efe740; }
+.home-company-arrow { display:grid; place-items:center; width:36px; height:36px; border:1px solid #f3efe759; border-radius:50%; font-size:21px; letter-spacing:0; transition:background .35s,color .35s,transform .5s; }
+.home-company-card:focus-visible { outline:3px solid #c5aa80; outline-offset:5px; }
+@media(hover:hover) { .home-company-card:hover .home-company-image { transform:scale(1.055); filter:saturate(.9) brightness(.85); } .home-company-card:hover::after { inset:18px; border-color:#e9d5b366; } .home-company-card:hover .home-company-copy { transform:translateY(-5px); } .home-company-card:hover .home-company-arrow { background:#dfc9a4; color:#172625; transform:rotate(45deg); } }
+@media(min-width:651px) { .home-company-card:nth-child(2) { transition-delay:.12s; } }
+@media(max-width:650px) { .home-company-grid { grid-template-columns:1fr; gap:20px; } .home-company-card { padding:26px; } .home-company-copy h2 { font-size:clamp(40px,10vw,66px); } .home-company-copy { padding-block:24px 20px; } }
+@media(prefers-reduced-motion:reduce) { .home-company-card,.home-company-card::after,.home-company-image,.home-company-copy,.home-company-arrow { transition:none!important; transform:none!important; } }

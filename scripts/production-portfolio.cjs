@@ -13,5 +13,5 @@ module.exports=function updateProduction(page,image){
   page.body=intro+page.body.slice(page.body.indexOf('<nav class="production-jumps'));
   const work=page.body.indexOf('<section class="work-section');
   page.body=page.body.slice(0,work)+portfolioSection(entries,data.window.OTIUM_PORTFOLIO_CATEGORIES);
-  page.extra=page.extra.replace('<script defer src="../data/projects.js"></script>','')+'<script defer src="../data/portfolio.js"></script><script defer src="../js/portfolio.js"></script><link rel="stylesheet" href="../portfolio.css">';
+  page.extra=page.extra.replace('<script defer src="../data/projects.js"></script>','')+'<script defer src="../js/production-formats.js"></script><script defer src="../data/portfolio.js"></script><script defer src="../js/portfolio.js"></script><link rel="stylesheet" href="../portfolio.css">';
 };

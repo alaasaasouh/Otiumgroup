@@ -9,7 +9,7 @@ const path=require('node:path');
   page.on('pageerror',e=>errors.push(e.message));
   page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`)});
   page.on('requestfailed',r=>errors.push(r.url()));
-  for(const route of ['', 'about/', 'divisions/', 'production/', 'travel/', 'events/', 'contact/', 'digital/', 'experiences/', 'luxury/']){
+  for(const route of ['', 'about/', 'divisions/', 'production/', 'events/', 'contact/']){
     await page.goto(`http://127.0.0.1:4173/${route}`,{waitUntil:'networkidle'});
     if(!route)await page.locator('[data-language="en"]').click();
     await page.locator('img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
@@ -21,6 +21,6 @@ const path=require('node:path');
     assert(fs.existsSync(path.resolve(__dirname,'..',folder,`frame_${String(i).padStart(4,'0')}.jpg`)));
   }
   assert.deepEqual(errors,[]);
-  console.log('All ten pages and 290 animation frames verified.');
+  console.log('All six pages and 290 animation frames verified.');
   await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

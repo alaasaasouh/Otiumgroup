@@ -7,7 +7,7 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
  for(const width of [1440,768,390,320]){
   const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
   page.on('pageerror',e=>errors.push(e.message));
-  for(const route of ['','about','divisions','production','events','luxury','digital','experiences','travel','contact']){
+  for(const route of ['','about','divisions','production','events','contact']){
    await page.goto(pathToFileURL(path.join(root,route,'index.html')).href);
    if(!route)await page.locator('[data-language="en"]').click();
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${route} ${width}: overflow`);
@@ -25,7 +25,7 @@ const fs=require('node:fs');const path=require('node:path');const {pathToFileURL
   }
   await page.goto(pathToFileURL(path.join(root,'contact/index.html')).href+'?type=Events');assert.equal(await page.locator('#type').inputValue(),'Events');
   await page.goto(pathToFileURL(path.join(root,'contact/index.html')).href+'?type=Production');assert.equal(await page.locator('#type').inputValue(),'Productions');
-  console.log(`${width}px: ten pages, local links, headings, overflow, slideshow, accordions, project dialog and inquiry routing passed`);await page.close();
+  console.log(`${width}px: six pages, local links, headings, overflow, slideshow, accordions, project dialog and inquiry routing passed`);await page.close();
  }
  assert.deepEqual(errors,[]);await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -12,8 +12,8 @@ fs.mkdirSync(output, { recursive: true });
 const entries = [
   'index.html', 'style.css', 'brand.css', 'hero.css', 'production.css', 'portfolio.css', 'i18n.css',
   'robots.txt', 'sitemap.xml',
-  'about', 'contact', 'digital', 'divisions', 'events', 'experiences', 'luxury',
-  'production', 'travel', 'assets', 'data', 'frames', 'js', 'public'
+  'about', 'contact', 'divisions', 'events',
+  'production', 'assets', 'data', 'frames', 'js', 'public'
 ];
 for (const entry of entries) {
   fs.cpSync(path.join(root, entry), path.join(output, entry), { recursive: true });

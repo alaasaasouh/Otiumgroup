@@ -1,7 +1,13 @@
-/* English source text -> [professional French, Modern Standard Arabic]. No remote translation service. */
+/* English source text -> [French, Modern Standard Arabic]. */
 window.OTIUM_TRANSLATIONS = {
-  "Email delivery is being activated.": ["L’envoi par e-mail est en cours d’activation.","جارٍ تفعيل إرسال الرسائل عبر البريد الإلكتروني."],
-  "Please email us directly while we finish setting up the form. Your details are still here.": ["Veuillez nous écrire directement par e-mail pendant la finalisation du formulaire. Vos informations sont conservées ici.","يرجى مراسلتنا مباشرة عبر البريد الإلكتروني إلى حين اكتمال إعداد النموذج. لا تزال بياناتكم محفوظة هنا."],
+  "Email delivery is being activated.": [
+    "L’envoi par e-mail est en cours d’activation.",
+    "جارٍ تفعيل إرسال الرسائل عبر البريد الإلكتروني."
+  ],
+  "Please email us directly while we finish setting up the form. Your details are still here.": [
+    "Veuillez nous écrire directement par e-mail pendant la finalisation du formulaire. Vos informations sont conservées ici.",
+    "يرجى مراسلتنا مباشرة عبر البريد الإلكتروني إلى حين اكتمال إعداد النموذج. لا تزال بياناتكم محفوظة هنا."
+  ],
   "Otium Group — The art of making things happen.": [
     "Otium Group — L’art de concrétiser les idées.",
     "مجموعة أوتيوم — فن تحويل الأفكار إلى واقع."
@@ -134,10 +140,6 @@ window.OTIUM_TRANSLATIONS = {
     "Des moments qui restent.",
     "لحظات تبقى في الذاكرة."
   ],
-  "Luxury": [
-    "Luxe",
-    "الخدمات الفاخرة"
-  ],
   "Life, impeccably arranged.": [
     "L’art de vivre, dans chaque détail.",
     "أسلوب حياة، بعناية بكل تفصيل."
@@ -146,17 +148,9 @@ window.OTIUM_TRANSLATIONS = {
     "Bientôt",
     "قريبًا"
   ],
-  "Digital": [
-    "Digital",
-    "التقنيات الرقمية"
-  ],
   "Ideas, engineered.": [
     "Des idées qui prennent forme.",
     "أفكار نصمّم لها حلولًا."
-  ],
-  "Experiences": [
-    "Expériences",
-    "التجارب"
   ],
   "The world, thoughtfully experienced.": [
     "Le monde, à travers des expériences choisies.",
@@ -306,18 +300,6 @@ window.OTIUM_TRANSLATIONS = {
     "Otium Events",
     "أوتيوم للفعاليات"
   ],
-  "Otium Luxury": [
-    "Otium Luxury",
-    "أوتيوم للخدمات الفاخرة"
-  ],
-  "Otium Digital": [
-    "Otium Digital",
-    "أوتيوم للتقنيات الرقمية"
-  ],
-  "Otium Experiences": [
-    "Otium Experiences",
-    "أوتيوم للتجارب"
-  ],
   "Otium Group. All rights reserved.": [
     "Otium Group. Tous droits réservés.",
     "مجموعة أوتيوم. جميع الحقوق محفوظة."
@@ -357,10 +339,6 @@ window.OTIUM_TRANSLATIONS = {
   "Footer navigation": [
     "Navigation de pied de page",
     "التنقل في تذييل الصفحة"
-  ],
-  "An international multidisciplinary group across productions, events, luxury, digital and destination experiences. London, Doha, Beirut and worldwide.": [
-    "Un groupe international aux expertises multiples : production, événementiel, luxe, digital et expériences de voyage. Londres, Doha, Beyrouth et au-delà.",
-    "مجموعة دولية متعددة التخصصات في الإنتاج والفعاليات والخدمات الفاخرة والتقنيات الرقمية وتجارب السفر. لندن والدوحة وبيروت وحول العالم."
   ],
   "Our Perspective — Otium Group": [
     "Notre vision — Otium Group",
@@ -550,10 +528,6 @@ window.OTIUM_TRANSLATIONS = {
     "Des services de conciergerie privée et d’art de vivre, guidés par la discrétion, l’accès privilégié et le souci du détail.",
     "خدمات مساعدة شخصية خاصة وأسلوب حياة، تُصمّم بمنتهى الخصوصية وتتيح امتيازات مختارة بعناية واهتمامًا بالتفاصيل."
   ],
-  "Preview Luxury": [
-    "Découvrir Luxury",
-    "لمحة عن الخدمات الفاخرة"
-  ],
   "Technology, applications and digital products designed around real-world needs.": [
     "Des technologies, applications et produits digitaux conçus pour répondre à des besoins concrets.",
     "تقنيات وتطبيقات ومنتجات رقمية مصمّمة لتلبية احتياجات واقعية."
@@ -566,10 +540,6 @@ window.OTIUM_TRANSLATIONS = {
     "Gestion de destinations, voyages sur mesure et expériences dans des lieux choisis.",
     "إدارة الوجهات ورحلات وتجارب مصمّمة بعناية في وجهات مختارة."
   ],
-  "Preview Experiences": [
-    "Découvrir Experiences",
-    "لمحة عن التجارب"
-  ],
   "Productions visual direction": [
     "Univers visuel de Productions",
     "التوجه البصري لقطاع الإنتاج"
@@ -578,21 +548,9 @@ window.OTIUM_TRANSLATIONS = {
     "Univers visuel d’Events",
     "التوجه البصري لقطاع الفعاليات"
   ],
-  "Luxury visual direction": [
-    "Univers visuel de Luxury",
-    "التوجه البصري للخدمات الفاخرة"
-  ],
   "Digital visual direction": [
     "Univers visuel de Digital",
     "التوجه البصري للتقنيات الرقمية"
-  ],
-  "Experiences visual direction": [
-    "Univers visuel d’Experiences",
-    "التوجه البصري لقطاع التجارب"
-  ],
-  "Meet Otium Productions and Otium Events, with Luxury, Digital and Experiences taking shape.": [
-    "Découvrez Otium Productions et Otium Events, ainsi que les projets Luxury, Digital et Experiences en préparation.",
-    "تعرّف إلى أوتيوم للإنتاج وأوتيوم للفعاليات، وإلى شركات الخدمات الفاخرة والتقنيات الرقمية والتجارب قيد التطوير."
   ],
   "Otium Productions — Stories worth telling.": [
     "Otium Productions — Des histoires qui méritent d’être racontées.",
@@ -1094,14 +1052,6 @@ window.OTIUM_TRANSLATIONS = {
     "Concerts, festivals, événements d’entreprise, mariages et célébrations privées. Créativité, planification minutieuse et réalisation sur le terrain.",
     "حفلات موسيقية ومهرجانات وفعاليات للشركات وحفلات زفاف ومناسبات خاصة. تفكير إبداعي وتخطيط دقيق وتنفيذ ميداني."
   ],
-  "Otium Luxury — Life, impeccably arranged.": [
-    "Otium Luxury — L’art de vivre, dans chaque détail.",
-    "أوتيوم للخدمات الفاخرة — أسلوب حياة، بعناية بكل تفصيل."
-  ],
-  "Otium Luxury / Coming soon": [
-    "Otium Luxury / Bientôt",
-    "أوتيوم للخدمات الفاخرة / قريبًا"
-  ],
   "In development": [
     "En préparation",
     "قيد التطوير"
@@ -1126,33 +1076,13 @@ window.OTIUM_TRANSLATIONS = {
     "Des services de conciergerie privée et d’art de vivre, guidés par la discrétion, l’accès privilégié et le souci du détail. Bientôt.",
     "خدمات مساعدة شخصية خاصة وأسلوب حياة، تُصمّم بمنتهى الخصوصية وتتيح امتيازات مختارة بعناية واهتمامًا بالتفاصيل. قريبًا."
   ],
-  "Otium Digital — Ideas, engineered.": [
-    "Otium Digital — Des idées qui prennent forme.",
-    "أوتيوم للتقنيات الرقمية — أفكار نصمّم لها حلولًا."
-  ],
-  "Otium Digital / Coming soon": [
-    "Otium Digital / Bientôt",
-    "أوتيوم للتقنيات الرقمية / قريبًا"
-  ],
   "Technology, applications and digital products designed around real-world needs. Coming soon.": [
     "Des technologies, applications et produits digitaux conçus pour répondre à des besoins concrets. Bientôt.",
     "تقنيات وتطبيقات ومنتجات رقمية مصمّمة لتلبية احتياجات واقعية. قريبًا."
   ],
-  "Otium Experiences — The world, thoughtfully experienced.": [
-    "Otium Experiences — Le monde, à travers des expériences choisies.",
-    "أوتيوم للتجارب — تجارب مختارة بعناية لاكتشاف العالم."
-  ],
-  "Otium Experiences / Coming soon": [
-    "Otium Experiences / Bientôt",
-    "أوتيوم للتجارب / قريبًا"
-  ],
   "Destination management, curated journeys and experiences across selected destinations. Coming soon.": [
     "Gestion de destinations, voyages sur mesure et expériences dans des lieux choisis. Bientôt.",
     "إدارة الوجهات ورحلات وتجارب مصمّمة بعناية في وجهات مختارة. قريبًا."
-  ],
-  "Otium Experiences — formerly Travel": [
-    "Otium Experiences — anciennement Travel",
-    "أوتيوم للتجارب — قطاع السفر سابقًا"
   ],
   "A wider": [
     "Un monde",
@@ -1161,18 +1091,6 @@ window.OTIUM_TRANSLATIONS = {
   "world.": [
     "plus vaste.",
     "أوسع."
-  ],
-  "Our travel and destination offering is taking shape as Otium Experiences.": [
-    "Notre offre de voyages et de destinations prend forme sous le nom d’Otium Experiences.",
-    "تتبلور خدماتنا للسفر والوجهات تحت اسم أوتيوم للتجارب."
-  ],
-  "Discover Otium Experiences": [
-    "Découvrir Otium Experiences",
-    "اكتشف أوتيوم للتجارب"
-  ],
-  "Discover the forthcoming Otium Experiences company.": [
-    "Découvrez la future société Otium Experiences.",
-    "تعرّف إلى شركة أوتيوم للتجارب المرتقبة."
   ],
   "Contact Otium — Let’s make it happen.": [
     "Contacter Otium — Donnons vie à vos idées.",
@@ -1229,18 +1147,6 @@ window.OTIUM_TRANSLATIONS = {
   "Select an inquiry type": [
     "Choisissez le type de demande",
     "اختر نوع الاستفسار"
-  ],
-  "Otium Luxury — register interest": [
-    "Otium Luxury — manifester mon intérêt",
-    "أوتيوم للخدمات الفاخرة — تسجيل الاهتمام"
-  ],
-  "Otium Digital — register interest": [
-    "Otium Digital — manifester mon intérêt",
-    "أوتيوم للتقنيات الرقمية — تسجيل الاهتمام"
-  ],
-  "Otium Experiences — register interest": [
-    "Otium Experiences — manifester mon intérêt",
-    "أوتيوم للتجارب — تسجيل الاهتمام"
   ],
   "A potential partnership": [
     "Un partenariat potentiel",
@@ -1533,5 +1439,53 @@ window.OTIUM_TRANSLATIONS = {
   "Linkedin": [
     "LinkedIn",
     "لينكدإن"
+  ],
+  "Otium Nexus Group": [
+    "Otium Nexus Group",
+    "?????? ?????? ????"
+  ],
+  "Otium Nexus Group home": [
+    "Accueil Otium Nexus Group",
+    "?????? ???????? ??????? ?????? ????"
+  ],
+  "An international group bringing together productions and events. London, Doha, Beirut and worldwide.": [
+    "Un groupe international r?unissant production et ?v?nementiel. Londres, Doha, Beyrouth et partout dans le monde.",
+    "?????? ????? ???? ??????? ??????????. ???? ??????? ?????? ???? ??????."
+  ],
+  "Meet Otium Productions and Otium Events.": [
+    "D?couvrez Otium Productions et Otium Events.",
+    "??????? ??? ?????? ??????? ??????? ?????????."
+  ],
+  "Production formats": [
+    "Formats de production",
+    "????? ???????"
+  ],
+  "Previous formats": [
+    "Formats pr?c?dents",
+    "??????? ???????"
+  ],
+  "Next formats": [
+    "Formats suivants",
+    "??????? ???????"
+  ],
+  "OTIUM / 01": [
+    "OTIUM / 01",
+    "OTIUM / 01"
+  ],
+  "OTIUM / 02": [
+    "OTIUM / 02",
+    "OTIUM / 02"
+  ],
+  "OTIUM / 03": [
+    "OTIUM / 03",
+    "OTIUM / 03"
+  ],
+  "OTIUM / 04": [
+    "OTIUM / 04",
+    "OTIUM / 04"
+  ],
+  "OTIUM / 05": [
+    "OTIUM / 05",
+    "OTIUM / 05"
   ]
 };
