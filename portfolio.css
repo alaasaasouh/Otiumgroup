@@ -92,3 +92,12 @@ body:has(.format-section) .portfolio-title { line-height:1.6; }
 @media(max-width:600px) { .format-heading { align-items:center; gap:15px; } .format-heading h2 { font-size:38px; } .format-navigation { gap:6px; } .format-navigation button { width:44px; height:44px; } .format-track { grid-auto-columns:88%; gap:12px; } .format-card { min-height:370px; padding:28px; } .format-card h3 { font-size:36px; } body:has(.format-section) .brand-process { grid-template-columns:repeat(2,minmax(0,1fr)); } body:has(.format-section) .brand-process li { font-size:21px; padding:20px 14px; gap:12px; } }
 @media(prefers-reduced-motion:reduce) { .format-card,.format-card-top svg,.format-card-bottom>span,.format-navigation button { transition:none!important; transform:none!important; } }
 html[dir=rtl] .format-navigation { flex-direction:row-reverse; }
+/* Production keeps its cinema backdrop, with a brighter frame around the formats. */
+.format-section { background:linear-gradient(145deg,#bbcab7,#ded0b3); color:#203631; }
+.format-heading .eyebrow { color:#435b4f; }
+.format-heading h2 em { color:#3d675c; }
+.format-navigation button { border-color:#36584c66; color:#294b41; }
+.format-navigation button:hover:not(:disabled) { background:#294b41; color:#f3ead7; }
+body:has(.format-section) .video-portfolio { background:linear-gradient(135deg,#183331,#242e2a 65%,#363329); }
+body:has(.format-section) .brand-process li:nth-child(2n) { background:#3c4438; }
+body:has(.format-section) .brand-process li:nth-child(3n) { background:#3d3830; }

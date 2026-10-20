@@ -1487,5 +1487,13 @@ window.OTIUM_TRANSLATIONS = {
   "OTIUM / 05": [
     "OTIUM / 05",
     "OTIUM / 05"
+  ],
+  "Designed & developed by": [
+    "Design et développement par",
+    "التصميم والتطوير بواسطة"
+  ],
+  "Asonyx Media": [
+    "Asonyx Media",
+    "Asonyx Media"
   ]
 };
