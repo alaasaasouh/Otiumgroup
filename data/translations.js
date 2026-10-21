@@ -1495,5 +1495,25 @@ window.OTIUM_TRANSLATIONS = {
   "Asonyx Media": [
     "Asonyx Media",
     "Asonyx Media"
+  ],
+  "View productions": [
+    "Voir les productions",
+    "عرض الإنتاجات"
+  ],
+  "View events": [
+    "Voir les événements",
+    "عرض الفعاليات"
+  ],
+  "Loading...": [
+    "Chargement...",
+    "جارٍ التحميل..."
+  ],
+  "Tell us about your project.": [
+    "Parlez-nous de votre projet.",
+    "أخبرونا عن مشروعكم."
+  ],
+  "Selected work from Otium Productions.": [
+    "Une sélection de projets Otium Productions.",
+    "أعمال مختارة من أوتيوم للإنتاج."
   ]
 };

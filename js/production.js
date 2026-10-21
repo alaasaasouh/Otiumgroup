@@ -32,9 +32,9 @@
           const image=slides[next].querySelector('img');
           if(image.complete && image.naturalWidth)show(next);
           else { image.loading='eager'; restart(); }
-        }, 1500);
+        }, 6000);
       }
-      pause.textContent = userPaused ? '▶' : 'Ⅱ';
+      pause.innerHTML = '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">'+(userPaused?'<path d="m8 5 11 7-11 7Z"/>':'<path d="M9 5v14M15 5v14"/>')+'</svg>';
       pause.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
       pause.setAttribute('aria-pressed', String(userPaused));
     }

@@ -57,7 +57,7 @@ const assert=require('node:assert/strict');
   await ready.waitForFunction(()=>document.querySelector('.home-intro progress').value===1);
   await ready.waitForTimeout(2800);
   assert.equal(await ready.locator('.home-intro').evaluate(el=>el.open),true,'Readiness and the old timeout must not skip selection');
-  assert.equal(await ready.locator('.intro-status').textContent(),'Your first glimpse is ready');
+  assert.equal(await ready.locator('.intro-status').textContent(),'');
   await ready.screenshot({path:'preview/home-loading-desktop.png'});
   for(const [width,height] of [[320,568],[844,390],[1440,900]]){
    await ready.setViewportSize({width,height});

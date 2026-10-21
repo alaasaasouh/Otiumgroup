@@ -11,5 +11,5 @@ const end = html.indexOf('</main>', start);
 if (start < 0 || end < 0) throw Error('Production Projects boundaries not found');
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(root, 'data/portfolio.js'), 'utf8'), context);
-fs.writeFileSync(file, html.slice(0, start) + portfolioSection(context.window.OTIUM_PORTFOLIO, context.window.OTIUM_PORTFOLIO_CATEGORIES) + html.slice(end));
+fs.writeFileSync(file, require('./refine-presentation.cjs')(html.slice(0, start) + portfolioSection(context.window.OTIUM_PORTFOLIO, context.window.OTIUM_PORTFOLIO_CATEGORIES) + html.slice(end), {active:'production'}));
 console.log('Built Production Projects markup');

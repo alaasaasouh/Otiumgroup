@@ -46,7 +46,7 @@ const {chromium}=require('playwright-core');
    console.log(width+'px card '+(i+1)+': actual Mux playback, correct ID, close/unmount passed');
   }
   await page.locator('.portfolio-open').first().click();await page.waitForSelector('mux-player');await page.mouse.click(2,2);await page.waitForFunction(()=>!document.querySelector('.portfolio-modal').open);assert.equal(await page.locator('mux-player').count(),0);
-  await page.locator('[data-filter="Documentary"]').click();assert.equal(await page.locator('.portfolio-card:visible').count(),0);
+  assert.equal(await page.locator('[data-filter="Documentary"]').count(),0,'Empty categories stay out of the portfolio filters');
   await page.locator('[data-filter="Podcasts"]').click();assert.equal(await page.locator('.portfolio-card:visible').count(),8);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   assert.deepEqual(errors,[]);await page.screenshot({path:'preview/mux-cards-'+width+'.png'});await page.close();

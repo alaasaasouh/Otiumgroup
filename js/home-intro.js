@@ -19,7 +19,7 @@
       if(finished)return;
       progress.hidden=false;
       progress.value=loaded/total;
-      status.textContent=loaded>=total?'Your first glimpse is ready':'Preparing your first glimpse';
+      status.textContent=loaded>=total?'':'Loading...';
     },
     static(){
       if(finished)return;

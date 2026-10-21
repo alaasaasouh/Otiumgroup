@@ -6,7 +6,6 @@ module.exports=function withLocalization(html,base=''){
   html=html.replace('<meta charset="UTF-8">','<meta charset="UTF-8">'+boot)
     .replace(`<script defer src="${base}js/main.js"></script>`,`<script defer src="${base}data/translations.js"></script><script defer src="${base}js/i18n.js"></script><script defer src="${base}js/main.js"></script>`)
     .replace('</head>',`<link rel="stylesheet" href="${base}i18n.css"></head>`)
-    .replace('<button class="menu-toggle"',select+'<button class="menu-toggle"')
-    .replace('<div class="footer-bottom">',`<div class="footer-language">${select}</div><div class="footer-bottom">`);
+    .replace('<button class="menu-toggle"',select+'<button class="menu-toggle"');
   return html;
 };

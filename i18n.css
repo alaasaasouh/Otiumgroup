@@ -3,7 +3,6 @@
 .language-switch[hidden]{display:none}
 .language-switch select{min-height:44px;max-width:110px;padding:8px 10px;border:1px solid #ffffff38;border-radius:3px;background:#252a29;color:#eeeae2;font:inherit;font-size:12px;cursor:pointer}
 .language-switch option{background:#252a29;color:#eeeae2}
-.footer-language{display:flex;justify-content:flex-end;padding-block:20px;border-top:1px solid var(--line)}
 .site-header{gap:18px}
 .site-header .desktop-nav{margin-left:0}
 html[lang=fr] .heading,html[lang=fr] .page-intro h1{overflow-wrap:break-word}

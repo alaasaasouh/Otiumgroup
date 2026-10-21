@@ -35,3 +35,7 @@ Archive contents are excluded from Git and deployments. Back them up separately.
 ## Current brand and company setup
 
 The approved logo is `assets/images/otium-nexus-logo.png`; `scripts/build-brand.cjs` derives its favicon. Active companies are configured in `scripts/companies.cjs`. Homepage cards and production-format cards have dedicated markup helpers. Removed company directories are not deployed. The superseded logo is preserved under `_archive/cleanup-2026-10-20/`.
+
+## Presentation refinements
+
+`scripts/refine-presentation.cjs` applies the shared interface refinements during generation and the portfolio build. The language selector is in the navbar only; the opening language picker remains. Empty portfolio filters are omitted automatically without deleting service categories or changing video classifications. Decorative card labels and their unused styles were removed. Keep `data/projects.js` and its referenced imagery: the authoring generator still reads them.

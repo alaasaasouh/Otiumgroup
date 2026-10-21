@@ -9,6 +9,6 @@ module.exports = formats => `<section class="format-section container" id="capab
   <div class="format-heading"><div><p class="eyebrow">What we produce</p><h2 id="formats-title">Every story.<br><em>Its own format.</em></h2></div>
   <div class="format-navigation" role="group" aria-label="Production formats"><button type="button" data-format-prev aria-label="Previous formats" aria-controls="format-track">←</button><button type="button" data-format-next aria-label="Next formats" aria-controls="format-track">→</button></div></div>
   <div class="format-track" id="format-track" tabindex="0" aria-label="Production formats">
-  ${formats.map(([title,copy],i)=>`<article class="format-card" tabindex="0"><div class="format-card-top"><svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[i]}</svg><span aria-hidden="true">0${i+1}</span></div><h3>${title}</h3><p>${copy}</p><div class="format-card-bottom" aria-hidden="true"><span></span><span>OTIUM / 0${i+1}</span></div></article>`).join('')}
+  ${formats.map(([title,copy],i)=>`<article class="format-card" tabindex="0"><div class="format-card-top"><svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[i]}</svg></div><h3>${title}</h3><p>${copy}</p></article>`).join('')}
   </div>
 </section>`;

@@ -102,9 +102,7 @@ console.log('French and Arabic coverage verified for every static page string an
   for(const language of ['fr','ar']){
    const page=await browser.newPage({reducedMotion:'reduce'});
    await page.goto(base+'production/?lang='+language);
-   await page.locator('[data-filter="Documentary"]').click();
-   assert.equal(await page.locator('.portfolio-card:visible').count(),0);
-   assert.equal(await page.locator('[data-filter-status]').textContent(),await page.evaluate(()=>OtiumI18n.t('0 videos shown in Documentary.')));
+   assert.equal(await page.locator('[data-filter="Documentary"]').count(),0);
    await page.locator('[data-filter="Podcasts"]').click();
    assert.equal(await page.locator('.portfolio-card:visible').count(),8);
    await page.locator('.portfolio-open').first().click();
