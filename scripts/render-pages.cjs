@@ -15,7 +15,7 @@ function image(base,name,alt,cls='',eager=false,sizes='100vw') {
 }
 function brand(base) { return `<a class="brand" href="${base}index.html" aria-label="Otium Nexus Group home"><img class="brand-logo" src="${base}assets/images/otium-nexus-logo.png" alt="Otium Nexus Group" width="2172" height="724"></a>`; }
 function header(base,active) {
-  const links=[['Group','index.html','home'],['Production','production/index.html','production'],['Divisions','divisions/index.html','divisions'],['About','about/index.html','about']];
+  const links=[['Home','index.html','home'],['Production','production/index.html','production'],['Events','events/index.html','events'],['About Us','about/index.html','about']];
   return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header">${brand(base)}<nav class="desktop-nav" aria-label="Main navigation">${links.map(([label,href,key])=>`<a href="${base}${href}"${key===active?' aria-current="page"':''}>${label}</a>`).join('')}</nav><a class="pill header-contact" href="${base}contact/index.html"${active==='contact'?' aria-current="page"':''}>Let’s talk ${arrow}</a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button></header><div class="mobile-menu" id="mobile-menu" hidden><nav aria-label="Mobile navigation">${[...links,['Contact','contact/index.html','contact']].map(([label,href,key],i)=>`<a href="${base}${href}"${key===active?' aria-current="page"':''}>${label}<span>0${i+1}</span></a>`).join('')}</nav><p class="eyebrow">People. Ideas. Businesses.</p></div>`;
 }
 function footer(base,production=false) {
@@ -134,6 +134,8 @@ for (const page of pages) {
   fs.mkdirSync(path.dirname(path.join(root,page.file)),{recursive:true});
   if (page.active === 'home') html = require('./home-intro-markup.cjs')(html);
   html = require('./refine-presentation.cjs')(html,page);
+  if (page.active === 'home') html = require('./home-story.cjs')(html);
+  html = require('./presentation-cleanup.cjs')(html,page.base||'');
   html = require('./localization-markup.cjs')(html,page.base||'');
   fs.writeFileSync(path.join(root,page.file),html);
   console.log(`Wrote ${page.file}`);

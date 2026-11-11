@@ -46,7 +46,6 @@
   async function open(project,button){
     clearPlayer();trigger=button;activeProject=project;retry.hidden=true;
     dialog.querySelector('#portfolio-modal-title').textContent=project.title;
-    dialog.querySelector('[data-video-category]').textContent=project.category;
     if(!dialog.open){
       scrollPosition=scrollY;
       previousStyles={position:document.body.style.position,top:document.body.style.top,width:document.body.style.width,paddingRight:document.body.style.paddingRight};

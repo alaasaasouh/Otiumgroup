@@ -1,5 +1,17 @@
 /* English source text -> [French, Modern Standard Arabic]. */
 window.OTIUM_TRANSLATIONS = {
+  "Our Story": ["Notre histoire", "قصتنا"],
+  "Our": ["Notre", "هذه"],
+  "Story.": ["histoire.", "قصتنا."],
+  "Close our story": ["Fermer notre histoire", "إغلاق قصتنا"],
+  "Different perspectives. One shared ambition.": ["Des perspectives différentes. Une ambition commune.", "رؤى متنوعة. وطموح يجمعنا."],
+  "Our Vision": ["Notre vision", "رؤيتنا"],
+  "Our Mission": ["Notre mission", "رسالتنا"],
+  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a outlook and a personal touch to everything we create.": ["Otium réunit imagination et savoir-faire. À travers nos productions et nos événements, nous transformons les idées en récits à découvrir, en expériences à vivre et en moments qui restent. De Londres à Doha et Beyrouth, nous apportons une perspective  et une attention personnelle à chaque création.", "نجمع في أوتيوم بين الخيال والخبرة. ومن خلال الإنتاج والفعاليات، نحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نمنح كل ما نصنعه رؤية إبداعية ولمسة شخصية."],
+  "To open new possibilities for how people connect through stories and shared experiences. We imagine a world where creativity crosses borders, every perspective adds something meaningful, and extraordinary work leaves a lasting impression.": ["Ouvrir de nouvelles possibilités de rencontre à travers les récits et les expériences partagées. Nous imaginons un monde où la créativité dépasse les frontières, où chaque regard enrichit le projet et où un travail exceptionnel laisse une empreinte durable.", "أن نفتح آفاقاً جديدة للتواصل من خلال القصص والتجارب المشتركة. نتطلع إلى عالم يتجاوز فيه الإبداع الحدود، وتضيف فيه كل وجهة نظر قيمة، وتترك فيه الأعمال الاستثنائية أثراً يدوم."],
+  "To bring the right people, ideas and expertise together, and carry every project from its first spark to its final detail. With thoughtful creativity, local understanding and precise execution, we create productions and events that move people and make every collaboration matter.": ["Réunir les talents, les idées et les expertises adaptés, et accompagner chaque projet de sa première étincelle à son dernier détail. Par une créativité réfléchie, une connaissance du terrain et une exécution précise, nous créons des productions et des événements qui touchent les gens et donnent du sens à chaque collaboration.", "أن نجمع الأشخاص والأفكار والخبرات المناسبة، ونرافق كل مشروع من شرارته الأولى إلى أدق تفاصيله. بإبداع مدروس وفهم محلي وتنفيذ متقن، نصنع إنتاجات وفعاليات تلامس الناس وتمنح كل تعاون قيمة."],
+  "Home": ["Accueil", "الرئيسية"],
+  "About Us": ["À propos de nous", "من نحن"],
   "Email delivery is being activated.": [
     "L’envoi par e-mail est en cours d’activation.",
     "جارٍ تفعيل إرسال الرسائل عبر البريد الإلكتروني."
@@ -112,7 +124,7 @@ window.OTIUM_TRANSLATIONS = {
     "Faites défiler pour découvrir",
     "مرّر للاستكشاف"
   ],
-  "London · Doha · Beirut · Worldwide": [
+  "London · Doha · Beirut": [
     "Londres · Doha · Beyrouth · Dans le monde entier",
     "لندن · الدوحة · بيروت · حول العالم"
   ],
@@ -124,9 +136,9 @@ window.OTIUM_TRANSLATIONS = {
     "Plusieurs expertises.",
     "خبرات متعددة."
   ],
-  "Otium is an international multidisciplinary group with expertise across production, events, entertainment, technology, luxury and destination experiences.": [
-    "Otium est un groupe international aux expertises multiples : production, événementiel, divertissement, technologie, services de luxe et expériences de voyage.",
-    "أوتيوم مجموعة دولية متعددة التخصصات، تجمع خبرات في الإنتاج والفعاليات والترفيه والتكنولوجيا والخدمات الفاخرة وتجارب السفر."
+  "Otium is a multidisciplinary group with expertise across production, events, entertainment, technology, luxury and destination experiences.": [
+    "Otium est un groupe aux expertises multiples : production, événementiel, divertissement, technologie, services de luxe et expériences de voyage.",
+    "أوتيوم مجموعة متنوعة متعددة التخصصات، تجمع خبرات في الإنتاج والفعاليات والترفيه والتكنولوجيا والخدمات الفاخرة وتجارب السفر."
   ],
   "Stories worth telling.": [
     "Des histoires qui méritent d’être racontées.",
@@ -168,9 +180,9 @@ window.OTIUM_TRANSLATIONS = {
     "L’élan des idées.",
     "وطموحنا تقوده الأفكار."
   ],
-  "Our strength is our people: an international network of specialists, creatives, producers, strategists and operators who bring different perspectives to every project.": [
-    "Notre force, ce sont nos équipes : un réseau international de spécialistes, de créatifs, de producteurs, de stratèges et de professionnels des opérations qui apportent un regard singulier à chaque projet.",
-    "قوتنا في فريقنا: شبكة دولية من المتخصصين والمبدعين والمنتجين والاستراتيجيين وخبراء التشغيل، يقدّم كل منهم منظورًا مختلفًا لكل مشروع."
+  "Our strength is our people: a network of specialists, creatives, producers, strategists and operators who bring different perspectives to every project.": [
+    "Notre force, ce sont nos équipes : un réseau de spécialistes, de créatifs, de producteurs, de stratèges et de professionnels des opérations qui apportent un regard singulier à chaque projet.",
+    "قوتنا في فريقنا: شبكة متنوعة من المتخصصين والمبدعين والمنتجين والاستراتيجيين وخبراء التشغيل، يقدّم كل منهم منظورًا مختلفًا لكل مشروع."
   ],
   "We believe the best work happens when expertise is shared, ideas are challenged and everyone takes ownership.": [
     "Nous sommes convaincus que les meilleurs projets naissent du partage des expertises, du dialogue autour des idées et de l’engagement de chacun.",
@@ -184,9 +196,9 @@ window.OTIUM_TRANSLATIONS = {
     "Pluridisciplinaire.",
     "متعددو التخصصات."
   ],
-  "International.": [
-    "International.",
-    "دوليون."
+  "Creative.": [
+    "Creative.",
+    "متنوعون."
   ],
   "Hands-on.": [
     "Sur le terrain.",
@@ -232,9 +244,9 @@ window.OTIUM_TRANSLATIONS = {
     "Livrer",
     "نسلّم"
   ],
-  "International by nature": [
-    "L’international dans notre ADN",
-    "دوليون بطبيعتنا"
+  "": [
+    "L’dans notre ADN",
+    "متنوعون بطبيعتنا"
   ],
   "Wherever the project": [
     "Là où vos projets",
@@ -256,9 +268,9 @@ window.OTIUM_TRANSLATIONS = {
     "Beyrouth",
     "بيروت"
   ],
-  "Local knowledge. International expertise. One team.": [
-    "Connaissance du terrain. Expertise internationale. Une même équipe.",
-    "معرفة محلية. خبرة دولية. فريق واحد."
+  "Local knowledge. Shared expertise. One team.": [
+    "Connaissance du terrain. Expertise . Une même équipe.",
+    "معرفة محلية. خبرة متنوعة. فريق واحد."
   ],
   "Let’s create something": [
     "Créons des moments",
@@ -276,9 +288,9 @@ window.OTIUM_TRANSLATIONS = {
     "Londres · Doha · Beyrouth",
     "لندن · الدوحة · بيروت"
   ],
-  "International by nature.": [
-    "L’international dans notre ADN.",
-    "دوليون بطبيعتنا."
+  "": [
+    "L’dans notre ADN.",
+    "متنوعون بطبيعتنا."
   ],
   "The Group": [
     "Le Groupe",
@@ -352,9 +364,9 @@ window.OTIUM_TRANSLATIONS = {
     "Du concret.",
     "تنفيذ."
   ],
-  "An international creative and experiential group bringing together people, ideas and capabilities to create work that moves, engages and endures.": [
-    "Un groupe international de création et d’expériences qui réunit talents, idées et savoir-faire pour concevoir des projets qui touchent, engagent et durent.",
-    "مجموعة دولية للإبداع والتجارب، تجمع الأشخاص والأفكار والخبرات لتقديم أعمال مؤثرة وتفاعلية تدوم."
+  "A creative and experiential group bringing together people, ideas and capabilities to create work that moves, engages and endures.": [
+    "Un groupe de création et d’expériences qui réunit talents, idées et savoir-faire pour concevoir des projets qui touchent, engagent et durent.",
+    "مجموعة متنوعة للإبداع والتجارب، تجمع الأشخاص والأفكار والخبرات لتقديم أعمال مؤثرة وتفاعلية تدوم."
   ],
   "Who we are": [
     "Qui nous sommes",
@@ -392,13 +404,13 @@ window.OTIUM_TRANSLATIONS = {
     "Notre mission est de réunir les talents, les expertises et les ressources adaptés pour créer des projets porteurs de sens, mémorables et réalisés avec une attention constante aux détails.",
     "رسالتنا هي الجمع بين الأشخاص والخبرات والموارد المناسبة لتقديم أعمال هادفة وراسخة في الذاكرة، تُنفّذ بعناية ودقة."
   ],
-  "Our vision is to build an international group recognised for the quality of its ideas, the strength of its people and the excellence of its execution.": [
-    "Notre vision : bâtir un groupe international reconnu pour la qualité de ses idées, la force de ses équipes et l’excellence de ses réalisations.",
-    "رؤيتنا هي بناء مجموعة دولية تُعرف بجودة أفكارها وقوة فريقها وتميّز تنفيذها."
+  "Our vision is to build a group recognised for the quality of its ideas, the strength of its people and the excellence of its execution.": [
+    "Notre vision : bâtir un groupe reconnu pour la qualité de ses idées, la force de ses équipes et l’excellence de ses réalisations.",
+    "رؤيتنا هي بناء مجموعة متنوعة تُعرف بجودة أفكارها وقوة فريقها وتميّز تنفيذها."
   ],
-  "We combine creativity with commercial thinking, imagination with discipline, and international perspective with local understanding.": [
-    "Nous associons créativité et réflexion commerciale, imagination et rigueur, perspective internationale et compréhension locale.",
-    "نجمع بين الإبداع والفكر التجاري، وبين الخيال والانضباط، وبين الرؤية الدولية والفهم المحلي."
+  "We combine creativity with commercial thinking, imagination with discipline, and creative perspective with local understanding.": [
+    "Nous associons créativité et réflexion commerciale, imagination et rigueur, perspective  et compréhension locale.",
+    "نجمع بين الإبداع والفكر التجاري، وبين الخيال والانضباط، وبين الرؤية المتنوعة والفهم المحلي."
   ],
   "Expertise, shared.": [
     "L’expertise se partage.",
@@ -600,9 +612,9 @@ window.OTIUM_TRANSLATIONS = {
     "regard.",
     "مختلف."
   ],
-  "International stories. Local intelligence. Creative ambition.": [
-    "Des histoires internationales. Une connaissance locale. Une ambition créative.",
-    "قصص دولية. معرفة محلية. طموح إبداعي."
+  "Original stories. Local intelligence. Creative ambition.": [
+    "Des histoires . Une connaissance locale. Une ambition créative.",
+    "قصص متنوعة. معرفة محلية. طموح إبداعي."
   ],
   "Explore Production": [
     "Découvrir Productions",
@@ -624,9 +636,9 @@ window.OTIUM_TRANSLATIONS = {
     "vous accompagnent.",
     "تبقى معك."
   ],
-  "Otium Productions is an international production company creating documentaries, web series, podcasts, digital content and original productions for audiences across markets and platforms.": [
-    "Otium Productions est une société de production internationale qui crée des documentaires, des séries web, des podcasts, des contenus digitaux et des productions originales pour des publics, des marchés et des plateformes variés.",
-    "أوتيوم للإنتاج شركة إنتاج دولية تصنع الوثائقيات ومسلسلات الويب والبودكاست والمحتوى الرقمي والإنتاجات الأصلية لجماهير عبر أسواق ومنصات متعددة."
+  "Otium Productions is a production company creating documentaries, web series, podcasts, digital content and original productions for audiences across markets and platforms.": [
+    "Otium Productions est une société de production  qui crée des documentaires, des séries web, des podcasts, des contenus digitaux et des productions originales pour des publics, des marchés et des plateformes variés.",
+    "أوتيوم للإنتاج شركة إنتاج متنوعة تصنع الوثائقيات ومسلسلات الويب والبودكاست والمحتوى الرقمي والإنتاجات الأصلية لجماهير عبر أسواق ومنصات متعددة."
   ],
   "From the first idea to the final frame, we bring together creative vision, editorial intelligence and hands-on production expertise.": [
     "De la première idée à la dernière image, nous associons vision créative, exigence éditoriale et expertise concrète de la production.",
@@ -720,9 +732,9 @@ window.OTIUM_TRANSLATIONS = {
     "Des esprits créatifs. La rigueur de la production.",
     "عقول مبدعة. وانضباط في الإنتاج."
   ],
-  "International stories.": [
-    "Des histoires internationales.",
-    "قصص دولية."
+  "Original stories.": [
+    "Des histoires .",
+    "قصص متنوعة."
   ],
   "Local intelligence.": [
     "Une connaissance locale.",
@@ -888,9 +900,9 @@ window.OTIUM_TRANSLATIONS = {
     "Fermer la vidéo",
     "إغلاق الفيديو"
   ],
-  "Documentaries, web series, podcasts, digital content and original productions. International perspective, editorial intelligence and hands-on production.": [
-    "Documentaires, séries web, podcasts, contenus digitaux et productions originales. Perspective internationale, exigence éditoriale et expertise de terrain.",
-    "وثائقيات ومسلسلات ويب وبودكاست ومحتوى رقمي وإنتاجات أصلية. رؤية دولية وخبرة تحريرية وإنتاج عملي."
+  "Documentaries, web series, podcasts, digital content and original productions. Creative perspective, editorial intelligence and hands-on production.": [
+    "Documentaires, séries web, podcasts, contenus digitaux et productions originales. Perspective , exigence éditoriale et expertise de terrain.",
+    "وثائقيات ومسلسلات ويب وبودكاست ومحتوى رقمي وإنتاجات أصلية. رؤية متنوعة وخبرة تحريرية وإنتاج عملي."
   ],
   "Otium Events — Moments worth remembering.": [
     "Otium Events — Des moments qui restent.",
@@ -1448,8 +1460,8 @@ window.OTIUM_TRANSLATIONS = {
     "Accueil Otium Nexus Group",
     "?????? ???????? ??????? ?????? ????"
   ],
-  "An international group bringing together productions and events. London, Doha, Beirut and worldwide.": [
-    "Un groupe international r?unissant production et ?v?nementiel. Londres, Doha, Beyrouth et partout dans le monde.",
+  "A group bringing together productions and events. London, Doha, Beirut.": [
+    "Un groupe r?unissant production et ?v?nementiel. Londres, Doha, Beyrouth et partout dans le monde.",
     "?????? ????? ???? ??????? ??????????. ???? ??????? ?????? ???? ??????."
   ],
   "Meet Otium Productions and Otium Events.": [

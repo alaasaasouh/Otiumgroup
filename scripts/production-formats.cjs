@@ -6,9 +6,8 @@ const icons = [
   '<circle cx="34" cy="33" r="26"/><circle cx="34" cy="18" r="6"/><circle cx="19" cy="34" r="6"/><circle cx="49" cy="34" r="6"/><circle cx="34" cy="48" r="6"/><path d="M34 59h21q8 0 12 6"/>'
 ];
 module.exports = formats => `<section class="format-section container" id="capabilities" aria-labelledby="formats-title">
-  <div class="format-heading"><div><p class="eyebrow">What we produce</p><h2 id="formats-title">Every story.<br><em>Its own format.</em></h2></div>
-  <div class="format-navigation" role="group" aria-label="Production formats"><button type="button" data-format-prev aria-label="Previous formats" aria-controls="format-track">←</button><button type="button" data-format-next aria-label="Next formats" aria-controls="format-track">→</button></div></div>
-  <div class="format-track" id="format-track" tabindex="0" aria-label="Production formats">
+  <div class="format-heading"><div><p class="eyebrow">What we produce</p><h2 id="formats-title">Every story.<br><em>Its own format.</em></h2></div></div><div class="format-carousel"><div class="format-navigation" role="group" aria-label="Production formats"><button type="button" data-format-prev aria-label="Previous formats" aria-controls="format-track">←</button><button type="button" data-format-next aria-label="Next formats" aria-controls="format-track">→</button></div>
+<div class="format-track" id="format-track" tabindex="0" aria-label="Production formats">
   ${formats.map(([title,copy],i)=>`<article class="format-card" tabindex="0"><div class="format-card-top"><svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[i]}</svg></div><h3>${title}</h3><p>${copy}</p></article>`).join('')}
   </div>
-</section>`;
+</div></section>`;

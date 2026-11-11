@@ -94,3 +94,24 @@
     }
   }
 })();
+
+// Native dialog provides modal focus containment, Escape, and focus restoration.
+(() => {
+  const story = document.querySelector('#our-story');
+  const opener = document.querySelector('[data-story-open]');
+  if (!story || !opener) return;
+  opener.addEventListener('click', () => {
+    story.showModal();
+    story.scrollTop = 0;
+    document.body.classList.add('story-open');
+  });
+  story.querySelector('[data-story-close]').addEventListener('click', () => story.close());
+  story.addEventListener('click', event => {
+    const rect = story.getBoundingClientRect();
+    if (event.target === story && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) story.close();
+  });
+  story.addEventListener('close', () => {
+    document.body.classList.remove('story-open');
+    opener.focus({preventScroll:true});
+  });
+})();

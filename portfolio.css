@@ -100,3 +100,35 @@ body:has(.format-section) .brand-process li:nth-child(3n) { background:#3d3830; 
 .format-card-top { margin-bottom:30px; }
 .portfolio-category,.portfolio-watch,.cinema-gallery .slide-description { font-size:11px; letter-spacing:.08em; }
 .format-card:hover .format-card-top svg { transform:none; }
+
+/* Keep the company title steady while each centered story changes. */
+.cinema-fixed-title{position:absolute;z-index:3;top:8%;left:7%;right:7%;margin:0;color:#eeeae2;text-align:center;pointer-events:none}
+.cinema-gallery .cinema-copy,html[dir=rtl] .cinema-gallery .cinema-copy{left:7%;right:7%;top:16%;bottom:19%;max-width:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cinema-gallery .cinema-description{margin-inline:auto}
+.cinema-caption-spacer{visibility:hidden}
+.cinema-gallery .hero-slide::after{background:linear-gradient(0deg,#101915eb,transparent 45%),linear-gradient(90deg,#10191588,#10191599 50%,#10191588)}
+@media(max-width:600px){.cinema-fixed-title{top:9%;font-size:10px}.cinema-gallery .cinema-copy{top:17%;bottom:18%}}
+
+/* A permanent title above the changing stories. */
+.cinema-fixed-title{font-family:var(--sans);font-size:clamp(30px,4.8vw,74px);font-weight:500;line-height:1.05;letter-spacing:-.045em;top:7%;text-wrap:balance}
+.cinema-gallery .cinema-copy,html[dir=rtl] .cinema-gallery .cinema-copy{top:23%}
+.production-purpose{margin-top:30px}
+.production-purpose h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:26px 0 10px;color:#d8c09b}
+.format-carousel{position:relative}
+.format-carousel .format-navigation{position:absolute;inset:0;z-index:2;padding:0;pointer-events:none;align-items:center;justify-content:space-between}
+.format-carousel .format-navigation button{pointer-events:auto;flex-shrink:0;background:#ded0b3;border-color:#36584c99;box-shadow:0 3px 15px #10191522}
+.format-carousel [data-format-prev]{position:absolute;left:-23px}
+.format-carousel [data-format-next]{position:absolute;right:-23px}
+html[dir=rtl] .format-carousel .format-navigation{flex-direction:row}
+@media(max-width:600px){.cinema-fixed-title{top:8%;font-size:clamp(29px,7.8vw,46px)}.cinema-gallery .cinema-copy{top:20%}.format-carousel .format-navigation button{width:40px;height:40px}}
+
+/* Events shares Production's presentation, with an editorial capabilities grid. */
+.event-delivery{background:linear-gradient(135deg,#183331,#242e2a 65%,#363329);border-top:1px solid #ffffff14}
+.event-delivery .heading em{color:#d8c09b}
+.event-delivery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.event-delivery-grid article{padding:32px;background:#26302d;border:1px solid #ffffff14}
+.event-delivery-grid h3{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:400;line-height:1.15;margin-bottom:18px}
+.event-delivery-grid p{color:var(--muted);font-size:14px;line-height:1.85;max-width:48ch}
+@media(max-width:600px){.event-delivery-grid{grid-template-columns:1fr;gap:16px}.event-delivery-grid article{padding:26px}}
+
+@media(max-width:600px){.format-carousel [data-format-prev]{left:-20px}.format-carousel [data-format-next]{right:-20px}}

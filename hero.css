@@ -60,3 +60,28 @@
   .intro-language-prompt { margin:16px 0 10px; }
   .intro-language { min-height:44px; padding:8px; }
 }
+/* Centered opening and editorial story dialog. */
+.home-scroll .hero-content{text-align:center}
+.home-scroll .hero-content>.eyebrow{justify-content:center}
+.home-scroll .hero-description{margin-inline:auto;max-width:420px}
+.home-scroll .hero-actions{justify-content:center;align-items:center;flex-direction:row}
+.story-dialog{position:fixed;inset:0;margin:auto;width:min(820px,calc(100% - 40px));max-height:calc(100svh - 48px);padding:0;border:1px solid #bca47b55;background:#e8e3d8;color:#242d26;overscroll-behavior:contain;box-shadow:0 30px 100px #0006}
+.story-dialog::backdrop{background:#101a16b8;backdrop-filter:blur(10px)}
+.story-shell{padding:clamp(32px,6vw,68px);position:relative}
+.story-close{position:absolute;inset-block-start:16px;inset-inline-end:16px;width:44px;height:44px;border:1px solid #29372c33;border-radius:50%;background:transparent;color:inherit;font-size:28px;line-height:1;cursor:pointer}
+.story-close:hover{background:#29372c0d}
+.story-close:focus-visible,.hero-actions button:focus-visible{outline:2px solid #b69a67;outline-offset:5px}
+.story-shell>.eyebrow{color:#6b695c;margin-bottom:22px}
+.story-shell h2{font-family:var(--serif,'Instrument Serif',serif);font-size:clamp(58px,8vw,86px);line-height:1.05;font-weight:400;letter-spacing:-.04em;margin:0 0 14px}
+.story-shell h2 em{color:#7e6948;font-weight:400}
+.story-intro{font-size:13px;line-height:1.8;color:#686c60;margin-bottom:36px}
+.story-sections section{display:grid;grid-template-columns:32px 1fr;gap:18px;border-top:1px solid #29372c26;padding:26px 0}
+.story-sections section:last-child{padding-bottom:0}
+.story-number{font-size:10px;letter-spacing:.12em;color:#8b7654;padding-top:10px}
+.story-sections h3{font-family:var(--serif,'Instrument Serif',serif);font-size:34px;font-weight:400;line-height:1.2;margin-bottom:12px}
+.story-sections p{font-size:13px;line-height:1.9;color:#565e53;max-width:58ch}
+body.story-open{overflow:hidden}
+@media(max-width:600px){.story-dialog{width:calc(100% - 24px);max-height:calc(100svh - 24px)}.story-shell{padding:52px 24px 32px}.story-sections section{grid-template-columns:24px 1fr;gap:10px}.story-sections h3{font-size:30px}.home-scroll .hero-description{max-width:310px}}
+/* Keep the story scrollable without a visible scrollbar. */
+.story-dialog{scrollbar-width:none;-ms-overflow-style:none}
+.story-dialog::-webkit-scrollbar{display:none;width:0;height:0}

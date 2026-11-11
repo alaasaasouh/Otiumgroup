@@ -154,3 +154,7 @@ body:has(.home-scroll) .hero-bottom { justify-content:flex-end; }
 .brand-accordions details[open] summary .ui-icon { transform:rotate(45deg); }
 .brand-accordions summary .ui-icon { color:var(--gold); transition:transform .25s; }
 @media(prefers-reduced-motion:reduce) { .home-company-arrow svg,.home-company-action::after,.brand-accordions summary .ui-icon { transition:none; } .home-company-card:hover .home-company-arrow svg,.home-company-card:focus-visible .home-company-arrow svg { transform:none; } }
+/* Simplified footer and softly rounded story panel. */
+.site-footer .footer-middle{grid-template-columns:1.6fr 1fr}
+.story-dialog{border-radius:22px}
+@media(max-width:600px){.site-footer .footer-middle{grid-template-columns:1fr}.site-footer .footer-brand{grid-column:auto}.story-dialog{border-radius:18px}}
