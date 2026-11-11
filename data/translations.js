@@ -1527,5 +1527,10 @@ window.OTIUM_TRANSLATIONS = {
   "Selected work from Otium Productions.": [
     "Une sélection de projets Otium Productions.",
     "أعمال مختارة من أوتيوم للإنتاج."
-  ]
+  ],
+  "Mission.": ["mission.","مهمتنا."],
+  "Vision.": ["vision.","رؤيتنا."],
+  "One shared ambition.": ["Une ambition commune.","وطموح يجمعنا."],
+  "About Us — Otium Group": ["À propos — Otium Group","من نحن — مجموعة أوتيوم"],
+  "Our story, our mission and our vision. Discover the ideas and people behind Otium productions and events.": ["Notre histoire, notre mission et notre vision. Découvrez les idées et les personnes qui font vivre les productions et les événements Otium.","قصتنا ومهمتنا ورؤيتنا. اكتشفوا الأفكار والأشخاص وراء إنتاجات أوتيوم وفعالياتها."]
 };
