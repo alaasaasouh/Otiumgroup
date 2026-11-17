@@ -39,3 +39,8 @@ Vercel runs `npm run build:vercel` and publishes `dist/`. Its output must not be
 `dist/` and `preview/` are generated and ignored. Original media, superseded assets, and the presentation are kept in the local-only `_archive/`; back that folder up separately. Do not manually upload ignored folders.
 
 See the [folder guide](docs/FOLDER-GUIDE.md), [current documentation](docs/README.md), and [script guide](scripts/README.md).
+
+The approved earthy logo and its audit records are documented in the
+[brand handover](docs/brand/README.md). Keep track of releases in the
+[change log](docs/CHANGELOG.md); [rollback instructions](docs/ROLLBACK.md) identify
+the previous source commit and the dated local backup.

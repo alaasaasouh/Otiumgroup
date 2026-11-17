@@ -5,7 +5,8 @@ All assets used at runtime are included locally. No remote fonts, remote image h
 ## Current client photography — 17 November 2026
 
 The approved photo selection replaces all stock delivery images and the architectural hero.
-Sources are the 37 original JPEGs supplied in `Otium Nexus Website Photos Enhanced.zip`,
+Sources are the 37 original JPEGs supplied in `Otium Nexus Website Photos Enhanced.zip`
+(now in `_archive/brand-update-2026-11-17/loose-originals/`),
 organized without modifying their bytes in `Client Photos - Review/`. The source map is
 `scripts/client-photo-manifest.cjs`; run `node scripts/prepare-assets.cjs` to reproduce the
 800/1600-pixel WebP copies. This command no longer downloads stock photographs.
@@ -30,7 +31,7 @@ The hero sequence uses London, Qatar desert, and Beirut dinner photos, with dete
 camera pushes and dissolves. It does not contain AI-generated waves or people movement.
 See [the hero guide](HERO-ANIMATION.md). No project credits or National Geographic
 affiliation are inferred from the supplied filenames. The eight actual film posters
-remain paired with their original portfolio videos, and the supplied logo is unchanged.
+remain paired with their original portfolio videos. The logo revision is documented below.
 
 Previous delivery images and all original hero frames were backed up under
 `_archive/client-photo-update-2026-11-17/`. The following sections describe historical
@@ -38,10 +39,12 @@ assets and their provenance; the portal and stock photographs are no longer disp
 
 ## Otium identity
 
-- Original: `_archive/otium logo.png`, supplied by the user.
-- Web copy: `assets/images/otium-nexus-logo.png` (approved supplied artwork; preserve unchanged).
-- Headers, the opening screen, footers and the contact page use the complete supplied OTIUM NEXUS GROUP wordmark. Its artwork is unchanged.
-- `assets/favicon.png` is derived from the central I in the supplied logo by `scripts/build-brand.cjs`.
+- Current master: `assets/images/otium-nexus-logo.png`, the client-approved earthy-gradient revision of 17 November 2026, 2172 x 724 pixels with transparency.
+- Created with the built-in image generation tool from the supplied gold artwork. The approved design retains the original typography, sculptural I, and dimensional gradients; it removes the airplane, uses beige/taupe/olive tones, and extends NEXUS GROUP across the wordmark width.
+- Headers, the opening screen, footers and contact page all use this same master. Layout and navbar sizing are unchanged.
+- `assets/favicon.png` is derived from the approved I by `scripts/build-brand.cjs`.
+- Previous gold logo and favicon: `_archive/brand-update-2026-11-17/before/assets/` and Git commit `0c31430`.
+- Approved presentation, generation directions, hashes and cleanup records: [brand handover](brand/README.md). Recovery steps: [rollback guide](ROLLBACK.md).
 
 ## Architectural hero
 

@@ -1,0 +1,6 @@
+{
+  "tool": "Built-in image_gen",
+  "editTarget": "assets/images/otium-nexus-logo.png",
+  "paletteRevision": "Preserve original OTIUM letterforms, sculptural I, flowing ribbons, internal filmstrip/grid and shaped gradients. Remove the airplane. Replace metallic gold by matte stone beige #D9D3C7, sand #C8BDAA, ivory #E6E0D4 and taupe #9B8D78, with muted olive/charcoal #333B34 and #1F2D2A shadows. Preserve depth and dimensional modeling; avoid yellow, glitter and reflective metallic highlights.",
+  "alignmentRefinement": "Keep the entire recolored OTIUM design unchanged. Extend only the tracking of the original NEXUS GROUP subtitle from the left edge of O to the right edge of M, keeping its font, cap height and gradient treatment. Use the prior concept solely as a full-width subtitle alignment reference, never as a reference for the simplified I or flat fill."
+}

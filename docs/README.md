@@ -9,6 +9,9 @@
 | [Production opening](PRODUCTION-OPENING.md) | Current slideshow editing |
 | [Loading and performance](PERFORMANCE-UPDATE.md) | Loading behavior, local fonts, and mobile handling |
 | [Asset provenance](ASSETS.md) | Logo, imagery, and font sources/licenses |
+| [Approved brand](brand/README.md) | Current logo, presentation, hashes, and archived concepts |
+| [Change log](CHANGELOG.md) | Approved website updates and verification records |
+| [Rollback](ROLLBACK.md) | Restore the previous logo or the complete pre-update website |
 | [Source audit](PRODUCTION-SOURCE-AUDIT.md) | Original Production video inspection |
 | [Source manifest](production-source-manifest.json) | Source hashes, poster selections, and Playback IDs |
 | [Historical notes](history/README.md) | Earlier designs and the superseded YouTube implementation |

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-17",
+  "approvedDirection": "Original sculptural I with earthy gradients and full-width NEXUS GROUP",
+  "preChangeCommit": "0c31430a7314f6916e774905afe887719305b94e",
+  "localBackup": "_archive/brand-update-2026-11-17",
+  "sourceSnapshot": {
+    "path": "_archive/brand-update-2026-11-17/site-before-logo-update.zip",
+    "sha256": "756357c6e94550d206ced3407c9289ad72442b2b645e7ff5fb0817f843fa6ba3"
+  },
+  "previous": [
+    {
+      "path": "assets/images/otium-nexus-logo.png",
+      "bytes": 902651,
+      "sha256": "bee7bab367d95de746403f4e89f4a195c48b9c4341c4f90f527a1acfd6edda1d"
+    },
+    {
+      "path": "assets/favicon.png",
+      "bytes": 24010,
+      "sha256": "d9e634101d80d843355f011c7749dae970c94b5627a4bf79de4ba5398b919eb5"
+    }
+  ],
+  "current": [
+    {
+      "path": "assets/images/otium-nexus-logo.png",
+      "bytes": 956996,
+      "sha256": "1d96685415c6d7a36b385b88aba5927b68107c79cc975273d6eb929be9f72a9e"
+    },
+    {
+      "path": "assets/favicon.png",
+      "bytes": 23085,
+      "sha256": "007fb03a2b1320ff0400037d85c1a32ccab6aaa09cbb2482856b4cc098a78283"
+    }
+  ],
+  "approvedLogoDimensions": {
+    "width": 2172,
+    "height": 724,
+    "transparent": true
+  },
+  "brandUrlVersion": "earthy-20261117"
+}

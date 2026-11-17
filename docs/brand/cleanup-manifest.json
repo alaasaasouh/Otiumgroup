@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-17",
+  "moves": [
+    {
+      "source": "download.png",
+      "destination": "_archive/brand-update-2026-11-17/loose-originals/download.png",
+      "bytes": 420174,
+      "sha256": "7520eb9cf0e07af39b60b5f23aa99276b49d5e793416858046fc01a1cfbe393e",
+      "status": "archived and verified"
+    },
+    {
+      "source": "Luxury OTIUM Nexus Group Logo (1).png",
+      "destination": "_archive/brand-update-2026-11-17/loose-originals/Luxury OTIUM Nexus Group Logo (1).png",
+      "bytes": 902651,
+      "sha256": "bee7bab367d95de746403f4e89f4a195c48b9c4341c4f90f527a1acfd6edda1d",
+      "status": "archived and verified"
+    },
+    {
+      "source": "Otium Nexus Website Photos Enhanced.zip",
+      "destination": "_archive/brand-update-2026-11-17/loose-originals/Otium Nexus Website Photos Enhanced.zip",
+      "bytes": 14372009,
+      "sha256": "3d07933b3287c131b41f11ff3c7239d0bef354a630ad0a9fdb8b1e8dc0827b04",
+      "status": "archived and verified"
+    }
+  ],
+  "conceptBackupVerified": true,
+  "conceptArchive": "concepts-before-cleanup",
+  "note": "All 12 concept files were hash-verified against their backups before removing duplicate working files. Windows is retaining the two empty working directories until their handles are released.",
+  "concepts": [
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/design-brief.md",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/design-brief.md",
+      "bytes": 1279,
+      "sha256": "5edfdb4741c1ebfbe88e41dd70ec9c778c465fb76fd80d8a275a5aeed28c84e5"
+    },
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/generation-prompts.json",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/generation-prompts.json",
+      "bytes": 982,
+      "sha256": "638be8809669cc0020907d0cc7f5dcd905f06e50ae071ba49e5a2fd29c77c5bf"
+    },
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/logo-presentation.html",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/logo-presentation.html",
+      "bytes": 3514,
+      "sha256": "828c612805d16970e791f084c240dc3a2150772c5e50a5a4d95b3596117b8d79"
+    },
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/otium-logo-presentation-v1.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/otium-logo-presentation-v1.png",
+      "bytes": 224028,
+      "sha256": "7de58061613d27bfebb38ebc719941ed49999b5b0656922d739a146522bd03a0"
+    },
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/otium-nexus-earthy-v1.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/otium-nexus-earthy-v1.png",
+      "bytes": 698594,
+      "sha256": "55d8bcfe4b73bb81a8441ee9d04af1cf7dd1850d1883d16442f6087f64cf932d"
+    },
+    {
+      "source": "Logo Concepts/01 - Earthy Minimal/working/first-pass.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/01 - Earthy Minimal/working/first-pass.png",
+      "bytes": 775178,
+      "sha256": "a96286faaf38ad83741bb1c0dd083ea9ab3a02586c051466436527fd32d158c8"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/design-brief.md",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/design-brief.md",
+      "bytes": 729,
+      "sha256": "1bcae04647567015c00f2f8530a8b696c9a334700fb7dcddf85360f897dbac08"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/generation-prompts.json",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/generation-prompts.json",
+      "bytes": 873,
+      "sha256": "e64fa4c28453767ef69660ba10081be5ddf776c020cc7a1f179e6ebfe506f603"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/logo-presentation.html",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/logo-presentation.html",
+      "bytes": 3564,
+      "sha256": "d5d8e2b8d0b418489c8c43e95846c724a78b44eed4773fe6737129865f36914b"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/otium-logo-presentation-v2.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/otium-logo-presentation-v2.png",
+      "bytes": 302300,
+      "sha256": "b3a32a6754cc78829b7a35de7619d3d374e5e61f20ea465819d402b6f665592c"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/otium-nexus-earthy-gradients-v2.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/otium-nexus-earthy-gradients-v2.png",
+      "bytes": 956996,
+      "sha256": "1d96685415c6d7a36b385b88aba5927b68107c79cc975273d6eb929be9f72a9e"
+    },
+    {
+      "source": "Logo Concepts/02 - Original Earthy Gradients/working/original-layout-earthy.png",
+      "destination": "_archive/brand-update-2026-11-17/concepts-before-cleanup/02 - Original Earthy Gradients/working/original-layout-earthy.png",
+      "bytes": 922670,
+      "sha256": "a5e919175060c9b04748b77406514b0a077d65dacdc400a6d1fff2225860500c"
+    }
+  ],
+  "remainingEmptyDirectories": [
+    "Logo Concepts/01 - Earthy Minimal/working",
+    "Logo Concepts/02 - Original Earthy Gradients/working"
+  ]
+}

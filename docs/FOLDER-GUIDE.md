@@ -15,6 +15,7 @@ Keep the published page and asset paths stable: both hosts use the same static w
 | `src/` | Editable React/Mux player source |
 | `scripts/` | Build, page authoring, media preparation, and checks; see its README |
 | `docs/` | Current editing and asset guides |
+| `docs/brand/` | Approved logo presentation, generation directions, hashes and verification logs |
 | `docs/history/` | Earlier handovers and implementation notes, clearly marked historical |
 | `_archive/` | Local-only originals, presentation, and superseded assets |
 | `preview/` | Regenerable screenshots and inspection output; ignored |
@@ -33,6 +34,21 @@ Source-inspection material and old Mux verification metadata were preserved in t
 
 Archive contents are excluded from Git and deployments. Back them up separately. Files already tracked in Git remain recoverable from history after cleanup.
 ## Current brand and company setup
+
+### Approved logo and cleanup - 17 November 2026
+
+The website now uses the approved earthy-gradient OTIUM logo at the existing asset path.
+The current presentation and audit records live in `docs/brand/`. The two unused root
+PNGs and client photo ZIP were archived under
+`_archive/brand-update-2026-11-17/loose-originals/`. All concept versions and their
+working renders are preserved under `concepts-before-cleanup/` in that same backup.
+`Client Photos - Review/` remains in place for visual review and media preparation.
+
+The backup also includes a complete pre-logo-update source ZIP, the original logo and
+favicon, and hash manifests. See [the change log](CHANGELOG.md),
+[rollback guide](ROLLBACK.md), and [cleanup manifest](brand/cleanup-manifest.json).
+Windows is retaining two empty concept working directories locally; all files have
+already been archived and their paths are recorded in the manifest.
 
 The approved logo is `assets/images/otium-nexus-logo.png`; `scripts/build-brand.cjs` derives its favicon. Active companies are configured in `scripts/companies.cjs`. Homepage cards and production-format cards have dedicated markup helpers. Removed company directories are not deployed. The superseded logo is preserved under `_archive/cleanup-2026-10-20/`.
 

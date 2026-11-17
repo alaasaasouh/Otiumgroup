@@ -1,4 +1,5 @@
-/* The user-supplied PNG is the approved master. Generate only its browser icon.
+/* The client-approved PNG is the master (earthy-gradient revision, 17 November 2026).
+ * Generate only its browser icon; the master keeps its approved bytes and dimensions.
  * Preserve the full master without redrawing, recolouring or background changes.
  */
 const path = require('node:path');

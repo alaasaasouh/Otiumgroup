@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-17",
+  "result": "passed",
+  "productionBuild": "passed",
+  "allAssetsAnd290Frames": "passed",
+  "brandAssetMatchesApprovedSha256": true,
+  "pageErrors": [],
+  "layouts": [
+    {
+      "route": "/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "about/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "production/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "events/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "divisions/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "contact/",
+      "width": 1440,
+      "navbarHeight": 104,
+      "logoWidth": 180,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "about/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "production/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "events/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "divisions/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "contact/",
+      "width": 390,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "about/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "production/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "events/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "divisions/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    },
+    {
+      "route": "contact/",
+      "width": 320,
+      "navbarHeight": 83,
+      "logoWidth": 140,
+      "imagesLoaded": true,
+      "noOverflow": true
+    }
+  ]
+}
