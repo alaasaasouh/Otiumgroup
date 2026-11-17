@@ -11,7 +11,7 @@ const { OTIUM_PROJECTS: projects, OTIUM_SERVICES: services } = content.window;
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function image(base,name,alt,cls='',eager=false,sizes='100vw') {
-  return `<img ${cls ? `class="${cls}" ` : ''}src="${base}assets/images/${name}-1600.webp" srcset="${base}assets/images/${name}-800.webp 800w, ${base}assets/images/${name}-1600.webp 1600w" sizes="${sizes}" alt="${esc(alt)}" ${eager?'fetchpriority="high" loading="eager"':'loading="lazy"'} decoding="async" width="1600" height="1000">`;
+  return `<img ${cls ? `class="${cls}" ` : ''}src="${base}assets/images/${name}-1600.webp" srcset="${base}assets/images/${name}-800.webp 800w, ${base}assets/images/${name}-1600.webp 1600w" sizes="${sizes}" alt="${esc(alt)}" ${eager?'fetchpriority="high" loading="eager"':'loading="lazy"'} decoding="async" width="1600" height="900">`;
 }
 function brand(base) { return `<a class="brand" href="${base}index.html" aria-label="Otium Nexus Group home"><img class="brand-logo" src="${base}assets/images/otium-nexus-logo.png" alt="Otium Nexus Group" width="2172" height="724"></a>`; }
 function header(base,active) {
@@ -104,7 +104,7 @@ for (const page of pages) {
   }
   if (page.active === 'home') {
     page.extra = '<link rel="stylesheet" href="hero.css"><script defer src="js/home-intro.js"></script><script defer src="js/hero.js"></script>';
-    const poster = '<picture><source media="(max-width:600px)" srcset="frames/mobile/frame_0001.jpg"><img src="frames/frame_0001.jpg" alt="A golden stone portal opening onto a Mediterranean sunset" width="1280" height="720" fetchpriority="high"></picture><canvas class="hero-canvas" aria-hidden="true"></canvas>';
+    const poster = '<picture><source media="(max-width:600px)" srcset="frames/mobile/frame_0001.jpg"><img src="frames/frame_0001.jpg" alt="A cinema camera overlooking Tower Bridge in London" width="1280" height="720" fetchpriority="high"></picture><canvas class="hero-canvas" aria-hidden="true"></canvas>';
     page.body = '<div class="home-scroll">' + page.body
       .replace(image('','hero','Sculptural stone portal opening onto a golden Mediterranean horizon','',true), poster)
       .replace('</section><div class="manifesto-strip"', '<div class="hero-progress" aria-hidden="true"></div></section></div><div class="manifesto-strip"');

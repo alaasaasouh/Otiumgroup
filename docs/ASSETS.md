@@ -2,6 +2,40 @@
 
 All assets used at runtime are included locally. No remote fonts, remote image hotlinks, or third-party scripts are required to view the website.
 
+## Current client photography — 17 November 2026
+
+The approved photo selection replaces all stock delivery images and the architectural hero.
+Sources are the 37 original JPEGs supplied in `Otium Nexus Website Photos Enhanced.zip`,
+organized without modifying their bytes in `Client Photos - Review/`. The source map is
+`scripts/client-photo-manifest.cjs`; run `node scripts/prepare-assets.cjs` to reproduce the
+800/1600-pixel WebP copies. This command no longer downloads stock photographs.
+
+| Delivery key | Supplied filename | Current placement |
+| --- | --- | --- |
+| hero | home_hero_1_london.jpg | Homepage fallback and default social image |
+| production | productions_hero.jpg | Productions opening and company cards |
+| events | site_event_baalbek_concert.jpg | Events company cards |
+| production-podcast | productions_podcast_studio.jpg | Podcast slide |
+| production-documentary | productions_documentary_doha.jpg | Documentary slide |
+| event-concert | events_hero_concert.jpg | Live-entertainment slide |
+| event-corporate | events_corporate_launch.jpg | Corporate-events slide |
+| event-wedding | events_wedding.jpg | Wedding slide |
+| story-about | popup_about_us.jpg | About chapter and story dialog |
+| story-mission | popup_our_mission.jpg | Mission chapter and story dialog |
+| story-vision | popup_our_vision.jpg | Vision chapter and story dialog |
+| landscape | natgeo_qatar_desert.jpg | Hero source / retained image alias |
+| travel | home_hero_3_beirut.jpg | Hero source / retained image alias |
+
+The hero sequence uses London, Qatar desert, and Beirut dinner photos, with deterministic
+camera pushes and dissolves. It does not contain AI-generated waves or people movement.
+See [the hero guide](HERO-ANIMATION.md). No project credits or National Geographic
+affiliation are inferred from the supplied filenames. The eight actual film posters
+remain paired with their original portfolio videos, and the supplied logo is unchanged.
+
+Previous delivery images and all original hero frames were backed up under
+`_archive/client-photo-update-2026-11-17/`. The following sections describe historical
+assets and their provenance; the portal and stock photographs are no longer displayed.
+
 ## Otium identity
 
 - Original: `_archive/otium logo.png`, supplied by the user.

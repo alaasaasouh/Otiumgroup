@@ -1,9 +1,9 @@
 /* Events uses the production presentation with its own editorial content. */
 module.exports = function eventsPage(image) {
   const scenes = [
-    ['events','Concert audience beneath stage lights','Moments worth remembering.','Moments worth<br><em>remembering.</em>','Live entertainment','Concerts, festivals and shared experiences that bring people together.'],
-    ['hero','Sculptural architecture opening onto a Mediterranean horizon','Ideas brought to life.','Ideas brought<br><em>to life.</em>','Corporate & brand experiences','Conferences, launches and brand experiences, shaped around your ambition.'],
-    ['travel','A villa and swimming pool in a landscaped setting','An occasion entirely yours.','An occasion<br><em>entirely yours.</em>','Weddings & private celebrations','Personal celebrations, thoughtfully imagined and carefully delivered.']
+    ['event-concert','An audience watching an outdoor concert beneath stage lights','Moments worth remembering.','Moments worth<br><em>remembering.</em>','Live entertainment','Concerts, festivals and shared experiences that bring people together.'],
+    ['event-corporate','Guests attending a corporate launch with a large presentation screen','Ideas brought to life.','Ideas brought<br><em>to life.</em>','Corporate & brand experiences','Conferences, launches and brand experiences, shaped around your ambition.'],
+    ['event-wedding','A couple walking down the aisle at a garden wedding','An occasion entirely yours.','An occasion<br><em>entirely yours.</em>','Weddings & private celebrations','Personal celebrations, thoughtfully imagined and carefully delivered.']
   ];
   const arrow = d => `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
   const slides = scenes.map(([asset,alt,title,heading,caption,copy],i) => `<div class="hero-slide ${i===0?'active':''}" data-title="${title}" data-caption="${caption}" aria-hidden="${i!==0}" ${i?'inert':''} role="group" aria-roledescription="slide" aria-label="${i+1} of 3">${image('../',asset,alt,'',i===0,'100vw')}<div class="cinema-copy">${i?`<p class="eyebrow">${caption}</p>`:''}<h2>${heading}</h2><p class="cinema-description">${copy}</p></div></div>`).join('');

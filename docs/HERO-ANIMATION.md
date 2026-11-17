@@ -1,6 +1,30 @@
 ﻿# Homepage video scroll animation
 
-The golden portal moves toward the event space as visitors scroll down and reverses when they scroll up. Only the homepage uses this effect. Headings, buttons, navigation, and the rest of the page retain their existing functions.
+## Current three-photo sequence — 17 November 2026
+
+The homepage now scrolls through London production, Qatar desert filming, and a Beirut
+seaside dinner. Sources: `home_hero_1_london.jpg`, `natgeo_qatar_desert.jpg`, and
+`home_hero_3_beirut.jpg` in `Client Photos - Review/`.
+
+- Rebuild with `node scripts/build-client-hero-frames.cjs` (Sharp and FFmpeg required).
+- 145 desktop JPEGs at 1280 × 720 and 145 separately composed portrait JPEGs at 540 × 960.
+- Original portal frames are preserved in `_archive/client-photo-update-2026-11-17/frames/`.
+- A 12-second, 12-fps review MP4 is exported to
+  `Client Photos - Review/Hero Animation - London Qatar Beirut.mp4`.
+- This is photo animation: gentle 4.5% camera pushes with two soft dissolves. It does
+  not simulate moving water, people, or candle flames. The available Weave video service
+  requires linking the user's Figma account before generative video can be produced.
+- Phone framing is baked separately for each scene to preserve the camera/bridge,
+  desert crew, and Beirut rocks/table. Runtime and static phone posters use centered cover.
+- The existing 145-frame contract, bounded cache, loader, forward/reverse scroll,
+  reduced-motion, data-saving, and failed-frame fallbacks remain in place.
+
+## Historical portal animation
+
+The original portal notes below are retained for reference. The former 6-second footage
+and `extract-hero-frames.cjs` describe that historical source, not the current photo build.
+
+The golden portal moved toward the event space as visitors scrolled down and reversed when they scrolled up. Only the homepage used this effect.
 
 - Source: the supplied `_archive/vid16.mp4`, 6.04 seconds, 1280 Ã— 720, 24 fps. Original preserved.
 - Assets: 145 JPG frames in `frames/`, plus 960px mobile renditions in `frames/mobile/`.

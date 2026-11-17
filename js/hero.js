@@ -37,7 +37,7 @@
     const img = entry.image;
     const scale = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight);
     const width = img.naturalWidth * scale, height = img.naturalHeight * scale;
-    context.drawImage(img, (canvas.width - width) * .6, (canvas.height - height) / 2, width, height);
+    context.drawImage(img, (canvas.width - width) * (mobile ? .5 : .6), (canvas.height - height) / 2, width, height);
     last = index;
     section.classList.add('has-frame');
     section.dataset.frame = String(index + 1);

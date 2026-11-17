@@ -1,5 +1,16 @@
 /* English source text -> [French, Modern Standard Arabic]. */
 window.OTIUM_TRANSLATIONS = {
+  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a creative outlook and a personal touch to everything we create.": ["Nous sommes un lieu de rencontre entre imagination et savoir-faire. En réunissant production et événementiel, Otium transforme les idées en histoires à découvrir, en expériences à vivre et en moments qui restent. Depuis Londres, Doha et Beyrouth, nous apportons un regard créatif et une attention personnelle à chacune de nos réalisations.", "نحن ملتقى الخيال والخبرة. نجمع بين الإنتاج والفعاليات لنحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نضيف رؤية إبداعية ولمسة شخصية إلى كل ما نقدّمه."],
+  "A cinema camera overlooking Tower Bridge in London": ["Une caméra de cinéma face au Tower Bridge à Londres", "كاميرا سينمائية تطل على جسر تاور بريدج في لندن"],
+  "A film crew working on a historic Beirut street": ["Une équipe de tournage dans une rue historique de Beyrouth", "فريق تصوير يعمل في شارع تاريخي في بيروت"],
+  "Microphones arranged around a warm podcast studio table": ["Des microphones autour de la table d’un studio de podcast chaleureux", "ميكروفونات حول طاولة في استوديو بودكاست بأجواء دافئة"],
+  "A documentary crew filming on location in Doha": ["Une équipe documentaire en tournage à Doha", "فريق وثائقي يصوّر في أحد مواقع الدوحة"],
+  "An audience watching an outdoor concert beneath stage lights": ["Un public assistant à un concert en plein air sous les lumières de la scène", "جمهور يشاهد حفلًا موسيقيًا في الهواء الطلق تحت أضواء المسرح"],
+  "Guests attending a corporate launch with a large presentation screen": ["Des invités à un lancement d’entreprise devant un grand écran de présentation", "ضيوف يحضرون فعالية إطلاق لشركة أمام شاشة عرض كبيرة"],
+  "A couple walking down the aisle at a garden wedding": ["Un couple remontant l’allée lors d’un mariage dans un jardin", "عروسان يسيران في الممر خلال حفل زفاف في حديقة"],
+  "A production team preparing a studio set": ["Une équipe de production préparant un plateau en studio", "فريق إنتاج يجهّز موقع تصوير داخل الاستوديو"],
+  "Careful preparation of a candlelit table setting": ["La préparation soignée d’une table éclairée aux bougies", "إعداد متقن لطاولة مضاءة بالشموع"],
+  "A traveler looking across an airport runway at dusk": ["Un voyageur contemplant les pistes d’un aéroport au crépuscule", "مسافر يتأمل مدرج مطار عند الغسق"],
   "Our Story": ["Notre histoire", "قصتنا"],
   "Our": ["Notre", "هذه"],
   "Story.": ["histoire.", "قصتنا."],

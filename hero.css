@@ -85,3 +85,7 @@ body.story-open{overflow:hidden}
 /* Keep the story scrollable without a visible scrollbar. */
 .story-dialog{scrollbar-width:none;-ms-overflow-style:none}
 .story-dialog::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* Portrait frames have their scene composition baked in. Match the static poster. */
+.home-scroll .group-hero::after{background:linear-gradient(180deg,#1019154d,#10191588 35%,#10191577 70%,#101915aa)}
+@media(max-width:600px){.home-scroll .hero-media img{object-position:50% center}}

@@ -183,3 +183,15 @@ body:has(.home-scroll) .hero-bottom { justify-content:flex-end; }
 @media(max-width:800px){.about-chapter{gap:30px;grid-template-columns:.85fr 1.15fr;padding:34px}.about-story{min-height:480px;border-start-end-radius:75px}.about-chapter h1{font-size:70px}.about-chapter h2{font-size:48px}}
 @media(max-width:600px){.about-chapters{padding-top:115px}.about-chapter{grid-template-columns:1fr;gap:28px;padding:30px 24px;border-radius:20px;margin-bottom:16px}.about-story{border-start-end-radius:65px}.about-story h1{font-size:68px}.about-chapter h2{font-size:48px}.about-chapter-number{margin-bottom:16px}.about-chapter h2 em{display:inline}.about-story-mark{margin-top:26px}.about-story-mark i{width:44px;height:44px;margin-inline-end:-14px}.about-chapter-copy .about-story-lead{font-size:25px;margin-bottom:18px}.about-chapter-copy>p{font-size:15px;line-height:1.85}}
 @media(prefers-reduced-motion:reduce){.about-story .about-chapter-heading,.about-story .about-chapter-copy{animation:none}.about-chapter .reveal{transition:none}}
+
+/* Client photography adds a visual chapter without obscuring the story text. */
+.about-chapter-heading{min-width:0}
+.about-chapter-photo{margin:28px 0 0;aspect-ratio:16/10;border-radius:12px;overflow:hidden}
+.about-chapter-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.story-sections .story-photo{display:block;width:100%;height:auto;aspect-ratio:16/8;object-fit:cover;border-radius:10px;margin-top:22px}
+.cinema-gallery img[src*="production-podcast-"]{object-position:55% center}
+.cinema-gallery img[src*="production-documentary-"]{object-position:40% center}
+.cinema-gallery img[src*="event-concert-"]{object-position:65% center}
+.cinema-gallery img[src*="event-corporate-"]{object-position:65% center}
+.cinema-gallery img[src*="event-wedding-"]{object-position:48% center}
+@media(max-width:600px){.about-chapter-photo{aspect-ratio:16/9;margin-top:24px}.story-sections .story-photo{aspect-ratio:16/10}}
