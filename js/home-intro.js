@@ -24,7 +24,7 @@
     static(){
       if(finished)return;
       progress.hidden=true;
-      status.textContent='Welcome to Otium Group';
+      status.textContent='Welcome to Otium Nexus Group';
     }
   };
   if(!document.documentElement.classList.contains('intro-pending')){finish();return;}

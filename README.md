@@ -12,7 +12,7 @@ Run `npm ci` for a fresh checkout, then `npm run dev`. Open http://127.0.0.1:417
 
 | Content | Source |
 | --- | --- |
-| Group and company copy | `scripts/client-pages.cjs` |
+| Approved client text, story and company copy | `scripts/client-content.json`, `scripts/document-content.cjs`, `scripts/document-pages.cjs` |
 | Shared page shell and markup | `scripts/render-pages.cjs` |
 | Production slideshow | `scripts/production-portfolio.cjs` |
 | Video titles, categories, posters, Mux IDs | `data/portfolio.js` |
@@ -23,6 +23,12 @@ Run `npm ci` for a fresh checkout, then `npm run dev`. Open http://127.0.0.1:417
 | Video player source | `src/otium-video-player.jsx` |
 
 Run `npm run build` after editing the player or Production portfolio. For page-copy changes, run `node scripts/render-pages.cjs` (optionally `--home-only` or `--production-only`), then restore deployment metadata with `node scripts/configure-domain.cjs https://alaasaasouh.github.io/Otiumgroup/`.
+
+The complete client Word document is mapped to the site in
+[the content update guide](docs/CLIENT-CONTENT-UPDATE.md). After changing its French
+or Arabic source translations, run `node scripts/sync-client-translations.cjs`.
+Use `npm run test:client-content` to verify every document paragraph and the three
+homepage pop-ups in all languages.
 
 English, professional French, and Modern Standard Arabic are available across the site, with saved language selection and Arabic right-to-left layouts. See the [translation and rollback guide](docs/TRANSLATIONS.md). The contact form is configured to send inquiries to asonyxmedia@gmail.com through FormSubmit; recipient activation is required. See [contact setup](docs/CONTACT.md).
 

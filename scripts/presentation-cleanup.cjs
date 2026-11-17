@@ -1,14 +1,7 @@
 /* Final shared navigation and wording cleanup. */
 function wording(text) {
-  return text.replace(/International by nature\.?/g, '')
-    .replace(/ \u00b7 Worldwide/g, '').replace(/ and worldwide/g, '')
-    .replace(/\bAn international /g, 'A ').replace(/\ban international /g, 'a ')
-    .replace(/\binternational outlook/g, 'creative outlook')
-    .replace(/\binternational perspective/g, 'creative perspective')
-    .replace(/\bInternational perspective/g, 'Creative perspective')
-    .replace(/\bInternational stories/g, 'Original stories')
-    .replace(/\bInternational expertise/g, 'Shared expertise')
-    .replace(/\binternational /g, '').replace(/\bInternational\./g, 'Creative.');
+  // Client copy must pass through verbatim, including international positioning.
+  return text;
 }
 module.exports = (html, base = '') => {
   html = html.replace(/<div class="footer-credit">[\s\S]*?<\/div>/g, '')

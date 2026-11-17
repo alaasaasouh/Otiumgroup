@@ -1,5 +1,20 @@
 # Website change log
 
+## 18 November 2026 - Complete client website text
+
+- Applied all 65 non-empty paragraphs and placement instructions from the supplied
+  Word document, with exact English copy and complete French and Arabic translations.
+- Updated the homepage, Our Story and About page, Productions and Events pages,
+  company directory, shared identity, office cities, metadata and inquiry branding.
+- Added Productions and Events dialogs while preserving full-page links, the
+  approved logo, photography, animation frames and video portfolio.
+- Removed the obsolete rule that stripped international positioning from copy.
+- Added a source-document hash and paragraph-by-paragraph coverage report. See
+  [the content update guide](CLIENT-CONTENT-UPDATE.md).
+- Validation passed: 65/65 document paragraphs, all three languages, six responsive
+  pages at widths down to 320 pixels, dialog controls and focus restoration, asset
+  and navigation checks, local inquiry downloads, and the production build.
+
 ## 17 November 2026 - Approved earthy logo and folder cleanup
 
 - Applied the approved earthy-gradient logo to the shared website asset. Retained

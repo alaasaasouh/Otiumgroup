@@ -6,6 +6,7 @@
     "build": "node scripts/build-player.cjs && node scripts/build-production.cjs",
     "build:vercel": "npm run build && node scripts/build-site.cjs",
     "test:assets": "node scripts/check-assets.cjs",
+    "test:client-content": "node scripts/check-client-content.cjs",
     "test:loading": "node scripts/check-loading.cjs",
     "test:hero": "node scripts/check-hero.cjs",
     "test:navigation": "node scripts/check-navigation.cjs",

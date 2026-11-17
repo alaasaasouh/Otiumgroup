@@ -12,7 +12,7 @@
   let currentBriefData;
   function briefText(){
     const data=currentBriefData;
-    return `${t('OTIUM GROUP — PROJECT INQUIRY')}\n\n${t('Name')}: ${data.name}\n${t('Company')}: ${data.company||'—'}\n${t('Email')}: ${data.email}\n${t('Phone')}: ${data.phone||'—'}\n${t('Inquiry')}: ${t(data.type)}\n\n${data.message}\n\n${t('This brief was prepared locally and has not been submitted to Otium Group.')}`;
+    return `${t('OTIUM NEXUS GROUP — PROJECT INQUIRY')}\n\n${t('Name')}: ${data.name}\n${t('Company')}: ${data.company||'—'}\n${t('Email')}: ${data.email}\n${t('Phone')}: ${data.phone||'—'}\n${t('Inquiry')}: ${t(data.type)}\n\n${data.message}\n\n${t('This brief was prepared locally and has not been submitted to Otium Nexus Group.')}`;
   }
   function refreshBrief(){
     if(!currentBriefData)return;
@@ -68,7 +68,7 @@
         const endpoint = new URL(config.formEndpoint, window.location.href);
         if (endpoint.protocol !== 'https:') throw new Error('This inquiry service is not available yet.');
         const isFormSubmit=endpoint.hostname==='formsubmit.co';
-        const payload=isFormSubmit?{...data,_subject:'Otium Group — '+data.type+' inquiry',_template:'table',_url:location.href,language:document.documentElement.lang}:data;
+        const payload=isFormSubmit?{...data,_subject:'Otium Nexus Group — '+data.type+' inquiry',_template:'table',_url:location.href,language:document.documentElement.lang}:data;
         const response = await fetch(endpoint.href, {
           method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(payload), signal: AbortSignal.timeout(20000)

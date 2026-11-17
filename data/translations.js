@@ -1,28 +1,97 @@
 /* English source text -> [French, Modern Standard Arabic]. */
 window.OTIUM_TRANSLATIONS = {
-  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a creative outlook and a personal touch to everything we create.": ["Nous sommes un lieu de rencontre entre imagination et savoir-faire. En réunissant production et événementiel, Otium transforme les idées en histoires à découvrir, en expériences à vivre et en moments qui restent. Depuis Londres, Doha et Beyrouth, nous apportons un regard créatif et une attention personnelle à chacune de nos réalisations.", "نحن ملتقى الخيال والخبرة. نجمع بين الإنتاج والفعاليات لنحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نضيف رؤية إبداعية ولمسة شخصية إلى كل ما نقدّمه."],
-  "A cinema camera overlooking Tower Bridge in London": ["Une caméra de cinéma face au Tower Bridge à Londres", "كاميرا سينمائية تطل على جسر تاور بريدج في لندن"],
-  "A film crew working on a historic Beirut street": ["Une équipe de tournage dans une rue historique de Beyrouth", "فريق تصوير يعمل في شارع تاريخي في بيروت"],
-  "Microphones arranged around a warm podcast studio table": ["Des microphones autour de la table d’un studio de podcast chaleureux", "ميكروفونات حول طاولة في استوديو بودكاست بأجواء دافئة"],
-  "A documentary crew filming on location in Doha": ["Une équipe documentaire en tournage à Doha", "فريق وثائقي يصوّر في أحد مواقع الدوحة"],
-  "An audience watching an outdoor concert beneath stage lights": ["Un public assistant à un concert en plein air sous les lumières de la scène", "جمهور يشاهد حفلًا موسيقيًا في الهواء الطلق تحت أضواء المسرح"],
-  "Guests attending a corporate launch with a large presentation screen": ["Des invités à un lancement d’entreprise devant un grand écran de présentation", "ضيوف يحضرون فعالية إطلاق لشركة أمام شاشة عرض كبيرة"],
-  "A couple walking down the aisle at a garden wedding": ["Un couple remontant l’allée lors d’un mariage dans un jardin", "عروسان يسيران في الممر خلال حفل زفاف في حديقة"],
-  "A production team preparing a studio set": ["Une équipe de production préparant un plateau en studio", "فريق إنتاج يجهّز موقع تصوير داخل الاستوديو"],
-  "Careful preparation of a candlelit table setting": ["La préparation soignée d’une table éclairée aux bougies", "إعداد متقن لطاولة مضاءة بالشموع"],
-  "A traveler looking across an airport runway at dusk": ["Un voyageur contemplant les pistes d’un aéroport au crépuscule", "مسافر يتأمل مدرج مطار عند الغسق"],
-  "Our Story": ["Notre histoire", "قصتنا"],
-  "Our": ["Notre", "هذه"],
-  "Story.": ["histoire.", "قصتنا."],
-  "Close our story": ["Fermer notre histoire", "إغلاق قصتنا"],
-  "Different perspectives. One shared ambition.": ["Des perspectives différentes. Une ambition commune.", "رؤى متنوعة. وطموح يجمعنا."],
-  "Our Vision": ["Notre vision", "رؤيتنا"],
-  "Our Mission": ["Notre mission", "رسالتنا"],
-  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a outlook and a personal touch to everything we create.": ["Otium réunit imagination et savoir-faire. À travers nos productions et nos événements, nous transformons les idées en récits à découvrir, en expériences à vivre et en moments qui restent. De Londres à Doha et Beyrouth, nous apportons une perspective  et une attention personnelle à chaque création.", "نجمع في أوتيوم بين الخيال والخبرة. ومن خلال الإنتاج والفعاليات، نحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نمنح كل ما نصنعه رؤية إبداعية ولمسة شخصية."],
-  "To open new possibilities for how people connect through stories and shared experiences. We imagine a world where creativity crosses borders, every perspective adds something meaningful, and extraordinary work leaves a lasting impression.": ["Ouvrir de nouvelles possibilités de rencontre à travers les récits et les expériences partagées. Nous imaginons un monde où la créativité dépasse les frontières, où chaque regard enrichit le projet et où un travail exceptionnel laisse une empreinte durable.", "أن نفتح آفاقاً جديدة للتواصل من خلال القصص والتجارب المشتركة. نتطلع إلى عالم يتجاوز فيه الإبداع الحدود، وتضيف فيه كل وجهة نظر قيمة، وتترك فيه الأعمال الاستثنائية أثراً يدوم."],
-  "To bring the right people, ideas and expertise together, and carry every project from its first spark to its final detail. With thoughtful creativity, local understanding and precise execution, we create productions and events that move people and make every collaboration matter.": ["Réunir les talents, les idées et les expertises adaptés, et accompagner chaque projet de sa première étincelle à son dernier détail. Par une créativité réfléchie, une connaissance du terrain et une exécution précise, nous créons des productions et des événements qui touchent les gens et donnent du sens à chaque collaboration.", "أن نجمع الأشخاص والأفكار والخبرات المناسبة، ونرافق كل مشروع من شرارته الأولى إلى أدق تفاصيله. بإبداع مدروس وفهم محلي وتنفيذ متقن، نصنع إنتاجات وفعاليات تلامس الناس وتمنح كل تعاون قيمة."],
-  "Home": ["Accueil", "الرئيسية"],
-  "About Us": ["À propos de nous", "من نحن"],
+  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a creative outlook and a personal touch to everything we create.": [
+    "Nous sommes un lieu de rencontre entre imagination et savoir-faire. En réunissant production et événementiel, Otium transforme les idées en histoires à découvrir, en expériences à vivre et en moments qui restent. Depuis Londres, Doha et Beyrouth, nous apportons un regard créatif et une attention personnelle à chacune de nos réalisations.",
+    "نحن ملتقى الخيال والخبرة. نجمع بين الإنتاج والفعاليات لنحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نضيف رؤية إبداعية ولمسة شخصية إلى كل ما نقدّمه."
+  ],
+  "A cinema camera overlooking Tower Bridge in London": [
+    "Une caméra de cinéma face au Tower Bridge à Londres",
+    "كاميرا سينمائية تطل على جسر تاور بريدج في لندن"
+  ],
+  "A film crew working on a historic Beirut street": [
+    "Une équipe de tournage dans une rue historique de Beyrouth",
+    "فريق تصوير يعمل في شارع تاريخي في بيروت"
+  ],
+  "Microphones arranged around a warm podcast studio table": [
+    "Des microphones autour de la table d’un studio de podcast chaleureux",
+    "ميكروفونات حول طاولة في استوديو بودكاست بأجواء دافئة"
+  ],
+  "A documentary crew filming on location in Doha": [
+    "Une équipe documentaire en tournage à Doha",
+    "فريق وثائقي يصوّر في أحد مواقع الدوحة"
+  ],
+  "An audience watching an outdoor concert beneath stage lights": [
+    "Un public assistant à un concert en plein air sous les lumières de la scène",
+    "جمهور يشاهد حفلًا موسيقيًا في الهواء الطلق تحت أضواء المسرح"
+  ],
+  "Guests attending a corporate launch with a large presentation screen": [
+    "Des invités à un lancement d’entreprise devant un grand écran de présentation",
+    "ضيوف يحضرون فعالية إطلاق لشركة أمام شاشة عرض كبيرة"
+  ],
+  "A couple walking down the aisle at a garden wedding": [
+    "Un couple remontant l’allée lors d’un mariage dans un jardin",
+    "عروسان يسيران في الممر خلال حفل زفاف في حديقة"
+  ],
+  "A production team preparing a studio set": [
+    "Une équipe de production préparant un plateau en studio",
+    "فريق إنتاج يجهّز موقع تصوير داخل الاستوديو"
+  ],
+  "Careful preparation of a candlelit table setting": [
+    "La préparation soignée d’une table éclairée aux bougies",
+    "إعداد متقن لطاولة مضاءة بالشموع"
+  ],
+  "A traveler looking across an airport runway at dusk": [
+    "Un voyageur contemplant les pistes d’un aéroport au crépuscule",
+    "مسافر يتأمل مدرج مطار عند الغسق"
+  ],
+  "Our Story": [
+    "Notre histoire",
+    "قصتنا"
+  ],
+  "Our": [
+    "Notre",
+    "هذه"
+  ],
+  "Story.": [
+    "histoire.",
+    "قصتنا."
+  ],
+  "Close our story": [
+    "Fermer notre histoire",
+    "إغلاق قصتنا"
+  ],
+  "Different perspectives. One shared ambition.": [
+    "Des perspectives différentes. Une ambition commune.",
+    "رؤى متنوعة. وطموح يجمعنا."
+  ],
+  "Our Vision": [
+    "Notre vision",
+    "رؤيتنا"
+  ],
+  "Our Mission": [
+    "Notre mission",
+    "رسالتنا"
+  ],
+  "We are a meeting place for imagination and expertise. Bringing together productions and events, Otium turns ideas into stories you can see, experiences you can feel, and moments that stay with you. From London, Doha and Beirut, we bring a outlook and a personal touch to everything we create.": [
+    "Otium réunit imagination et savoir-faire. À travers nos productions et nos événements, nous transformons les idées en récits à découvrir, en expériences à vivre et en moments qui restent. De Londres à Doha et Beyrouth, nous apportons une perspective  et une attention personnelle à chaque création.",
+    "نجمع في أوتيوم بين الخيال والخبرة. ومن خلال الإنتاج والفعاليات، نحوّل الأفكار إلى قصص تُرى، وتجارب تُعاش، ولحظات تبقى في الذاكرة. من لندن والدوحة وبيروت، نمنح كل ما نصنعه رؤية إبداعية ولمسة شخصية."
+  ],
+  "To open new possibilities for how people connect through stories and shared experiences. We imagine a world where creativity crosses borders, every perspective adds something meaningful, and extraordinary work leaves a lasting impression.": [
+    "Ouvrir de nouvelles possibilités de rencontre à travers les récits et les expériences partagées. Nous imaginons un monde où la créativité dépasse les frontières, où chaque regard enrichit le projet et où un travail exceptionnel laisse une empreinte durable.",
+    "أن نفتح آفاقاً جديدة للتواصل من خلال القصص والتجارب المشتركة. نتطلع إلى عالم يتجاوز فيه الإبداع الحدود، وتضيف فيه كل وجهة نظر قيمة، وتترك فيه الأعمال الاستثنائية أثراً يدوم."
+  ],
+  "To bring the right people, ideas and expertise together, and carry every project from its first spark to its final detail. With thoughtful creativity, local understanding and precise execution, we create productions and events that move people and make every collaboration matter.": [
+    "Réunir les talents, les idées et les expertises adaptés, et accompagner chaque projet de sa première étincelle à son dernier détail. Par une créativité réfléchie, une connaissance du terrain et une exécution précise, nous créons des productions et des événements qui touchent les gens et donnent du sens à chaque collaboration.",
+    "أن نجمع الأشخاص والأفكار والخبرات المناسبة، ونرافق كل مشروع من شرارته الأولى إلى أدق تفاصيله. بإبداع مدروس وفهم محلي وتنفيذ متقن، نصنع إنتاجات وفعاليات تلامس الناس وتمنح كل تعاون قيمة."
+  ],
+  "Home": [
+    "Accueil",
+    "الرئيسية"
+  ],
+  "About Us": [
+    "À propos",
+    "من نحن"
+  ],
   "Email delivery is being activated.": [
     "L’envoi par e-mail est en cours d’activation.",
     "جارٍ تفعيل إرسال الرسائل عبر البريد الإلكتروني."
@@ -136,8 +205,8 @@ window.OTIUM_TRANSLATIONS = {
     "مرّر للاستكشاف"
   ],
   "London · Doha · Beirut": [
-    "Londres · Doha · Beyrouth · Dans le monde entier",
-    "لندن · الدوحة · بيروت · حول العالم"
+    "Londres · Doha · Beyrouth",
+    "لندن · الدوحة · بيروت"
   ],
   "One group.": [
     "Un groupe.",
@@ -256,8 +325,8 @@ window.OTIUM_TRANSLATIONS = {
     "نسلّم"
   ],
   "": [
-    "L’dans notre ADN",
-    "متنوعون بطبيعتنا"
+    "L’dans notre ADN.",
+    "متنوعون بطبيعتنا."
   ],
   "Wherever the project": [
     "Là où vos projets",
@@ -294,14 +363,6 @@ window.OTIUM_TRANSLATIONS = {
   "Contact us": [
     "Contactez-nous",
     "تواصل معنا"
-  ],
-  "London · Doha · Beirut": [
-    "Londres · Doha · Beyrouth",
-    "لندن · الدوحة · بيروت"
-  ],
-  "": [
-    "L’dans notre ADN.",
-    "متنوعون بطبيعتنا."
   ],
   "The Group": [
     "Le Groupe",
@@ -1465,7 +1526,7 @@ window.OTIUM_TRANSLATIONS = {
   ],
   "Otium Nexus Group": [
     "Otium Nexus Group",
-    "?????? ?????? ????"
+    "مجموعة أوتيوم نيكسوس"
   ],
   "Otium Nexus Group home": [
     "Accueil Otium Nexus Group",
@@ -1539,9 +1600,480 @@ window.OTIUM_TRANSLATIONS = {
     "Une sélection de projets Otium Productions.",
     "أعمال مختارة من أوتيوم للإنتاج."
   ],
-  "Mission.": ["mission.","مهمتنا."],
-  "Vision.": ["vision.","رؤيتنا."],
-  "One shared ambition.": ["Une ambition commune.","وطموح يجمعنا."],
-  "About Us — Otium Group": ["À propos — Otium Group","من نحن — مجموعة أوتيوم"],
-  "Our story, our mission and our vision. Discover the ideas and people behind Otium productions and events.": ["Notre histoire, notre mission et notre vision. Découvrez les idées et les personnes qui font vivre les productions et les événements Otium.","قصتنا ومهمتنا ورؤيتنا. اكتشفوا الأفكار والأشخاص وراء إنتاجات أوتيوم وفعالياتها."]
+  "Mission.": [
+    "mission.",
+    "مهمتنا."
+  ],
+  "Vision.": [
+    "vision.",
+    "رؤيتنا."
+  ],
+  "One shared ambition.": [
+    "Une ambition commune.",
+    "وطموح يجمعنا."
+  ],
+  "About Us — Otium Group": [
+    "À propos — Otium Group",
+    "من نحن — مجموعة أوتيوم"
+  ],
+  "Our story, our mission and our vision. Discover the ideas and people behind Otium productions and events.": [
+    "Notre histoire, notre mission et notre vision. Découvrez les idées et les personnes qui font vivre les productions et les événements Otium.",
+    "قصتنا ومهمتنا ورؤيتنا. اكتشفوا الأفكار والأشخاص وراء إنتاجات أوتيوم وفعالياتها."
+  ],
+  "Otium Nexus Group: Homepage": [
+    "Otium Nexus Group : page d’accueil",
+    "مجموعة أوتيوم نيكسوس: الصفحة الرئيسية"
+  ],
+  "Global standards. Local roots.": [
+    "Des standards internationaux. Des racines locales.",
+    "معايير عالمية. جذور محلية."
+  ],
+  "Otium Nexus Group is an international conglomerate headquartered in London, with offices in Amman, Beirut, Cairo, Doha and Riyadh. Through Otium Productions and Otium Events, our multinational, multidisciplinary team and local partners deliver to uncompromising international standards, wherever in the world the project takes us.": [
+    "Otium Nexus Group est un conglomérat international dont le siège se trouve à Londres, avec des bureaux à Amman, Beyrouth, Le Caire, Doha et Riyad. À travers Otium Productions et Otium Events, notre équipe multinationale et pluridisciplinaire et nos partenaires locaux réalisent chaque projet selon des standards internationaux sans compromis, partout où celui-ci nous mène dans le monde.",
+    "مجموعة أوتيوم نيكسوس هي مجموعة شركات دولية مقرها الرئيسي في لندن، ولها مكاتب في عمّان وبيروت والقاهرة والدوحة والرياض. من خلال أوتيوم للإنتاج وأوتيوم للفعاليات، يقدّم فريقنا المتعدد الجنسيات والتخصصات، بالتعاون مع شركائنا المحليين، أعمالًا تلتزم بأعلى المعايير الدولية دون مساومة، أينما يأخذنا المشروع حول العالم."
+  ],
+  "Our Story (pop-up)": [
+    "Notre histoire (fenêtre contextuelle)",
+    "قصتنا (نافذة منبثقة)"
+  ],
+  "Otium Nexus Group is a home for creative people who make things worth experiencing. We are headquartered in London, with offices in Amman, Beirut, Cairo, Doha and Riyadh. We create productions and events for clients around the world.": [
+    "Otium Nexus Group rassemble des talents créatifs qui donnent vie à des expériences qui en valent la peine. Notre siège se trouve à Londres, avec des bureaux à Amman, Beyrouth, Le Caire, Doha et Riyad. Nous créons des productions et des événements pour des clients du monde entier.",
+    "مجموعة أوتيوم نيكسوس هي بيت للمبدعين الذين يصنعون تجارب تستحق أن تُعاش. يقع مقرنا الرئيسي في لندن، ولدينا مكاتب في عمّان وبيروت والقاهرة والدوحة والرياض. ننجز أعمالًا إنتاجية وننظّم فعاليات لعملاء حول العالم."
+  ],
+  "Our strength lies in how we combine two perspectives. We have the experience of an international group: the standards, the discipline and the ambition to take on projects of any scale. And we have the knowledge of people who know each place well: the right supplier, the right permit, the right way to welcome a guest. Together, they mean our clients never have to choose between a global outlook and a local touch.": [
+    "Notre force réside dans notre façon de conjuguer deux perspectives. Nous avons l’expérience d’un groupe international : les standards, la rigueur et l’ambition nécessaires pour mener des projets de toute envergure. Nous avons aussi le savoir de celles et ceux qui connaissent chaque lieu : le bon fournisseur, la bonne autorisation, la bonne manière d’accueillir un invité. Ensemble, ces deux atouts permettent à nos clients de bénéficier à la fois d’une vision internationale et d’une attention locale.",
+    "تكمن قوتنا في الجمع بين منظورين. نمتلك خبرة مجموعة دولية، بما تحمله من معايير وانضباط وطموح لتنفيذ مشاريع مهما كان حجمها. ونمتلك أيضًا معرفة أشخاص يعرفون كل مكان جيدًا: المورّد المناسب، والتصريح المطلوب، والطريقة الأنسب لاستقبال الضيف. وباجتماع هذين المنظورين، لا يضطر عملاؤنا أبدًا إلى الاختيار بين الرؤية العالمية واللمسة المحلية."
+  ],
+  "The team is as varied as the work. Our people come from many nations and have built careers in film, music, television, live production, hospitality, design, logistics and business development. Having that range under one roof lets us look at every project from many angles, and it is the reason we can deliver anywhere in the world with the same care.": [
+    "Notre équipe est aussi diverse que nos projets. Nos collaborateurs viennent de nombreux pays et ont construit leur parcours dans le cinéma, la musique, la télévision, la production de spectacles, l’hospitalité, le design, la logistique et le développement commercial. Réunir autant de compétences sous un même toit nous permet d’aborder chaque projet sous de multiples angles et de le réaliser partout dans le monde avec le même soin.",
+    "يتنوّع فريقنا بقدر تنوّع أعمالنا. يأتي أعضاء فريقنا من دول عديدة، وقد بنوا مسيرتهم المهنية في السينما والموسيقى والتلفزيون وإنتاج العروض الحية والضيافة والتصميم والخدمات اللوجستية وتطوير الأعمال. يتيح لنا اجتماع هذا التنوع تحت سقف واحد أن ننظر إلى كل مشروع من زوايا متعددة، وهو ما يمكّننا من تقديم المستوى نفسه من العناية في أي مكان في العالم."
+  ],
+  "Today the group trades through two companies. Otium Productions creates films, television series, documentaries, web-series and video podcasts. Otium Events delivers everything from large-scale concerts to exclusive, high-end private dinners.": [
+    "Aujourd’hui, le groupe exerce ses activités à travers deux sociétés. Otium Productions crée des films, des séries télévisées, des documentaires, des webséries et des podcasts vidéo. Otium Events organise aussi bien des concerts de grande envergure que des dîners privés exclusifs et haut de gamme.",
+    "تعمل المجموعة اليوم من خلال شركتين. تنتج أوتيوم للإنتاج الأفلام والمسلسلات التلفزيونية والأفلام الوثائقية ومسلسلات الويب والبودكاست المرئي. أما أوتيوم للفعاليات، فتنظّم كل شيء، من الحفلات الموسيقية الكبرى إلى حفلات العشاء الخاصة الحصرية والراقية."
+  ],
+  "Our Name": [
+    "Notre nom",
+    "اسمنا"
+  ],
+  "Both words in our name come from Latin, and each says something about who we are.": [
+    "Les deux mots qui composent notre nom viennent du latin et expriment chacun une part de notre identité.",
+    "تعود الكلمتان في اسمنا إلى اللغة اللاتينية، وتعبّر كل منهما عن جانب من هويتنا."
+  ],
+  "Otium is Latin for time well spent. It means hours freed from the daily routine of life and given to what enriches it: conversation, music, stories, beauty and good company. It is the feeling we hope to create every time someone watches, listens, dances or sits down at one of our tables.": [
+    "En latin, Otium signifie du temps bien employé. Il désigne ces heures libérées de la routine quotidienne et consacrées à ce qui enrichit la vie : la conversation, la musique, les histoires, la beauté et la bonne compagnie. C’est le sentiment que nous souhaitons faire naître chaque fois qu’une personne regarde, écoute, danse ou s’installe à l’une de nos tables.",
+    "تعني كلمة «أوتيوم» باللاتينية وقتًا يُقضى فيما يستحق. وهي تشير إلى ساعات تتحرر من روتين الحياة اليومي وتُكرَّس لما يثريها: الحوار والموسيقى والقصص والجمال والصحبة الطيبة. وهذا هو الشعور الذي نأمل أن نصنعه كلما شاهد أحدهم عملًا لنا، أو استمع، أو رقص، أو جلس إلى إحدى موائدنا."
+  ],
+  "Nexus means the point at which separate things are joined. It comes from the Latin nectere, to bind. It describes our team of many nationalities, our offices in six cities, and the way we link people, places and ideas.": [
+    "Nexus désigne le point où des éléments distincts se rejoignent. Il vient du latin nectere, qui signifie lier. Il décrit notre équipe aux multiples nationalités, nos bureaux dans six villes et notre façon de relier les personnes, les lieux et les idées.",
+    "تعني كلمة «نيكسوس» النقطة التي تلتقي عندها أشياء منفصلة. وهي مشتقة من الكلمة اللاتينية «nectere»، أي الربط. وتصف فريقنا المتعدد الجنسيات، ومكاتبنا في ست مدن، والطريقة التي نصل بها بين الناس والأماكن والأفكار."
+  ],
+  "Our name is a promise to connect the world's best talent and local knowledge, and to use it to craft lasting experiences.": [
+    "Notre nom porte une promesse : réunir les meilleurs talents du monde et les savoirs locaux pour créer des expériences qui restent.",
+    "اسمنا وعد بأن نجمع أفضل المواهب في العالم مع المعرفة المحلية، وأن نوظّفهما لصنع تجارب يبقى أثرها."
+  ],
+  "To create productions and events of the highest standard anywhere in the world, and to make that feel simple, warm and personal for our clients.": [
+    "Créer des productions et des événements du plus haut niveau partout dans le monde, tout en offrant à nos clients une expérience simple, chaleureuse et personnelle.",
+    "أن نقدّم أعمالًا إنتاجية وفعاليات بأعلى مستوى في أي مكان في العالم، وأن نجعل تجربة عملائنا معنا بسيطة وودودة وشخصية."
+  ],
+  "We bring international best practice to every project, and we respect the people, places and traditions we work with. We stay accountable to our clients from the first conversation to the last guest leaving or the final credit rolling.": [
+    "Nous appliquons les meilleures pratiques internationales à chaque projet et respectons les personnes, les lieux et les traditions avec lesquels nous travaillons. Nous répondons de nos engagements auprès de nos clients, du premier échange au départ du dernier invité ou à la dernière ligne du générique.",
+    "نطبّق أفضل الممارسات الدولية في كل مشروع، ونحترم الأشخاص والأماكن والتقاليد التي نتعامل معها. ونظل مسؤولين أمام عملائنا من أول حوار حتى مغادرة آخر ضيف أو ظهور آخر اسم في شارة الختام."
+  ],
+  "To be the first name clients think of when an idea needs to cross borders.": [
+    "Être le premier nom auquel nos clients pensent lorsqu’une idée doit franchir les frontières.",
+    "أن نكون أول اسم يخطر ببال العملاء عندما تحتاج فكرة إلى عبور الحدود."
+  ],
+  "Production and events are where we begin, each one carrying the Otium name and the same promise: a world-class team, deep local roots and experiences worth people's time.": [
+    "La production et l’événementiel sont notre point de départ. Chaque projet porte le nom Otium et la même promesse : une équipe de premier plan mondial, un profond ancrage local et des expériences qui méritent le temps qu’on leur consacre.",
+    "يشكّل الإنتاج والفعاليات نقطة انطلاقنا، ويحمل كل منهما اسم أوتيوم والوعد نفسه: فريقًا بمستوى عالمي، وجذورًا محلية راسخة، وتجارب تستحق وقت الناس."
+  ],
+  "Otium Productions (pop-up) and Otium Events (pop-up)": [
+    "Otium Productions (fenêtre contextuelle) et Otium Events (fenêtre contextuelle)",
+    "أوتيوم للإنتاج (نافذة منبثقة) وأوتيوم للفعاليات (نافذة منبثقة)"
+  ],
+  "In Latin, otium means time well spent. It is what we aim to give everyone we work with.": [
+    "En latin, otium signifie du temps bien employé. C’est ce que nous souhaitons offrir à toutes les personnes avec lesquelles nous travaillons.",
+    "تعني كلمة «أوتيوم» باللاتينية وقتًا يُقضى فيما يستحق. وهذا ما نسعى إلى منحه لكل من يعمل معنا."
+  ],
+  "Otium Productions is the production house of Otium Nexus Group. We develop and make films, television series, documentaries, web-series, video podcasts and other original content, for broadcasters, platforms, brands and institutions. Our producers, directors and editors bring international standards of craft, and our crews and partners on the ground bring knowledge of each location.": [
+    "Otium Productions est la société de production d’Otium Nexus Group. Nous développons et réalisons des films, des séries télévisées, des documentaires, des webséries, des podcasts vidéo et d’autres contenus originaux pour des diffuseurs, des plateformes, des marques et des institutions. Nos producteurs, réalisateurs et monteurs apportent un savoir-faire répondant aux standards internationaux, tandis que nos équipes et nos partenaires sur le terrain apportent leur connaissance de chaque lieu.",
+    "أوتيوم للإنتاج هي شركة الإنتاج التابعة لمجموعة أوتيوم نيكسوس. نطوّر وننتج الأفلام والمسلسلات التلفزيونية والأفلام الوثائقية ومسلسلات الويب والبودكاست المرئي وغيرها من أشكال المحتوى الأصلي للقنوات والمنصات والعلامات التجارية والمؤسسات. يقدّم منتجونا ومخرجونا ومونتيرونا خبرات فنية وفق معايير دولية، وتقدّم فرقنا وشركاؤنا الميدانيون معرفتهم بكل موقع."
+  ],
+  "Our team brings together writers, directors, producers, editors and sound designers from many countries, and that range gives our stories a voice that carries beyond borders. Based in London, with teams in Amman, Beirut, Cairo, Doha and Riyadh, we can produce anywhere with the confidence of people who know the ground: who to call, what to ask for, and how to put the people we film at ease.": [
+    "Notre équipe réunit des auteurs, des réalisateurs, des producteurs, des monteurs et des créateurs sonores de nombreux pays. Cette diversité donne à nos histoires une voix qui porte au-delà des frontières. Basés à Londres, avec des équipes à Amman, Beyrouth, Le Caire, Doha et Riyad, nous pouvons produire partout avec l’assurance de celles et ceux qui connaissent le terrain : qui appeler, quoi demander et comment mettre à l’aise les personnes que nous filmons.",
+    "يجمع فريقنا كتّابًا ومخرجين ومنتجين ومونتيرين ومصمّمي صوت من دول عديدة، ويمنح هذا التنوع قصصنا صوتًا يصل إلى ما وراء الحدود. نتخذ من لندن مقرًا لنا، ولدينا فرق في عمّان وبيروت والقاهرة والدوحة والرياض، ما يمكّننا من الإنتاج في أي مكان بثقة من يعرفون الميدان: بمن يتصلون، وما الذي يطلبونه، وكيف يجعلون من نصوّرهم يشعرون بالراحة."
+  ],
+  "We care about craft and about people. A good production is rigorous behind the scenes and warm in front of the camera, and that is how we work.": [
+    "Nous accordons autant d’importance au savoir-faire qu’aux personnes. Une bonne production allie la rigueur en coulisses à la chaleur devant la caméra. C’est ainsi que nous travaillons.",
+    "نهتم بالحرفة وبالناس. فالإنتاج الجيد يجمع بين الدقة خلف الكواليس والدفء أمام الكاميرا، وهذه هي طريقتنا في العمل."
+  ],
+  "To make stories that deserve people's time, and to make working with us a pleasure.": [
+    "Créer des histoires qui méritent le temps qu’on leur consacre et faire de chaque collaboration avec nous un plaisir.",
+    "أن نصنع قصصًا تستحق وقت الناس، وأن نجعل العمل معنا تجربة ممتعة."
+  ],
+  "We are rigorous in our craft, curious about the people we meet, and respectful of every place we film. We keep our partners informed and involved from the first idea to the final delivery.": [
+    "Nous travaillons avec rigueur, abordons les personnes que nous rencontrons avec curiosité et respectons chaque lieu où nous tournons. Nous tenons nos partenaires informés et les associons à chaque étape, de la première idée à la livraison finale.",
+    "نلتزم بالدقة في حرفتنا، ونحرص على التعرّف إلى الأشخاص الذين نلتقيهم، ونحترم كل مكان نصوّر فيه. ونُبقي شركاءنا على اطلاع ومشاركة من الفكرة الأولى حتى التسليم النهائي."
+  ],
+  "To become a name audiences and commissioners trust for storytelling that crosses borders: work made in the Middle East, Europe and beyond that people everywhere want to watch, hear and share.": [
+    "Devenir un nom auquel les publics et les commanditaires font confiance pour des récits qui franchissent les frontières : des œuvres réalisées au Moyen-Orient, en Europe et au-delà, que les gens du monde entier ont envie de regarder, d’écouter et de partager.",
+    "أن نصبح اسمًا يثق به الجمهور والجهات المكلِّفة بالإنتاج لتقديم قصص تعبر الحدود: أعمال تُصنع في الشرق الأوسط وأوروبا وخارجهما، ويرغب الناس في كل مكان في مشاهدتها وسماعها ومشاركتها."
+  ],
+  "What we make": [
+    "Nos productions",
+    "ما ننتجه"
+  ],
+  "Films. Features and short films, from the first draft of the script to the final grade.": [
+    "Films. Des longs et courts métrages, de la première version du scénario à l’étalonnage final.",
+    "الأفلام. أفلام طويلة وقصيرة، من المسودة الأولى للسيناريو حتى المعالجة اللونية النهائية."
+  ],
+  "Television series. Scripted and unscripted series for broadcasters and platforms, developed and delivered to international standards.": [
+    "Séries télévisées. Des séries scénarisées et non scénarisées pour les diffuseurs et les plateformes, développées et livrées selon les standards internationaux.",
+    "المسلسلات التلفزيونية. سلاسل مكتوبة النص وأخرى غير مكتوبة النص للقنوات والمنصات، نطوّرها ونسلّمها وفق المعايير الدولية."
+  ],
+  "Documentaries. Stories about real people, places and ideas, told with patience and a good eye.": [
+    "Documentaires. Des histoires de personnes, de lieux et d’idées réels, racontées avec patience et un regard attentif.",
+    "الأفلام الوثائقية. قصص عن أشخاص وأماكن وأفكار حقيقية، نرويها بتأنٍّ وحس بصري مرهف."
+  ],
+  "Web-series. Original series made for digital audiences, from the first script to the final episode.": [
+    "Webséries. Des séries originales conçues pour les publics numériques, du premier scénario au dernier épisode.",
+    "مسلسلات الويب. مسلسلات أصلية للجمهور الرقمي، من السيناريو الأول حتى الحلقة الأخيرة."
+  ],
+  "Video podcasts. Conversation shows with a clear voice, a considered format, a cinematic picture and polished sound.": [
+    "Podcasts vidéo. Des émissions de conversation portées par une voix affirmée, un format réfléchi, une image cinématographique et un son soigné.",
+    "البودكاست المرئي. برامج حوارية ذات صوت واضح، وصيغة مدروسة، وصورة سينمائية، وصوت متقن."
+  ],
+  "We also work on branded and corporate content, and on any other format a good idea demands.": [
+    "Nous réalisons également des contenus de marque et des contenus d’entreprise, ainsi que tout autre format qu’une bonne idée appelle.",
+    "نعمل أيضًا على محتوى العلامات التجارية ومحتوى الشركات، وعلى أي صيغة أخرى تتطلبها فكرة جيدة."
+  ],
+  "How we work": [
+    "Notre façon de travailler",
+    "كيف نعمل"
+  ],
+  "Every production starts with a conversation about what you want people to feel. We then shape the idea, build the team and plan every detail of the schedule, the locations and the permissions. Our producers are with you from the first call to the final wrap. In post-production we edit, grade, mix and deliver in every format and language you need.": [
+    "Chaque production commence par un échange sur les émotions que vous souhaitez susciter. Nous façonnons ensuite l’idée, constituons l’équipe et préparons chaque détail du calendrier, des lieux et des autorisations. Nos producteurs vous accompagnent du premier appel à la fin du tournage. En postproduction, nous assurons le montage, l’étalonnage, le mixage et la livraison dans tous les formats et toutes les langues dont vous avez besoin.",
+    "يبدأ كل إنتاج بحوار حول الشعور الذي تريد أن تتركه لدى الجمهور. ثم نصوغ الفكرة، ونشكّل الفريق، ونخطط لكل تفصيل في الجدول الزمني والمواقع والتصاريح. يرافقك منتجونا من أول اتصال حتى انتهاء التصوير. وفي مرحلة ما بعد الإنتاج، نتولى المونتاج والمعالجة اللونية ومزج الصوت، ونسلّم العمل بكل الصيغ واللغات التي تحتاجها."
+  ],
+  "Wherever the story is": [
+    "Là où se trouve l’histoire",
+    "أينما تكن القصة"
+  ],
+  "A story shouldn't lose its voice when it crosses a border. From our six offices, we can reach locations across the Middle East and Europe at short notice. Further afield, we send a core team from one of our offices to work alongside trusted local partners, and we run the whole crew as one.": [
+    "Une histoire doit conserver sa voix lorsqu’elle franchit une frontière. Depuis nos six bureaux, nous pouvons rejoindre rapidement des lieux de tournage au Moyen-Orient et en Europe. Plus loin, nous envoyons une équipe principale depuis l’un de nos bureaux pour travailler aux côtés de partenaires locaux de confiance, et nous dirigeons l’ensemble des collaborateurs comme une seule équipe.",
+    "ينبغي ألا تفقد القصة صوتها عندما تعبر الحدود. انطلاقًا من مكاتبنا الستة، نستطيع الوصول إلى مواقع في أنحاء الشرق الأوسط وأوروبا خلال مهلة قصيرة. وفي الوجهات الأبعد، نرسل فريقًا أساسيًا من أحد مكاتبنا ليعمل إلى جانب شركاء محليين موثوقين، وندير جميع أفراد الطاقم كفريق واحد."
+  ],
+  "Every occasion, every size.": [
+    "Toutes les occasions, toutes les envergures.",
+    "لكل مناسبة، مهما كان حجمها."
+  ],
+  "Otium Events is the events company of Otium Nexus Group. We create occasions that people talk about long afterwards. We work at every scale, from large concerts headlined by international stars to small, intimate evenings, and we also design corporate events, launches, luncheons, dinners, receptions, exhibitions and weddings.": [
+    "Otium Events est la société événementielle d’Otium Nexus Group. Nous créons des occasions dont on parle longtemps après. Nous travaillons à toutes les échelles, des grands concerts avec des stars internationales en tête d’affiche aux petites soirées intimistes. Nous concevons également des événements d’entreprise, des lancements, des déjeuners, des dîners, des réceptions, des expositions et des mariages.",
+    "أوتيوم للفعاليات هي شركة الفعاليات التابعة لمجموعة أوتيوم نيكسوس. نصنع مناسبات يظل الناس يتحدثون عنها طويلًا بعد انتهائها. نعمل على جميع المستويات، من الحفلات الموسيقية الكبرى التي يتصدّرها نجوم عالميون إلى الأمسيات الصغيرة ذات الأجواء الحميمة، ونصمّم أيضًا فعاليات الشركات وحفلات الإطلاق وحفلات الغداء والعشاء والاستقبال والمعارض وحفلات الزفاف."
+  ],
+  "The size of the guest list changes the logistics, never the attention to detail. Whether we are managing a crowd of thousands or a table of ten, the same questions come first: who is coming, how should they feel, and what will they remember?": [
+    "Le nombre d’invités modifie la logistique, jamais l’attention portée aux détails. Que nous accueillions une foule de plusieurs milliers de personnes ou une table de dix convives, les mêmes questions passent en premier : qui vient, que doit-on leur faire ressentir et de quoi se souviendront-ils ?",
+    "يغيّر عدد الضيوف الترتيبات اللوجستية، لكنه لا يغيّر أبدًا اهتمامنا بالتفاصيل. سواء كنا ندير حشدًا من الآلاف أو مائدة لعشرة أشخاص، تبقى الأسئلة نفسها في المقدمة: من سيحضر، وما الشعور الذي نريد أن يعيشه، وما الذي سيبقى في ذاكرته؟"
+  ],
+  "Our team combines producers, designers, technicians and hosts from many countries. With offices in London, Amman, Beirut, Cairo, Doha and Riyadh, and partners around the world, we bring international standards to every venue and local knowledge to every detail.": [
+    "Notre équipe réunit des producteurs, des designers, des techniciens et des professionnels de l’accueil de nombreux pays. Avec des bureaux à Londres, Amman, Beyrouth, Le Caire, Doha et Riyad, et des partenaires dans le monde entier, nous apportons des standards internationaux à chaque lieu et une connaissance locale à chaque détail.",
+    "يجمع فريقنا منتجين ومصمّمين وفنيين ومضيفين من دول عديدة. ومن خلال مكاتبنا في لندن وعمّان وبيروت والقاهرة والدوحة والرياض، وشركائنا حول العالم، نطبّق المعايير الدولية في كل موقع، ونوظّف المعرفة المحلية في كل تفصيل."
+  ],
+  "To create occasions that guests remember as time well spent, and to give hosts the chance to enjoy them.": [
+    "Créer des occasions dont les invités se souviennent comme de moments pleinement savourés, et permettre à leurs hôtes d’en profiter eux aussi.",
+    "أن نصنع مناسبات يتذكرها الضيوف بوصفها وقتًا قُضي فيما يستحق، وأن نمنح أصحابها فرصة الاستمتاع بها."
+  ],
+  "We plan every detail, keep you informed at every step and welcome each guest as our own. You bring the reason to celebrate. We take care of the rest.": [
+    "Nous planifions chaque détail, vous tenons informés à chaque étape et accueillons chaque invité comme le nôtre. Vous apportez la raison de célébrer. Nous nous occupons du reste.",
+    "نخطط لكل تفصيل، ونُبقيك على اطلاع في كل خطوة، ونستقبل كل ضيف كما لو كان ضيفنا. أنت تأتي بسبب الاحتفال، ونحن نتولى الباقي."
+  ],
+  "To be the name behind some of the world's most talked-about gatherings, from the concert stage to the dinner table, known for scale, finesse and warmth in equal measure.": [
+    "Être le nom derrière certains des rendez-vous les plus remarqués au monde, de la scène de concert à la table du dîner, reconnu à parts égales pour son envergure, sa finesse et sa chaleur.",
+    "أن نكون الاسم وراء بعض أكثر التجمعات التي يتحدث عنها الناس في العالم، من مسرح الحفل الموسيقي إلى مائدة العشاء، وأن نُعرف بقدرتنا على تنفيذ الفعاليات الكبرى، وبالإتقان والدفء بالقدر نفسه."
+  ],
+  "What we create": [
+    "Nos événements",
+    "ما نبتكره"
+  ],
+  "Large-scale concerts. Major live shows with international headline artists, delivered with the staging, safety planning and production quality that tens of thousands of people expect.": [
+    "Concerts de grande envergure. De grands spectacles en direct avec des artistes internationaux en tête d’affiche, organisés avec la mise en scène, la planification de la sécurité et la qualité de production qu’attendent des dizaines de milliers de personnes.",
+    "الحفلات الموسيقية الكبرى. عروض حية ضخمة يتصدّرها فنانون عالميون، مع تجهيزات مسرحية وتخطيط للسلامة وجودة إنتاج ترقى إلى توقعات عشرات الآلاف من الحاضرين."
+  ],
+  "Intimate concerts. Smaller, closer evenings where the music, the room and the guests all matter.": [
+    "Concerts intimistes. Des soirées en petit comité, au plus près des artistes, où la musique, le lieu et les invités comptent tout autant.",
+    "الحفلات الموسيقية الحميمة. أمسيات أصغر وأكثر قربًا، تحظى فيها الموسيقى والمكان والضيوف جميعًا بالاهتمام."
+  ],
+  "Corporate events and launches. Conferences, product launches, brand activations and company celebrations that leave the right impression.": [
+    "Événements d’entreprise et lancements. Des conférences, des lancements de produits, des activations de marque et des célébrations d’entreprise qui laissent l’impression souhaitée.",
+    "فعاليات الشركات وحفلات الإطلاق. مؤتمرات وإطلاق منتجات وأنشطة تفاعلية للعلامات التجارية واحتفالات للشركات تترك الانطباع المطلوب."
+  ],
+  "Luncheons and dinners. Private and corporate dining, from a quiet table for a few to a grand evening for hundreds.": [
+    "Déjeuners et dîners. Des repas privés et professionnels, d’une table paisible pour quelques convives à une grande soirée réunissant plusieurs centaines d’invités.",
+    "حفلات الغداء والعشاء. تجارب طعام خاصة وللشركات، من مائدة هادئة لعدد قليل إلى أمسية فاخرة لمئات الضيوف."
+  ],
+  "Exhibitions. The design, build and running of shows and installations, in galleries, venues and temporary spaces.": [
+    "Expositions. La conception, la réalisation et l’organisation d’expositions et d’installations dans des galeries, des lieux événementiels et des espaces temporaires.",
+    "المعارض. تصميم المعارض والأعمال التركيبية وتجهيزها وإدارتها، في صالات العرض ومواقع الفعاليات والمساحات المؤقتة."
+  ],
+  "Weddings. Celebrations planned together with the couple, with calm and care, in the places that matter to them.": [
+    "Mariages. Des célébrations préparées avec le couple, dans le calme et avec attention, dans les lieux qui comptent pour lui.",
+    "حفلات الزفاف. احتفالات نخطط لها مع العروسين بهدوء وعناية، في الأماكن التي تعني لهما الكثير."
+  ],
+  "We begin by learning who is coming and what the evening should feel like. Then we design the concept, choose the venue and plan the programme and suppliers with you. Every area has a named lead, and we rehearse before the doors open. On the day we run everything on site, so you can enjoy the occasion yourself. Afterwards, we send a clear account of how it went.": [
+    "Nous commençons par découvrir qui viendra et quelle atmosphère vous souhaitez donner à la soirée. Nous concevons ensuite le concept, choisissons le lieu et préparons avec vous le programme et le choix des prestataires. Chaque domaine a un responsable désigné, et nous effectuons des répétitions avant l’ouverture des portes. Le jour venu, nous coordonnons tout sur place pour que vous puissiez vous aussi profiter de l’événement. Ensuite, nous vous transmettons un compte rendu clair de son déroulement.",
+    "نبدأ بالتعرّف إلى الحضور والأجواء التي ينبغي أن تسود الأمسية. ثم نصمّم الفكرة، ونختار المكان، ونخطط معك للبرنامج والمورّدين. يتولى مسؤول محدّد كل جانب من جوانب العمل، ونجري التدريبات قبل فتح الأبواب. وفي يوم المناسبة، ندير كل شيء في الموقع لتتمكن من الاستمتاع بها بنفسك. وبعد انتهائها، نرسل تقريرًا واضحًا عمّا جرى."
+  ],
+  "Local knowledge, in every venue": [
+    "La connaissance locale, dans chaque lieu",
+    "معرفة محلية في كل موقع"
+  ],
+  "Each city has its own rules, rhythms and etiquette: licensing, protocol, the season, the right hour to start, the music, the menu. Our offices in London, Amman, Beirut, Cairo, Doha and Riyadh, and our partners elsewhere, put that knowledge into the plan from the very start.": [
+    "Chaque ville a ses règles, ses rythmes et ses usages : les autorisations, le protocole, la saison, la bonne heure pour commencer, la musique, le menu. Nos bureaux à Londres, Amman, Beyrouth, Le Caire, Doha et Riyad, ainsi que nos partenaires ailleurs dans le monde, intègrent cette connaissance à la préparation dès le départ.",
+    "لكل مدينة قواعدها وإيقاعها وآدابها الخاصة: التراخيص، والبروتوكول، والموسم، والساعة المناسبة للبدء، والموسيقى، وقائمة الطعام. وتُدخل مكاتبنا في لندن وعمّان وبيروت والقاهرة والدوحة والرياض، وشركاؤنا في الأماكن الأخرى، هذه المعرفة في الخطة منذ البداية."
+  ],
+  "Global standards.": [
+    "Des standards internationaux.",
+    "معايير عالمية."
+  ],
+  "Local roots.": [
+    "Des racines locales.",
+    "جذور محلية."
+  ],
+  "Films.": [
+    "Films.",
+    "الأفلام."
+  ],
+  "Features and short films, from the first draft of the script to the final grade.": [
+    "Des longs et courts métrages, de la première version du scénario à l’étalonnage final.",
+    "أفلام طويلة وقصيرة، من المسودة الأولى للسيناريو حتى المعالجة اللونية النهائية."
+  ],
+  "Television series.": [
+    "Séries télévisées.",
+    "المسلسلات التلفزيونية."
+  ],
+  "Scripted and unscripted series for broadcasters and platforms, developed and delivered to international standards.": [
+    "Des séries scénarisées et non scénarisées pour les diffuseurs et les plateformes, développées et livrées selon les standards internationaux.",
+    "سلاسل مكتوبة النص وأخرى غير مكتوبة النص للقنوات والمنصات، نطوّرها ونسلّمها وفق المعايير الدولية."
+  ],
+  "Documentaries.": [
+    "Documentaires.",
+    "الأفلام الوثائقية."
+  ],
+  "Stories about real people, places and ideas, told with patience and a good eye.": [
+    "Des histoires de personnes, de lieux et d’idées réels, racontées avec patience et un regard attentif.",
+    "قصص عن أشخاص وأماكن وأفكار حقيقية، نرويها بتأنٍّ وحس بصري مرهف."
+  ],
+  "Web-series.": [
+    "Webséries.",
+    "مسلسلات الويب."
+  ],
+  "Original series made for digital audiences, from the first script to the final episode.": [
+    "Des séries originales conçues pour les publics numériques, du premier scénario au dernier épisode.",
+    "مسلسلات أصلية للجمهور الرقمي، من السيناريو الأول حتى الحلقة الأخيرة."
+  ],
+  "Video podcasts.": [
+    "Podcasts vidéo.",
+    "البودكاست المرئي."
+  ],
+  "Conversation shows with a clear voice, a considered format, a cinematic picture and polished sound.": [
+    "Des émissions de conversation portées par une voix affirmée, un format réfléchi, une image cinématographique et un son soigné.",
+    "برامج حوارية ذات صوت واضح، وصيغة مدروسة، وصورة سينمائية، وصوت متقن."
+  ],
+  "Large-scale concerts.": [
+    "Concerts de grande envergure.",
+    "الحفلات الموسيقية الكبرى."
+  ],
+  "Major live shows with international headline artists, delivered with the staging, safety planning and production quality that tens of thousands of people expect.": [
+    "De grands spectacles en direct avec des artistes internationaux en tête d’affiche, organisés avec la mise en scène, la planification de la sécurité et la qualité de production qu’attendent des dizaines de milliers de personnes.",
+    "عروض حية ضخمة يتصدّرها فنانون عالميون، مع تجهيزات مسرحية وتخطيط للسلامة وجودة إنتاج ترقى إلى توقعات عشرات الآلاف من الحاضرين."
+  ],
+  "Intimate concerts.": [
+    "Concerts intimistes.",
+    "الحفلات الموسيقية الحميمة."
+  ],
+  "Smaller, closer evenings where the music, the room and the guests all matter.": [
+    "Des soirées en petit comité, au plus près des artistes, où la musique, le lieu et les invités comptent tout autant.",
+    "أمسيات أصغر وأكثر قربًا، تحظى فيها الموسيقى والمكان والضيوف جميعًا بالاهتمام."
+  ],
+  "Corporate events and launches.": [
+    "Événements d’entreprise et lancements.",
+    "فعاليات الشركات وحفلات الإطلاق."
+  ],
+  "Conferences, product launches, brand activations and company celebrations that leave the right impression.": [
+    "Des conférences, des lancements de produits, des activations de marque et des célébrations d’entreprise qui laissent l’impression souhaitée.",
+    "مؤتمرات وإطلاق منتجات وأنشطة تفاعلية للعلامات التجارية واحتفالات للشركات تترك الانطباع المطلوب."
+  ],
+  "Luncheons and dinners.": [
+    "Déjeuners et dîners.",
+    "حفلات الغداء والعشاء."
+  ],
+  "Private and corporate dining, from a quiet table for a few to a grand evening for hundreds.": [
+    "Des repas privés et professionnels, d’une table paisible pour quelques convives à une grande soirée réunissant plusieurs centaines d’invités.",
+    "تجارب طعام خاصة وللشركات، من مائدة هادئة لعدد قليل إلى أمسية فاخرة لمئات الضيوف."
+  ],
+  "Exhibitions.": [
+    "Expositions.",
+    "المعارض."
+  ],
+  "The design, build and running of shows and installations, in galleries, venues and temporary spaces.": [
+    "La conception, la réalisation et l’organisation d’expositions et d’installations dans des galeries, des lieux événementiels et des espaces temporaires.",
+    "تصميم المعارض والأعمال التركيبية وتجهيزها وإدارتها، في صالات العرض ومواقع الفعاليات والمساحات المؤقتة."
+  ],
+  "Weddings.": [
+    "Mariages.",
+    "حفلات الزفاف."
+  ],
+  "Celebrations planned together with the couple, with calm and care, in the places that matter to them.": [
+    "Des célébrations préparées avec le couple, dans le calme et avec attention, dans les lieux qui comptent pour lui.",
+    "احتفالات نخطط لها مع العروسين بهدوء وعناية، في الأماكن التي تعني لهما الكثير."
+  ],
+  "Otium Nexus Group — Global standards. Local roots.": [
+    "Otium Nexus Group — Des standards internationaux. Des racines locales.",
+    "مجموعة أوتيوم نيكسوس — معايير عالمية. جذور محلية."
+  ],
+  "London · Amman · Beirut · Cairo · Doha · Riyadh": [
+    "Londres · Amman · Beyrouth · Le Caire · Doha · Riyad",
+    "لندن · عمّان · بيروت · القاهرة · الدوحة · الرياض"
+  ],
+  "Visit Productions page": [
+    "Découvrir la page Productions",
+    "زيارة صفحة الإنتاج"
+  ],
+  "Visit Events page": [
+    "Découvrir la page Events",
+    "زيارة صفحة الفعاليات"
+  ],
+  "Otium Nexus Group. All rights reserved.": [
+    "Otium Nexus Group. Tous droits réservés.",
+    "مجموعة أوتيوم نيكسوس. جميع الحقوق محفوظة."
+  ],
+  "Close company information": [
+    "Fermer la présentation de la société",
+    "إغلاق معلومات الشركة"
+  ],
+  "About Us — Otium Nexus Group": [
+    "À propos — Otium Nexus Group",
+    "من نحن — مجموعة أوتيوم نيكسوس"
+  ],
+  "Our Companies — Otium Nexus Group": [
+    "Nos sociétés — Otium Nexus Group",
+    "شركاتنا — مجموعة أوتيوم نيكسوس"
+  ],
+  "Films, television series, documentaries, web-series, video podcasts, branded and corporate content.": [
+    "Films, séries télévisées, documentaires, webséries, podcasts vidéo, contenus de marque et d’entreprise.",
+    "أفلام ومسلسلات تلفزيونية وأفلام وثائقية ومسلسلات ويب وبودكاست مرئي ومحتوى للعلامات التجارية والشركات."
+  ],
+  "Large-scale and intimate concerts, corporate events and launches, luncheons and dinners, receptions, exhibitions and weddings.": [
+    "Concerts de grande envergure et intimistes, événements d’entreprise et lancements, déjeuners et dîners, réceptions, expositions et mariages.",
+    "حفلات موسيقية كبرى وحميمة، وفعاليات شركات وحفلات إطلاق، وغداء وعشاء، واستقبالات ومعارض وحفلات زفاف."
+  ],
+  "Otium Productions — Otium Nexus Group": [
+    "Otium Productions — Otium Nexus Group",
+    "أوتيوم للإنتاج — مجموعة أوتيوم نيكسوس"
+  ],
+  "Films, television series, documentaries, web-series and video podcasts.": [
+    "Films, séries télévisées, documentaires, webséries et podcasts vidéo.",
+    "أفلام ومسلسلات تلفزيونية وأفلام وثائقية ومسلسلات ويب وبودكاست مرئي."
+  ],
+  "International stories. Local intelligence. Creative ambition.": [
+    "Des récits internationaux. Une connaissance locale. Une ambition créative.",
+    "قصص دولية. معرفة محلية. طموح إبداعي."
+  ],
+  "Otium Events — Every occasion, every size.": [
+    "Otium Events — Toutes les occasions, toutes les envergures.",
+    "أوتيوم للفعاليات — لكل مناسبة، مهما كان حجمها."
+  ],
+  "Every occasion,": [
+    "Toutes les occasions,",
+    "لكل مناسبة،"
+  ],
+  "every size.": [
+    "toutes les envergures.",
+    "مهما كان حجمها."
+  ],
+  "Concerts, festivals and shared experiences that bring people together.": [
+    "Concerts, festivals et expériences partagées qui rapprochent les gens.",
+    "حفلات موسيقية ومهرجانات وتجارب مشتركة تجمع الناس."
+  ],
+  "Corporate & brand experiences": [
+    "Événements d’entreprise et expériences de marque",
+    "تجارب الشركات والعلامات التجارية"
+  ],
+  "Ideas brought": [
+    "Des idées qui prennent",
+    "أفكار تنبض"
+  ],
+  "to life.": [
+    "vie.",
+    "بالحياة."
+  ],
+  "Conferences, launches and brand experiences, shaped around your ambition.": [
+    "Conférences, lancements et expériences de marque conçus autour de votre ambition.",
+    "مؤتمرات وحفلات إطلاق وتجارب علامات تجارية نصمّمها حول طموحك."
+  ],
+  "Weddings & private celebrations": [
+    "Mariages et célébrations privées",
+    "حفلات الزفاف والاحتفالات الخاصة"
+  ],
+  "An occasion": [
+    "Une occasion",
+    "مناسبة"
+  ],
+  "entirely yours.": [
+    "qui vous ressemble.",
+    "خاصة بك تمامًا."
+  ],
+  "Personal celebrations, thoughtfully imagined and carefully delivered.": [
+    "Des célébrations personnelles, imaginées avec attention et réalisées avec soin.",
+    "احتفالات شخصية، نصمّمها باهتمام وننفّذها بعناية."
+  ],
+  "Live entertainment": [
+    "Spectacles vivants",
+    "عروض حية"
+  ],
+  "Otium Events introduction": [
+    "Présentation d’Otium Events",
+    "مقدمة أوتيوم للفعاليات"
+  ],
+  "Ideas brought to life.": [
+    "Des idées qui prennent vie.",
+    "أفكار تنبض بالحياة."
+  ],
+  "An occasion entirely yours.": [
+    "Une occasion qui vous ressemble.",
+    "مناسبة خاصة بك تمامًا."
+  ],
+  "Events page sections": [
+    "Rubriques de la page Events",
+    "أقسام صفحة الفعاليات"
+  ],
+  "Event services": [
+    "Prestations événementielles",
+    "خدمات الفعاليات"
+  ],
+  "Contact — Otium Nexus Group": [
+    "Contact — Otium Nexus Group",
+    "تواصل معنا — مجموعة أوتيوم نيكسوس"
+  ],
+  "London headquarters": [
+    "Siège à Londres",
+    "المقر الرئيسي في لندن"
+  ],
+  "Contact Otium Nexus Group for productions and events. London headquarters, with offices in Amman, Beirut, Cairo, Doha and Riyadh.": [
+    "Contactez Otium Nexus Group pour vos productions et événements. Siège à Londres, avec des bureaux à Amman, Beyrouth, Le Caire, Doha et Riyad.",
+    "تواصل مع مجموعة أوتيوم نيكسوس للإنتاج والفعاليات. مقرنا الرئيسي في لندن، ولدينا مكاتب في عمّان وبيروت والقاهرة والدوحة والرياض."
+  ],
+  "Welcome to Otium Nexus Group": [
+    "Bienvenue chez Otium Nexus Group",
+    "مرحبًا بك في مجموعة أوتيوم نيكسوس"
+  ],
+  "OTIUM NEXUS GROUP — PROJECT INQUIRY": [
+    "OTIUM NEXUS GROUP — DEMANDE DE PROJET",
+    "مجموعة أوتيوم نيكسوس — استفسار عن مشروع"
+  ],
+  "This brief was prepared locally and has not been submitted to Otium Nexus Group.": [
+    "Ce brief a été préparé localement et n’a pas été transmis à Otium Nexus Group.",
+    "أُعدّ هذا الموجز محليًا ولم يُرسل إلى مجموعة أوتيوم نيكسوس."
+  ]
 };

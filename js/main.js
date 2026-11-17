@@ -115,3 +115,27 @@
     opener.focus({preventScroll:true});
   });
 })();
+
+// Company links keep their full-page fallback when JavaScript is unavailable.
+(() => {
+  for (const opener of document.querySelectorAll('[data-company-open]')) {
+    const dialog = document.getElementById('company-' + opener.dataset.companyOpen);
+    if (!dialog || typeof dialog.showModal !== 'function') continue;
+    opener.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button) return;
+      event.preventDefault();
+      dialog.showModal();
+      dialog.scrollTop = 0;
+      document.body.classList.add('story-open');
+    });
+    dialog.querySelector('[data-company-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      const bounds = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('story-open');
+      opener.focus({preventScroll:true});
+    });
+  }
+})();

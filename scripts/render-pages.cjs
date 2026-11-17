@@ -116,6 +116,7 @@ for (const page of pages) {
   if (process.argv.includes('--production-only') && page.active !== 'production') continue;
   page.extra = (page.extra || '') + `<link rel="stylesheet" href="${page.base || ''}brand.css">`;
   if (page.active === 'production') require('./production-portfolio.cjs')(page, image);
+  require('./document-pages.cjs')(page);
   let html = simplifyPresentation(shell(page), page)
     .replace(/Otium Production\b/g, 'Otium Productions')
     .replace(/>Production<\/a>/g, '>Productions</a>')
@@ -137,6 +138,8 @@ for (const page of pages) {
   html = require('./refine-presentation.cjs')(html,page);
   if (page.active === 'home') html = require('./home-story.cjs')(html);
   html = require('./presentation-cleanup.cjs')(html,page.base||'');
+  html = html.replaceAll('Otium Group', 'Otium Nexus Group')
+    .replaceAll('London · Doha · Beirut', require('./document-content.cjs').cities);
   html = require('./localization-markup.cjs')(html,page.base||'');
   fs.writeFileSync(path.join(root,page.file),html);
   console.log(`Wrote ${page.file}`);
