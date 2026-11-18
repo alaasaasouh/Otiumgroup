@@ -8,6 +8,10 @@ Live: [Vercel](https://otiumgroup.vercel.app/) · [GitHub Pages](https://alaasaa
 
 Run `npm ci` for a fresh checkout, then `npm run dev`. Open http://127.0.0.1:4173. The committed pages and player bundle can be previewed without rebuilding.
 
+Run `npm run clean` to remove generated `dist/` and `preview/` files. Build output
+and screenshots are recreated when needed. Sources, dependencies and original
+client files are preserved; see the [folder guide](docs/FOLDER-GUIDE.md).
+
 ## Editing
 
 | Content | Source |

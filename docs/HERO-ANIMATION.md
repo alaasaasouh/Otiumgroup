@@ -22,7 +22,8 @@ seaside dinner. Sources: `home_hero_1_london.jpg`, `natgeo_qatar_desert.jpg`, an
 ## Historical portal animation
 
 The original portal notes below are retained for reference. The former 6-second footage
-and `extract-hero-frames.cjs` describe that historical source, not the current photo build.
+describes that historical source. Its superseded extractor was removed in the
+18 November cleanup and remains recoverable in Git history.
 
 The golden portal moved toward the event space as visitors scrolled down and reversed when they scrolled up. Only the homepage used this effect.
 
@@ -45,7 +46,11 @@ The picker markup is in `scripts/home-intro-markup.cjs`, its behavior in `js/hom
 
 Edit hero copy and links in `scripts/render-pages.cjs`, then run `node scripts/render-pages.cjs --home-only`. Generated markup lives in `index.html`. Appearance is in `hero.css`; behavior is in `js/hero.js`. Shared styles remain in `style.css`.
 
-To replace the footage, update the source and run `node scripts/extract-hero-frames.cjs`. This development helper uses the already-installed `@ffmpeg-installer/ffmpeg`, or an executable path supplied through `FFMPEG_PATH`. Update `count` in `js/hero.js` if the frame count changes. Verify the first and last frames, crop, contrast, and file sizes after replacing footage. The source video and extraction tools are not required on the public website; the JPG folders are.
+To rebuild the current sequence, edit the source selection and run
+`node scripts/build-client-hero-frames.cjs` with Sharp and FFmpeg available. Update
+`count` in `js/hero.js` only if the frame count changes. Verify the first and last
+frames, crop, contrast, and file sizes after replacing imagery. The source photos
+and media tools are not required on the public website; both JPG folders are.
 
 Run `scripts/check-hero.cjs` with the installed Playwright path to verify forward and reverse playback, sticky positioning, mobile overflow, reduced motion, and the JavaScript-disabled poster. Screenshots are saved in `preview/hero-scroll-*.png`.
 

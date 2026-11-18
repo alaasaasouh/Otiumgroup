@@ -1,6 +1,6 @@
 # Client website text update — 18 November 2026
 
-Source: `Otium Nexus Group Website Full Text.docx` in the project root. All 65
+Source: `_archive/source-materials/Otium Nexus Group Website Full Text.docx`. All 65
 non-empty paragraphs were extracted, including headings and placement instructions.
 The paragraph numbers preserve their original Word-document positions; four blank
 paragraphs are omitted. The source SHA-256 is recorded with the extraction. The

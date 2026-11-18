@@ -3,11 +3,8 @@
  */
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const content = {window:{}};
-vm.runInNewContext(fs.readFileSync(path.join(root,'data/projects.js'),'utf8'), content);
-const { OTIUM_PROJECTS: projects, OTIUM_SERVICES: services } = content.window;
+const {projects, services} = require('./concept-content.cjs');
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function image(base,name,alt,cls='',eager=false,sizes='100vw') {
@@ -46,7 +43,7 @@ const divisions = `${pageIntro('The Otium collective','One group.<br><em>Many wo
 const slideData = [
   {image:'production',alt:'Hands holding a clapperboard on a desert film location',title:'Every frame, a possibility.',caption:'Film & creative production'},
   {image:'events',alt:'Crowd and stage lights at a live concert',title:'Culture, in focus.',caption:'Documentary & digital storytelling'},
-  {image:'travel',alt:'Architectural villa beside a sunlit swimming pool',title:'See it differently.',caption:'Commercial & branded content'}
+  {image:'production-documentary',alt:'A documentary crew filming on location in Doha',title:'See it differently.',caption:'Commercial & branded content'}
 ];
 const production = `<section class="hero production-hero" aria-label="Otium Production introduction slideshow" aria-roledescription="carousel"><div class="hero-slides">${slideData.map((s,i)=>`<div class="hero-slide ${i===0?'active':''}" data-title="${s.title}" data-caption="${s.caption}" aria-hidden="${i!==0}" role="group" aria-roledescription="slide" aria-label="${i+1} of ${slideData.length}">${image('../',s.image,s.alt,'',i===0)}</div>`).join('')}</div><div class="container hero-content"><p class="eyebrow">Otium Production / A division of Otium Group</p><h1 class="hero-title">Beyond<br>the <span class="serif">ordinary.</span></h1><div class="hero-actions"><a class="pill solid" href="#work">Explore our creative world ${arrow}</a><a class="hero-secondary" href="../contact/index.html?type=Production">Start a project ${arrow}</a></div></div><div class="hero-bottom"><div class="slider-bottom"><p class="slide-description"><strong data-slide-title>${slideData[0].title}</strong><span data-slide-caption>${slideData[0].caption}</span></p><div class="slider-controls"><p class="slide-count"><b data-current-slide>01</b> <span>/ ${String(slideData.length).padStart(2,'0')}</span></p><div class="slider-progress" aria-hidden="true"></div><button class="pause-slider" aria-label="Pause slideshow" aria-pressed="false">Ⅱ</button><button class="circle-button" data-slide-prev aria-label="Previous slide"><span class="arrow" aria-hidden="true">←</span></button><button class="circle-button" data-slide-next aria-label="Next slide"><span class="arrow" aria-hidden="true">→</span></button></div></div></div></section>
 <section class="section-pad production-intro"><div class="container intro-grid"><p class="eyebrow reveal">01 / The creative perspective</p><div><h2 class="heading reveal">An idea is only<br><em>the beginning.</em></h2><div class="intro-bottom"><p class="body-copy reveal">Production is how a thought becomes something you can see, hear, and feel. We believe the best stories begin with a different perspective — and come to life through every considered detail.</p><a class="text-link reveal" href="../contact/index.html?type=Production">Let’s make something ${arrow}</a></div></div></div></section>
@@ -63,7 +60,7 @@ const pages = [
   {file:'index.html',active:'home',title:'Otium Group — Many worlds. One vision.',description:'Discover Otium Group. People, ideas, and businesses brought together through Productions, Events, and a shared vision of what comes next.',body:home},
   {file:'about/index.html',base:'../',active:'about',title:'Our Perspective — Otium Group',description:'A home for distinct businesses and a shared way of thinking. Discover the idea, outlook, and values behind Otium Group.',body:about},
   {file:'divisions/index.html',base:'../',active:'divisions',title:'Our Worlds — Otium Group',description:'Discover the Otium collective: explore Otium Productions and Otium Events.',body:divisions},
-  {file:'production/index.html',base:'../',active:'production',title:'Otium Production — Beyond the ordinary.',description:'Step into the creative world of Otium Production. Explore our visual direction, production possibilities, and future film portfolio.',body:production,hero:'production',extra:'<script defer src="../data/projects.js"></script><script defer src="../js/production.js"></script>'},
+  {file:'production/index.html',base:'../',active:'production',title:'Otium Production — Beyond the ordinary.',description:'Step into the creative world of Otium Production. Explore our visual direction, production possibilities, and future film portfolio.',body:production,hero:'production',extra:'<script defer src="../js/production.js"></script>'},
   {file:'events/index.html',base:'../',active:'divisions',title:'Otium Events — Moments that matter. Coming soon.',description:'A new world of shared experiences is on the horizon. Otium Events is coming soon.',body:coming('Events','events','Made to<br><em>be felt.</em>','Some moments stay with you.<br>A new world of Otium experiences is on its way.'),hero:'events'},
   {file:'contact/index.html',base:'../',active:'contact',title:'Start a Conversation — Otium Group',description:'A project, a possibility, a partnership. Tell Otium Group what you have in mind and prepare your project inquiry.',body:contact,extra:'<script defer src="../js/contact.js"></script>'}
 ];

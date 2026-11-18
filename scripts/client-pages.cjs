@@ -19,7 +19,7 @@ module.exports = function revise(pages, {image, pageIntro}) {
   home.description='An international group bringing together productions and events. London, Doha, Beirut and worldwide.';
 
   const about=pages.find(p=>p.active==='about');
-  about.body=require('./about-page.cjs')();
+  about.body=require('./document-content.cjs').aboutPage();
   about.title='About Us — Otium Group';
   about.description='Our story, our mission and our vision. Discover the ideas and people behind Otium productions and events.';
   const divisions=pages.find(p=>p.active==='divisions');

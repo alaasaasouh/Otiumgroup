@@ -1,5 +1,20 @@
 # Website change log
 
+## 18 November 2026 - Repository and local folder cleanup
+
+- Removed superseded About/story helpers, the old portal-frame extractor and the
+  obsolete brand check; current authoring and verification workflows remain intact.
+- Moved intermediate concept data to an authoring-only module outside deployment.
+- Removed four unused WebP aliases while keeping their original photos and all
+  hero-animation frames. The intermediate authoring stage reuses current images.
+- Archived the original Word document and retained client photography and backups.
+- Added `npm run clean` for generated builds and previews, with workspace path and
+  symlink guards. Runtime files and all 290 animation frames remain unchanged.
+- Validation passed: SHA-256 preservation of all 357 retained runtime files, exact
+  regeneration of six pages, all 65 client paragraphs, desktop/mobile navigation in
+  three languages, images, frame-loading fallbacks and the Vercel production build.
+- Previous source commit: `e6436d6`; removed tracked files remain in Git history.
+
 ## 18 November 2026 - Homepage company navigation
 
 - Fixed the Productions and Events cards to open their pages directly. Removed

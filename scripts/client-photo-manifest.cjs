@@ -5,8 +5,6 @@ module.exports = {
   hero: ['01 - Home and Cities', 'home_hero_1_london.jpg'],
   production: ['02 - Productions', 'productions_hero.jpg'],
   events: ['06 - Event Locations', 'site_event_baalbek_concert.jpg'],
-  landscape: ['04 - Travel and Documentary', 'natgeo_qatar_desert.jpg'],
-  travel: ['01 - Home and Cities', 'home_hero_3_beirut.jpg'],
   'production-podcast': ['02 - Productions', 'productions_podcast_studio.jpg'],
   'production-documentary': ['02 - Productions', 'productions_documentary_doha.jpg'],
   'event-concert': ['03 - Events', 'events_hero_concert.jpg'],

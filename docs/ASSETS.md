@@ -24,8 +24,10 @@ organized without modifying their bytes in `Client Photos - Review/`. The source
 | story-about | popup_about_us.jpg | About chapter and story dialog |
 | story-mission | popup_our_mission.jpg | Mission chapter and story dialog |
 | story-vision | popup_our_vision.jpg | Vision chapter and story dialog |
-| landscape | natgeo_qatar_desert.jpg | Hero source / retained image alias |
-| travel | home_hero_3_beirut.jpg | Hero source / retained image alias |
+
+The Qatar desert and Beirut dinner originals are read directly by the hero-frame
+builder. Their unused `landscape-*` and `travel-*` WebP aliases were removed in the
+18 November cleanup; all desktop/mobile animation frames and original JPEGs remain.
 
 The hero sequence uses London, Qatar desert, and Beirut dinner photos, with deterministic
 camera pushes and dissolves. It does not contain AI-generated waves or people movement.

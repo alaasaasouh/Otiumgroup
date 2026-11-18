@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/serve.cjs",
+    "clean": "node scripts/clean.cjs",
     "build": "node scripts/build-player.cjs && node scripts/build-production.cjs",
     "build:vercel": "npm run build && node scripts/build-site.cjs",
     "test:assets": "node scripts/check-assets.cjs",
