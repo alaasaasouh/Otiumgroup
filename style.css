@@ -405,7 +405,7 @@ h1,h2,h3{font-weight:400}
 .reveal[data-reveal=left].is-pending{transform:translateX(-30px)}
 .reveal[data-reveal=right].is-pending{transform:translateX(30px)}
 .reveal[data-reveal=scale].is-pending{transform:scale(.975)}
-@view-transition{navigation:auto}
+@media(prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
 ::view-transition-old(root){animation:fade-out .2s ease both}::view-transition-new(root){animation:fade-in .4s ease both}
 @keyframes fade-out{to{opacity:0}}@keyframes fade-in{from{opacity:0}to{opacity:1}}
 @media(min-width:1700px){.hero-bottom{left:max(var(--gutter),calc((100vw - 1624px)/2));right:max(var(--gutter),calc((100vw - 1624px)/2))}}

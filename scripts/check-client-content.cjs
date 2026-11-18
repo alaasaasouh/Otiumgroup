@@ -1,4 +1,4 @@
-/* Document completeness, localization and the new dialog interactions. */
+/* Document completeness, localization, company links and Our Story interactions. */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -84,12 +84,11 @@ console.log('All generated page strings have French and Arabic translations.');
             assert.equal(await page.locator('.site-header .brand-logo').getAttribute('alt'),'Otium Nexus Group');
           }
           await checkParagraphs([2,3,24],page,'Homepage');
-          for (const [id,open,ids] of [['our-story','[data-story-open]',storyIds],['company-production','[data-company-open="production"]',productionIds],['company-events','[data-company-open="events"]',eventIds]]) {
+          for (const [id,open,ids] of [['our-story','[data-story-open]',storyIds]]) {
             const opener = page.locator(open), dialog = page.locator('#'+id);
             await opener.click();
             assert(await dialog.evaluate(el=>el.open));
             await checkParagraphs(ids,dialog,id);
-            if (id!=='our-story') await checkParagraphs([24],dialog,id);
             for (const width of [1440,390,320]) {
               await page.setViewportSize({width,height:900});
               assert(await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1),`${language} ${id} horizontal overflow at ${width}`);
@@ -116,31 +115,32 @@ console.log('All generated page strings have French and Arabic translations.');
           assert(await page.locator('.format-card').last().evaluate(el=>{const a=el.getBoundingClientRect(),b=el.parentElement.getBoundingClientRect();return a.left>=b.left-2&&a.right<=b.right+2}),'Sixth Events card must be reachable');
         }
       }
-      // Close buttons, outside click, and no-JavaScript full-page links.
+      // Our Story close button, backdrop dismissal and mobile layout.
       await page.goto(base+'?lang='+language,{waitUntil:'domcontentloaded'});
       await page.locator(`[data-language="${language}"]`).click();
-      await page.locator('[data-company-open="production"]').click();
-      await page.locator('#company-production [data-company-close]').click();
-      assert.equal(await page.locator('#company-production').evaluate(el=>el.open),false);
-      await page.locator('[data-company-open="events"]').click();
+      await page.locator('[data-story-open]').click();
+      await page.locator('#our-story [data-story-close]').click();
+      assert.equal(await page.locator('#our-story').evaluate(el=>el.open),false);
+      await page.locator('[data-story-open]').click();
       await page.mouse.click(2,2);
-      assert.equal(await page.locator('#company-events').evaluate(el=>el.open),false);
+      assert.equal(await page.locator('#our-story').evaluate(el=>el.open),false);
+      assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('story-open')),false);
       await page.setViewportSize({width:390,height:844});
-      await page.locator('[data-company-open="events"]').click();
-      await page.locator('#company-events').screenshot({path:path.join(root,`preview/client-events-dialog-${language}.png`)});
+      await page.locator('[data-story-open]').click();
+      await page.locator('#our-story').screenshot({path:path.join(root,`preview/client-story-dialog-${language}.png`)});
       await page.keyboard.press('Escape');
-      console.log(language+': exact paragraphs, six responsive pages, three dialogs, focus restoration and six Events services passed.');
+      console.log(language+': exact paragraphs, six responsive pages, Our Story dialog, focus restoration and six Events services passed.');
       await context.close();
     }
     const plain = await browser.newPage({javaScriptEnabled:false});
     await plain.goto(base);
-    for (const kind of ['production','events']) assert.equal(await plain.locator(`[data-company-open="${kind}"]`).getAttribute('href'),`${kind}/index.html`);
+    for (const kind of ['production','events']) assert.equal(await plain.locator(`.home-company-card--${kind}`).getAttribute('href'),`${kind}/index.html`);
     await plain.close();
     assert.deepEqual(errors,[]);
     const special = [
       {id:1,placement:'Homepage group identity and browser title',verified:true,type:'document section label'},
       {id:5,placement:'Our Story button and functioning dialog',verified:true,type:'interaction instruction'},
-      {id:23,placement:'Productions and Events links with functioning dialogs and full-page fallbacks',verified:true,type:'interaction instruction'}
+      {id:23,placement:'Productions and Events cards navigate directly to their full pages',verified:true,type:'interaction instruction'}
     ];
     const coverage = source.paragraphs.map(p=>({id:p.id,text:p.text,placements:records.filter(r=>r.id===p.id).map(r=>r.placement),instruction:special.find(r=>r.id===p.id)||undefined}));
     assert(coverage.every(p=>p.placements.length || p.instruction),'Every document paragraph must have a destination');

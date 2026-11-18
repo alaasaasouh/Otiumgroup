@@ -18,6 +18,7 @@
     let index = 0;
     let timer;
     let userPaused = reducedMotion.matches;
+    let renderedPause;
     let focused = false;
     let visible = true;
     function restart() {
@@ -34,7 +35,11 @@
           else { image.loading='eager'; restart(); }
         }, 6000);
       }
-      pause.innerHTML = '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">'+(userPaused?'<path d="m8 5 11 7-11 7Z"/>':'<path d="M9 5v14M15 5v14"/>')+'</svg>';
+      // Preserve the pointer target when focus/visibility restarts the timer.
+      if (renderedPause !== userPaused) {
+        pause.innerHTML = '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">'+(userPaused?'<path d="m8 5 11 7-11 7Z"/>':'<path d="M9 5v14M15 5v14"/>')+'</svg>';
+        renderedPause = userPaused;
+      }
       pause.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
       pause.setAttribute('aria-pressed', String(userPaused));
     }

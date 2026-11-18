@@ -27,8 +27,9 @@ Run `npm run build` after editing the player or Production portfolio. For page-c
 The complete client Word document is mapped to the site in
 [the content update guide](docs/CLIENT-CONTENT-UPDATE.md). After changing its French
 or Arabic source translations, run `node scripts/sync-client-translations.cjs`.
-Use `npm run test:client-content` to verify every document paragraph and the three
-homepage pop-ups in all languages.
+Use `npm run test:client-content` to verify every document paragraph and the Our
+Story dialog in all languages. Use `npm run test:navigation` to follow homepage
+company cards and navigation links on desktop and mobile in all three languages.
 
 English, professional French, and Modern Standard Arabic are available across the site, with saved language selection and Arabic right-to-left layouts. See the [translation and rollback guide](docs/TRANSLATIONS.md). The contact form is configured to send inquiries to asonyxmedia@gmail.com through FormSubmit; recipient activation is required. See [contact setup](docs/CONTACT.md).
 

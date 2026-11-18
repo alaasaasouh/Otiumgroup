@@ -30,11 +30,6 @@ function storyDialog() {
 function aboutPage() {
   return `<div class="about-chapters container"><h1 class="document-about-title">Our Story</h1>${storySections.map((s,i) => `<section class="about-chapter about-${s.className}" aria-labelledby="about-${s.className}-title"><div class="about-chapter-heading"><span class="about-chapter-number" aria-hidden="true">0${i+1}</span>${heading(s.heading,2,`id="about-${s.className}-title"`)}${s.photo ? `<figure class="about-chapter-photo">${photo(s,'../')}</figure>` : ''}</div><div class="about-chapter-copy">${ps(s.ids)}</div></section>`).join('')}</div>`;
 }
-function companyDialog(kind) {
-  const c = companies[kind];
-  const sections = [[c.about,c.intro],[c.mission,c.missionCopy],[c.vision,c.visionCopy],[c.services,c.serviceCopy.concat(c.additional)],[c.approach,c.approachCopy],[c.location,c.locationCopy]];
-  return `<dialog class="story-dialog company-dialog" id="company-${kind}" aria-labelledby="company-${kind}-title"><div class="story-shell"><button class="story-close" type="button" data-company-close aria-label="Close company information" autofocus><span aria-hidden="true">×</span></button><p class="eyebrow no-dot">Otium Nexus Group</p>${heading(c.name,2,`id="company-${kind}-title"`)}${c.tagline ? p(c.tagline) : ''}<div class="company-dialog-quote">${p(24)}</div><div class="story-sections">${sections.map(([id,ids],i) => `<section><span class="story-number" aria-hidden="true">0${i+1}</span><div>${heading(id,3)}${ps(ids)}</div></section>`).join('')}</div><a class="text-link" href="${kind}/index.html">${kind === 'production' ? 'Visit Productions page' : 'Visit Events page'}</a></div></dialog>`;
-}
 function companyPage(kind) {
   const c = companies[kind];
   const formats = c.serviceCopy.map(id => {
@@ -46,4 +41,4 @@ function companyPage(kind) {
   const split = (id, ids, anchor) => `<section class="brand-section container brand-split" id="${anchor}"><div>${heading(id,2,'class="heading"')}</div><div class="brand-copy">${ps(ids)}</div></section>`;
   return intro + services + split(c.approach,c.approachCopy,kind === 'events' ? 'event-approach' : 'production-approach') + split(c.location,c.locationCopy,'local-knowledge');
 }
-module.exports = { source, text, esc, p, ps, heading, cities, storySections, companies, storyDialog, aboutPage, companyDialog, companyPage };
+module.exports = { source, text, esc, p, ps, heading, cities, storySections, companies, storyDialog, aboutPage, companyPage };

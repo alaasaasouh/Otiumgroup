@@ -185,7 +185,7 @@
       "placements": [],
       "instruction": {
         "id": 23,
-        "placement": "Productions and Events links with functioning dialogs and full-page fallbacks",
+        "placement": "Productions and Events cards navigate directly to their full pages",
         "verified": true,
         "type": "interaction instruction"
       }
@@ -195,8 +195,6 @@
       "text": "In Latin, otium means time well spent. It is what we aim to give everyone we work with.",
       "placements": [
         "Homepage",
-        "company-production",
-        "company-events",
         "Companies directory"
       ]
     },
@@ -204,7 +202,6 @@
       "id": 26,
       "text": "Otium Productions",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -212,7 +209,6 @@
       "id": 27,
       "text": "About Us",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -220,7 +216,6 @@
       "id": 28,
       "text": "Otium Productions is the production house of Otium Nexus Group. We develop and make films, television series, documentaries, web-series, video podcasts and other original content, for broadcasters, platforms, brands and institutions. Our producers, directors and editors bring international standards of craft, and our crews and partners on the ground bring knowledge of each location.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -228,7 +223,6 @@
       "id": 29,
       "text": "Our team brings together writers, directors, producers, editors and sound designers from many countries, and that range gives our stories a voice that carries beyond borders. Based in London, with teams in Amman, Beirut, Cairo, Doha and Riyadh, we can produce anywhere with the confidence of people who know the ground: who to call, what to ask for, and how to put the people we film at ease.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -236,7 +230,6 @@
       "id": 30,
       "text": "We care about craft and about people. A good production is rigorous behind the scenes and warm in front of the camera, and that is how we work.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -244,7 +237,6 @@
       "id": 31,
       "text": "Our Mission",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -252,7 +244,6 @@
       "id": 32,
       "text": "To make stories that deserve people's time, and to make working with us a pleasure.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -260,7 +251,6 @@
       "id": 33,
       "text": "We are rigorous in our craft, curious about the people we meet, and respectful of every place we film. We keep our partners informed and involved from the first idea to the final delivery.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -268,7 +258,6 @@
       "id": 34,
       "text": "Our Vision",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -276,7 +265,6 @@
       "id": 35,
       "text": "To become a name audiences and commissioners trust for storytelling that crosses borders: work made in the Middle East, Europe and beyond that people everywhere want to watch, hear and share.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -284,7 +272,6 @@
       "id": 36,
       "text": "What we make",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -292,7 +279,6 @@
       "id": 37,
       "text": "Films. Features and short films, from the first draft of the script to the final grade.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -300,7 +286,6 @@
       "id": 38,
       "text": "Television series. Scripted and unscripted series for broadcasters and platforms, developed and delivered to international standards.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -308,7 +293,6 @@
       "id": 39,
       "text": "Documentaries. Stories about real people, places and ideas, told with patience and a good eye.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -316,7 +300,6 @@
       "id": 40,
       "text": "Web-series. Original series made for digital audiences, from the first script to the final episode.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -324,7 +307,6 @@
       "id": 41,
       "text": "Video podcasts. Conversation shows with a clear voice, a considered format, a cinematic picture and polished sound.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -332,7 +314,6 @@
       "id": 42,
       "text": "We also work on branded and corporate content, and on any other format a good idea demands.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -340,7 +321,6 @@
       "id": 43,
       "text": "How we work",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -348,7 +328,6 @@
       "id": 44,
       "text": "Every production starts with a conversation about what you want people to feel. We then shape the idea, build the team and plan every detail of the schedule, the locations and the permissions. Our producers are with you from the first call to the final wrap. In post-production we edit, grade, mix and deliver in every format and language you need.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -356,7 +335,6 @@
       "id": 45,
       "text": "Wherever the story is",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -364,7 +342,6 @@
       "id": 46,
       "text": "A story shouldn't lose its voice when it crosses a border. From our six offices, we can reach locations across the Middle East and Europe at short notice. Further afield, we send a core team from one of our offices to work alongside trusted local partners, and we run the whole crew as one.",
       "placements": [
-        "company-production",
         "Productions page"
       ]
     },
@@ -372,7 +349,6 @@
       "id": 48,
       "text": "Otium Events",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -380,7 +356,6 @@
       "id": 49,
       "text": "Every occasion, every size.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -388,7 +363,6 @@
       "id": 50,
       "text": "About Us",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -396,7 +370,6 @@
       "id": 51,
       "text": "Otium Events is the events company of Otium Nexus Group. We create occasions that people talk about long afterwards. We work at every scale, from large concerts headlined by international stars to small, intimate evenings, and we also design corporate events, launches, luncheons, dinners, receptions, exhibitions and weddings.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -404,7 +377,6 @@
       "id": 52,
       "text": "The size of the guest list changes the logistics, never the attention to detail. Whether we are managing a crowd of thousands or a table of ten, the same questions come first: who is coming, how should they feel, and what will they remember?",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -412,7 +384,6 @@
       "id": 53,
       "text": "Our team combines producers, designers, technicians and hosts from many countries. With offices in London, Amman, Beirut, Cairo, Doha and Riyadh, and partners around the world, we bring international standards to every venue and local knowledge to every detail.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -420,7 +391,6 @@
       "id": 54,
       "text": "Our Mission",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -428,7 +398,6 @@
       "id": 55,
       "text": "To create occasions that guests remember as time well spent, and to give hosts the chance to enjoy them.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -436,7 +405,6 @@
       "id": 56,
       "text": "We plan every detail, keep you informed at every step and welcome each guest as our own. You bring the reason to celebrate. We take care of the rest.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -444,7 +412,6 @@
       "id": 57,
       "text": "Our Vision",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -452,7 +419,6 @@
       "id": 58,
       "text": "To be the name behind some of the world's most talked-about gatherings, from the concert stage to the dinner table, known for scale, finesse and warmth in equal measure.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -460,7 +426,6 @@
       "id": 59,
       "text": "What we create",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -468,7 +433,6 @@
       "id": 60,
       "text": "Large-scale concerts. Major live shows with international headline artists, delivered with the staging, safety planning and production quality that tens of thousands of people expect.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -476,7 +440,6 @@
       "id": 61,
       "text": "Intimate concerts. Smaller, closer evenings where the music, the room and the guests all matter.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -484,7 +447,6 @@
       "id": 62,
       "text": "Corporate events and launches. Conferences, product launches, brand activations and company celebrations that leave the right impression.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -492,7 +454,6 @@
       "id": 63,
       "text": "Luncheons and dinners. Private and corporate dining, from a quiet table for a few to a grand evening for hundreds.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -500,7 +461,6 @@
       "id": 64,
       "text": "Exhibitions. The design, build and running of shows and installations, in galleries, venues and temporary spaces.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -508,7 +468,6 @@
       "id": 65,
       "text": "Weddings. Celebrations planned together with the couple, with calm and care, in the places that matter to them.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -516,7 +475,6 @@
       "id": 66,
       "text": "How we work",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -524,7 +482,6 @@
       "id": 67,
       "text": "We begin by learning who is coming and what the evening should feel like. Then we design the concept, choose the venue and plan the programme and suppliers with you. Every area has a named lead, and we rehearse before the doors open. On the day we run everything on site, so you can enjoy the occasion yourself. Afterwards, we send a clear account of how it went.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -532,7 +489,6 @@
       "id": 68,
       "text": "Local knowledge, in every venue",
       "placements": [
-        "company-events",
         "Events page"
       ]
     },
@@ -540,7 +496,6 @@
       "id": 69,
       "text": "Each city has its own rules, rhythms and etiquette: licensing, protocol, the season, the right hour to start, the music, the menu. Our offices in London, Amman, Beirut, Cairo, Doha and Riyadh, and our partners elsewhere, put that knowledge into the plan from the very start.",
       "placements": [
-        "company-events",
         "Events page"
       ]
     }

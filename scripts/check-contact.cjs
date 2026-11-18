@@ -26,7 +26,7 @@ const {chromium}=require('playwright-core');
     await page.waitForFunction(()=>!document.querySelector('[type=submit]').disabled);
     assert.equal(requests,before+1);
     assert.equal(payload.email,'test@example.com');assert.equal(payload.language,lang);
-    assert.equal(payload._subject,'Otium Group — Events inquiry');
+    assert.equal(payload._subject,'Otium Nexus Group — Events inquiry');
     assert.equal(await page.locator('.form-result').evaluate(el=>el.classList.contains('error')),mode!=='success');
     const heading=mode==='success'?'Your inquiry is on its way.':mode==='activation'?'Email delivery is being activated.':'Let’s try that again.';
     assert.equal(await page.locator('.form-result h3').textContent(),await page.evaluate(s=>OtiumI18n.t(s),heading));

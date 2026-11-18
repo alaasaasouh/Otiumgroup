@@ -7,7 +7,11 @@ paragraphs are omitted. The source SHA-256 is recorded with the extraction. The
 original Word document stays local and is excluded from GitHub; the complete
 website-copy extraction and verification report are tracked.
 
-## Placement agreed before editing
+## Current placement
+
+The homepage company cards now open the full Productions and Events pages directly,
+following the navigation correction requested on 18 November. Our Story opens its
+own dialog.
 
 | Word paragraphs | Website destination |
 | --- | --- |
@@ -18,16 +22,16 @@ website-copy extraction and verification report are tracked.
 | 11–15 | New Our Name section in Our Story and the About page |
 | 16–18 | Group Mission in Our Story and the About page |
 | 19–21 | Group Vision in Our Story and the About page |
-| 23 | Productions and Events company cards open separate dialogs; full-page links remain available |
-| 24 | Full Latin sentence above company cards, in both company dialogs, and in the company directory |
-| 26–35 | Productions identity, About Us, Mission and Vision, in its dialog and page |
-| 36–42 | All five production format descriptions plus the branded/corporate-content paragraph, in its dialog and page |
-| 43–44 | Productions How we work, in its dialog and page |
-| 45–46 | Wherever the story is, in its dialog and page |
-| 48–58 | Events identity, tagline, About Us, Mission and Vision, in its dialog and page |
-| 59–65 | All six event descriptions, in its dialog and page |
-| 66–67 | Events How we work, in its dialog and page |
-| 68–69 | Local knowledge, in every venue, in its dialog and page |
+| 23 | Productions and Events company cards navigate to their full pages |
+| 24 | Full Latin sentence above company cards and in the company directory |
+| 26–35 | Productions identity, About Us, Mission and Vision on its page |
+| 36–42 | All five production format descriptions plus the branded/corporate-content paragraph on its page |
+| 43–44 | Productions How we work on its page |
+| 45–46 | Wherever the story is on its page |
+| 48–58 | Events identity, tagline, About Us, Mission and Vision on its page |
+| 59–65 | All six event descriptions on its page |
+| 66–67 | Events How we work on its page |
+| 68–69 | Local knowledge, in every venue on its page |
 
 The group name, page titles, social metadata, contact-page office information and
 shared footer use Otium Nexus Group. City references include London, Amman, Beirut,
@@ -39,7 +43,7 @@ or phone numbers were inferred.
 - The English document body is used verbatim. Headings and service descriptions
   are arranged for the existing layouts. The document’s “pop-up” notes are
   implemented as interactions, rather than displayed as customer-facing text.
-- Our Story, both company dialogs and the full pages use one source of copy.
+- Our Story and the full pages use one source of copy.
 - Faithful French and Modern Standard Arabic translations cover every document
   paragraph and the new controls. The existing language picker, saved-language
   behavior and Arabic right-to-left layout remain available.
@@ -47,7 +51,7 @@ or phone numbers were inferred.
   applied after the existing Production slideshow and portfolio builders, so they
   cannot overwrite it.
 - The approved logo, photography, 290 animation frames and video portfolio were
-  retained. Company cards remain usable as page links without JavaScript.
+  retained. Company cards navigate to their pages with or without JavaScript.
 - The source and generated pages are prepared for GitHub. The repository's existing
   deployment configuration handles publication after changes reach `main`.
 
@@ -75,7 +79,10 @@ node scripts/sync-client-translations.cjs
 With `node scripts/serve.cjs` running, use `npm.cmd run test:client-content` on
 Windows. The check compares every literal paragraph in every assigned destination,
 in English, French and Arabic. It checks page widths of 1440, 810, 390 and 320 pixels,
-all three dialogs, keyboard dismissal, focus restoration, close buttons, backdrop
-dismissal, full-page fallbacks, and access to the sixth Events service. Dialog
+the Our Story dialog, keyboard dismissal, focus restoration, its close button,
+backdrop dismissal, page links, and access to the sixth Events service. Dialog
 screenshots are saved in ignored `preview/`. The asset and navigation checks remain
 available through `npm.cmd run test:assets` and `npm.cmd run test:navigation`.
+The navigation check follows the company cards by mouse, keyboard and mobile tap,
+checks browser Back, follows the header, footer and mobile menu, and validates all
+internal links and anchor targets in English, French and Arabic.

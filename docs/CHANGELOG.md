@@ -1,5 +1,19 @@
 # Website change log
 
+## 18 November 2026 - Homepage company navigation
+
+- Fixed the Productions and Events cards to open their pages directly. Removed
+  the company-dialog click interception and duplicated hidden company copy.
+- Retained the Our Story dialog and all company text on the destination pages.
+- Fixed the slideshow play/pause button needing a second click after focus changed
+  by keeping its icon stable when restarting the timer.
+- Made page transitions honor reduced-motion settings without starting an animation.
+- Expanded navigation checks to follow links by mouse, keyboard and mobile tap,
+  including header/footer/mobile links, browser Back and all three languages.
+- Validation passed: navigation, all 65 client paragraphs, images and frames,
+  language entry, mocked form submissions, both slideshows and service carousels
+  down to 320 pixels, actual Mux playback and cleanup, and the Vercel build.
+
 ## 18 November 2026 - Complete client website text
 
 - Applied all 65 non-empty paragraphs and placement instructions from the supplied
