@@ -1,4 +1,5 @@
 /* Translation layout layer. Remove/disable localization to restore the English design. */
+@font-face{font-family:'Noto Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/noto-sans-arabic.ttf) format('truetype')}
 .language-switch{display:inline-flex;align-items:center;flex-shrink:0}
 .language-switch[hidden]{display:none}
 .language-switch select{min-height:44px;max-width:110px;padding:8px 10px;border:1px solid #ffffff38;border-radius:3px;background:#252a29;color:#eeeae2;font:inherit;font-size:12px;cursor:pointer}
@@ -9,10 +10,10 @@ html[lang=fr] .heading,html[lang=fr] .page-intro h1{overflow-wrap:break-word}
 html[lang=fr] .hero-title{font-size:clamp(44px,6.5vw,92px)}
 html[lang=fr] .home-scroll .hero-title{font-size:clamp(13px,3.6vw,66px)}
 html[lang=ar] .home-scroll .hero-title{font-size:clamp(17px,4.6vw,82px);line-height:1.5;font-style:normal}
-html[lang=ar]{--sans:Tahoma,Arial,sans-serif;--serif:Tahoma,Arial,sans-serif}
-html[lang=ar] body{font-family:Tahoma,Arial,sans-serif}
+html[lang=ar]{--sans:'Noto Sans Arabic',Tahoma,Arial,sans-serif;--serif:'Noto Sans Arabic',Tahoma,Arial,sans-serif;font-synthesis:none}
+html[lang=ar] body{font-family:var(--sans);font-weight:400}
 html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] p,html[lang=ar] a,html[lang=ar] button,html[lang=ar] label,html[lang=ar] span{letter-spacing:normal}
-html[lang=ar] em,html[lang=ar] .serif,html[lang=ar] .company-line{font-family:Tahoma,Arial,sans-serif;font-style:normal}
+html[lang=ar] em,html[lang=ar] .serif,html[lang=ar] .company-line{font-family:var(--sans);font-style:normal}
 html[lang=ar] .hero-title{font-size:clamp(42px,6.2vw,88px);line-height:1.5}
 html[lang=ar] .hero-title em{font-size:1em}
 html[lang=ar] .heading,html[lang=ar] .page-intro h1,html[lang=ar] .event-opening h1,html[lang=ar] .intro-inner h2{line-height:1.5}
@@ -29,7 +30,7 @@ html[dir=rtl] .form-result a,html[dir=rtl] .form-result button{margin-right:0;ma
 html[dir=rtl] .field input[type=email],html[dir=rtl] .field input[type=tel]{direction:ltr;text-align:right}
 html[dir=rtl] .portfolio-stage,html[dir=rtl] .slider-controls,html[dir=rtl] .intro-languages{direction:ltr}
 html[lang=ar] .portfolio-modal-header h2{line-height:1.6}
-html[lang=ar] .cinema-copy h2{font-family:Tahoma,Arial,sans-serif;font-size:clamp(40px,5vw,72px);line-height:1.4}
+html[lang=ar] .cinema-copy h2{font-family:var(--sans);font-size:clamp(40px,5vw,72px);line-height:1.4}
 html[lang=ar] .company-name{font-size:clamp(25px,2.6vw,42px)}
 html[lang=ar] .company-line{font-size:23px}
 @media(max-width:1100px){.site-header{gap:12px}.site-header .desktop-nav{gap:15px}.header-contact{padding-inline:15px;gap:12px}.language-switch select{max-width:96px}}
