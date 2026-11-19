@@ -51,8 +51,8 @@
         slide.inert = i !== index;
       });
       current.textContent = String(index + 1).padStart(2, '0');
-      slideTitle.textContent = slides[index].dataset.title;
-      slideCaption.textContent = slides[index].dataset.caption;
+      if (slideTitle) slideTitle.textContent = slides[index].dataset.title;
+      if (slideCaption) slideCaption.textContent = slides[index].dataset.caption;
       restart();
     }
     document.querySelector('[data-slide-prev]')?.addEventListener('click', () => show(index - 1));

@@ -6,6 +6,10 @@ module.exports = (html, page) => {
     .replace('placeholder="The idea, the ambition, the possibilities\u2026"','placeholder="Tell us about your project."');
   if(page.active==='home') html=html.replace(/<a class="scroll-cue"[\s\S]*?<\/a>/,'').replace(/<a href="#top">[\s\S]*?<\/a>/,'');
   if(page.active==='contact') html=html.replace(/<div class="footer-cta">[\s\S]*?(?=<div class="footer-middle">)/,'');
+  if(page.active==='production'||page.active==='events') html=html
+    .replace('class="footer-cta"',`class="footer-cta footer-cta--conversation footer-cta--${page.active}"`)
+    .replace('class="text-link footer-contact-link"',`class="pill solid footer-contact-link conversation-button${page.active==='production'?' production-conversation':''}"`)
+    .replace('aria-label="Start a conversation">Contact us</a>','aria-label="Start a conversation">Start a conversation</a>');
   html=html.replace(/>\u2190<\/button>/g,'>'+icon('M19 12H5m7-7-7 7 7 7')+'</button>')
     .replace(/>\u2192<\/button>/g,'>'+icon('M5 12h14m-7-7 7 7-7 7')+'</button>')
     .replace(/<span class="arrow" aria-hidden="true">\u2191<\/span>/g,icon('M12 19V5m-7 7 7-7 7 7'))

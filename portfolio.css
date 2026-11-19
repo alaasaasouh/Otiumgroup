@@ -105,6 +105,31 @@ body:has(.format-section) .brand-process li:nth-child(3n) { background:#3d3830; 
 .cinema-fixed-title{position:absolute;z-index:3;top:8%;left:7%;right:7%;margin:0;color:#eeeae2;text-align:center;pointer-events:none}
 .cinema-gallery .cinema-copy,html[dir=rtl] .cinema-gallery .cinema-copy{left:7%;right:7%;top:16%;bottom:19%;max-width:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .cinema-gallery .cinema-description{margin-inline:auto}
+.cinema-gallery .gallery-footer{justify-content:flex-end}
+.events-ideas-word{display:inline-block}
+html[lang=en] .events-ideas-word::first-letter{font-family:Georgia,'Times New Roman',serif;font-style:normal}
+@media(max-width:380px){html:is([lang=en],[lang=fr]) .cinema-gallery--events .hero-slide:first-child h2{font-size:46px}}
+.cinema-heading-lead{font-size:.78em;letter-spacing:-.04em}
+.cinema-gallery--events .hero-slide:first-child .cinema-heading-lead{font-size:.68em}
+.cinema-gallery--events .hero-slide:first-child h2 em{font-size:1.06em;word-spacing:.12em}
+.cinema-gallery--events .hero-slide:nth-child(3) h2 em{word-spacing:.12em}
+.cinema-heading-finish{font-size:.85em;letter-spacing:-.035em;word-spacing:.12em;white-space:nowrap}
+@media(max-width:380px){html[lang=fr] .cinema-heading-finish{font-size:.65em;word-spacing:.08em}}
+.footer-cta--conversation{flex-wrap:wrap;gap:28px;align-items:center}
+.footer-cta--production h2{font-size:clamp(32px,5.1vw,78px);line-height:1.15;white-space:nowrap}
+.site-footer .footer-cta--conversation .conversation-button{margin:0;min-height:56px;padding:16px 28px;font-size:16px;letter-spacing:.04em;text-transform:uppercase;background:#d7bc90;border-color:#d7bc90;color:#172725;box-shadow:inset 0 1px 0 #ffffff40,0 8px 24px #0002;transition:background .25s,border-color .25s,transform .25s}
+.site-footer .footer-cta--conversation .conversation-button:hover{background:#eddbba;border-color:#eddbba;transform:translateY(-2px)}
+@media(max-width:600px){.footer-cta--conversation{flex-direction:column;align-items:flex-start}.footer-cta--conversation .conversation-button{align-self:flex-start}}
+.cinema-quote{width:max-content;max-width:100%;margin:8px 0 0;color:#eee6d7}
+.cinema-quote blockquote{margin:0}
+.cinema-quote blockquote p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.8vw,26px);line-height:1.4;letter-spacing:-.015em;text-wrap:pretty}
+.cinema-quote blockquote p::before{content:'“'}
+.cinema-quote blockquote p::after{content:'”'}
+.cinema-quote figcaption{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;color:#d7bc90}
+.cinema-quote figcaption::before{content:'';width:24px;height:1px;background:currentColor}
+.cinema-quote cite{font-family:var(--display);font-size:14px;font-style:normal;line-height:1.4;letter-spacing:.04em}
+@media(min-width:1101px){.cinema-quote blockquote p{white-space:nowrap}}
+@media(max-width:600px){.cinema-quote blockquote p{font-size:20px}.cinema-quote figcaption{margin-top:12px}}
 .cinema-caption-spacer{visibility:hidden}
 .cinema-gallery .hero-slide::after{background:linear-gradient(0deg,#101915eb,transparent 45%),linear-gradient(90deg,#10191588,#10191599 50%,#10191588)}
 @media(max-width:600px){.cinema-fixed-title{top:9%;font-size:10px}.cinema-gallery .cinema-copy{top:17%;bottom:18%}}
@@ -113,6 +138,8 @@ body:has(.format-section) .brand-process li:nth-child(3n) { background:#3d3830; 
 .cinema-fixed-title{font-family:var(--sans);font-size:clamp(30px,4.8vw,74px);font-weight:500;line-height:1.05;letter-spacing:-.045em;top:7%;text-wrap:balance}
 .cinema-gallery .cinema-copy,html[dir=rtl] .cinema-gallery .cinema-copy{top:23%}
 .production-purpose{margin-top:30px}
+.brand-copy .production-work-lead{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);line-height:1.25;letter-spacing:-.02em;color:#dec69f}
+.brand-copy .production-work-lead:not(:first-child){margin-top:28px}
 .production-purpose h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:26px 0 10px;color:#d8c09b}
 .format-carousel{position:relative}
 .format-carousel .format-navigation{position:absolute;inset:0;z-index:2;padding:0;pointer-events:none;align-items:center;justify-content:space-between}

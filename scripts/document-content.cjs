@@ -6,7 +6,11 @@ const text = id => {
   if (!paragraphs.has(id)) throw new Error(`Missing client paragraph ${id}`);
   return paragraphs.get(id);
 };
-const p = id => `<p data-client-paragraph="${id}">${esc(text(id))}</p>`;
+const p = id => {
+  if (id === 58) return `<div data-client-paragraph="${id}">${text(id).split('\n\n').map(block => `<p>${esc(block)}</p>`).join('')}</div>`;
+  if ([44,46,67,69].includes(id)) return `<div data-client-paragraph="${id}">${text(id).split('\n\n').map((block,index) => `<p${index === 0 ? ' class="production-work-lead"' : ''}>${esc(block)}</p>`).join('')}</div>`;
+  return `<p data-client-paragraph="${id}">${esc(text(id))}</p>`;
+};
 const ps = ids => ids.map(p).join('');
 const heading = (id, level = 2, attrs = '') => `<h${level} data-client-paragraph="${id}" ${attrs}>${esc(text(id))}</h${level}>`;
 const cities = 'London · Amman · Beirut · Cairo · Doha · Riyadh';

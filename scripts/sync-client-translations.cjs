@@ -13,6 +13,12 @@ for (const paragraph of copy.source.paragraphs) {
   if (!fr[paragraph.id] || !ar[paragraph.id]) throw new Error(`Missing document translation ${paragraph.id}`);
   catalog[paragraph.text] = [fr[paragraph.id],ar[paragraph.id]];
 }
+// Working approach and regional reach each have three translated paragraphs.
+for (const id of [44,46,58,67,69]) {
+  const blocks = [copy.text(id),fr[id],ar[id]].map(value => value.split('\n\n'));
+  if (blocks.some(parts => parts.length !== (id === 58 ? 2 : id === 69 ? 4 : 3))) throw new Error(`Paragraph ${id} has inconsistent translated blocks`);
+  blocks[0].forEach((block,index) => { catalog[block] = [blocks[1][index],blocks[2][index]]; });
+}
 // Card titles and descriptions occupy separate text nodes in the design.
 for (const id of [2,37,38,39,40,41,60,61,62,63,64,65]) {
   const parts = [copy.text(id),fr[id],ar[id]].map(value => {
@@ -23,6 +29,29 @@ for (const id of [2,37,38,39,40,41,60,61,62,63,64,65]) {
   for (let i=0;i<2;i++) catalog[parts[0][i]] = [parts[1][i],parts[2][i]];
 }
 Object.assign(catalog, {
+  'Memories': ['Des souvenirs', 'ذكريات'],
+  'Entirely yours': ['Rien qu’à vous', 'خاصة بك وحدك'],
+  'Memories. Entirely yours.': ['Des souvenirs. Rien qu’à vous.', 'ذكريات خاصة بك وحدك.'],
+  'We do not remember days, we remember moments.': ['Nous ne nous souvenons pas des jours, nous nous souvenons des moments.', 'نحن لا نتذكر الأيام، بل نتذكر اللحظات.'],
+  'Cesare Pavese': ['Cesare Pavese', 'تشيزاري بافيزي'],
+  'Experiences': ['Des expériences', 'تجارب'],
+  'Every scale': ['À toutes les échelles', 'بكل المقاييس'],
+  'Experiences. Every scale.': ['Des expériences. À toutes les échelles.', 'تجارب بكل المقاييس.'],
+  'Great things are done by a series of small things brought together.': ['Les grandes choses se font par une série de petites choses réunies.', 'تُنجز الأشياء العظيمة من خلال سلسلة من الأشياء الصغيرة التي تجتمع معًا.'],
+  'Vincent Van Gogh': ['Vincent Van Gogh', 'فنسنت فان غوخ'],
+  'Ideas': ['Des idées', 'أفكار'],
+  'Brought to life': ['prennent vie', 'تنبض بالحياة'],
+  'The power of imagination makes us infinite.': ['La puissance de l’imagination nous rend infinis.', 'قوة الخيال تجعلنا بلا حدود.'],
+  'John Muir': ['John Muir', 'جون موير'],
+  'Perspective': ['Perspective', 'رؤية'],
+  'Beyond ordinary': ['Au-delà de l’ordinaire', 'تتجاوز المألوف'],
+  'Perspective. Beyond ordinary.': ['Perspective. Au-delà de l’ordinaire.', 'رؤية تتجاوز المألوف.'],
+  'Every great film should seem new every time you see it.': ['Chaque grand film devrait sembler nouveau chaque fois qu’on le voit.', 'ينبغي أن يبدو كل فيلم عظيم جديدًا في كل مرة تشاهده فيها.'],
+  'A story should have a beginning, a middle, and an end, but not necessarily in that order.': ['Une histoire doit avoir un début, un milieu et une fin, mais pas nécessairement dans cet ordre.', 'يجب أن تكون للقصة بداية ووسط ونهاية، ولكن ليس بالضرورة بهذا الترتيب.'],
+  "Never be limited by other people's limited imaginations.": ['Ne vous laissez jamais limiter par l’imagination limitée des autres.', 'لا تدع خيال الآخرين المحدود يحدّك أبدًا.'],
+  'Roger Ebert': ['Roger Ebert', 'روجر إيبرت'],
+  'Jean-Luc Godard': ['Jean-Luc Godard', 'جان لوك غودار'],
+  'Dr. Mae Jemison': ['Dr Mae Jemison', 'د. ماي جيميسون'],
   'Contact Us': ['Contactez-nous', 'تواصل معنا'],
   'In Latin, otium means time well spent. That’s what we share with you.': ['En latin, otium signifie du temps bien employé. C’est ce que nous partageons avec vous.', 'تعني كلمة «أوتيوم» باللاتينية وقتًا يُقضى فيما يستحق. وهذا ما نشاركه معك.'],
   'Dive in': ['Plongez', 'اكتشف'],

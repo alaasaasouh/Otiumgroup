@@ -124,7 +124,7 @@ for (const page of pages) {
     .replace(/People\. Ideas\. Businesses\.<br>A brighter tomorrow\./g, 'London · Doha · Beirut<br>International by nature.')
     .replace(/<nav class="footer-nav" aria-label="Our companies">[\s\S]*?<\/nav>/, `<nav class="footer-nav" aria-label="Our companies"><h3>Our companies</h3>${companies.map(c=>`<a href="${page.base || ''}${c[1]}/index.html">Otium ${c[0]}${c[5]?'<span>Coming soon</span>':''}</a>`).join('')}</nav>`);
   html = html.replace('Let’s create<br>what comes <em>next.</em>', 'Let’s create something<br><em>worth remembering.</em>')
-    .replace('Have a project<br><em>in mind?</em>', 'Let’s tell<br><em>a story.</em>');
+    .replace('Have a project<br><em>in mind?</em>', 'Let’s tell <em>a story.</em>');
   // The homepage ends after the company directory, without a repeated contact CTA.
   if (page.active === 'home') html = html.replace(/<div class="footer-cta">[\s\S]*?(?=<div class="footer-middle">)/, '');
   // Events is now an active destination in both navigation layouts.
