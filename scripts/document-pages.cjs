@@ -4,11 +4,10 @@ module.exports = page => {
   if (page.active === 'home') {
     page.title = 'Otium Nexus Group — Global standards. Local roots.';
     page.description = copy.text(3);
-    page.body = page.body.replace('The art of making<br><em>things happen.</em>','Global standards.<br><em>Local roots.</em>')
+    page.body = page.body.replace('The art of making<br><em>things happen.</em>','Global standards. <em>Local roots.</em>')
       .replace('class="hero-title"','class="hero-title" data-client-paragraph="2"')
-      .replace(/<p class="hero-description">[\s\S]*?<\/p>/,'<p class="hero-description">Otium Nexus Group</p>')
-      .replace(/<p class="hero-geography">[\s\S]*?<\/p>/,`<p class="hero-geography">${copy.cities}</p>`)
-      .replace('<section class="home-companies"',`<section class="home-document-intro container"><p class="eyebrow">Otium Nexus Group</p><div class="brand-copy">${copy.p(3)}</div></section><section class="home-companies"`);
+      .replace(/<p class="hero-description">[\s\S]*?<\/p>/,`<p class="hero-description" data-client-paragraph="3">${copy.esc(copy.text(3)).replace('the project takes us.', 'the\u00a0project\u00a0takes\u00a0us.')}</p>`)
+      .replace(/<p class="hero-geography">[\s\S]*?<\/p>/,`<p class="hero-geography">${copy.cities}</p>`);
   } else if (page.active === 'about') {
     page.title = 'About Us — Otium Nexus Group';
     page.description = copy.text(7);

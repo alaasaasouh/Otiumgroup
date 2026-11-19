@@ -23,6 +23,9 @@ for (const id of [2,37,38,39,40,41,60,61,62,63,64,65]) {
   for (let i=0;i<2;i++) catalog[parts[0][i]] = [parts[1][i],parts[2][i]];
 }
 Object.assign(catalog, {
+  'Contact Us': ['Contactez-nous', 'تواصل معنا'],
+  'In Latin, otium means time well spent. That’s what we share with you.': ['En latin, otium signifie du temps bien employé. C’est ce que nous partageons avec vous.', 'تعني كلمة «أوتيوم» باللاتينية وقتًا يُقضى فيما يستحق. وهذا ما نشاركه معك.'],
+  'Dive in': ['Plongez', 'اكتشف'],
   'Otium Nexus Group': ['Otium Nexus Group','مجموعة أوتيوم نيكسوس'],
   'Welcome to Otium Nexus Group': ['Bienvenue chez Otium Nexus Group','مرحبًا بك في مجموعة أوتيوم نيكسوس'],
   'OTIUM NEXUS GROUP — PROJECT INQUIRY': ['OTIUM NEXUS GROUP — DEMANDE DE PROJET','مجموعة أوتيوم نيكسوس — استفسار عن مشروع'],

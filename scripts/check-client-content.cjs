@@ -58,7 +58,11 @@ console.log('All generated page strings have French and Arabic translations.');
             clone.querySelectorAll('h3,p').forEach(block=>block.append(' '));
             return clone.textContent;
           });
-          assert.equal(normalized(value),normalized(expected[id]),`${label}: changed paragraph ${id}`);
+          const revisedIntro = require('./home-company-cards.cjs').introText;
+          const expectedText = id === 24 && label === 'Homepage'
+            ? (language === 'en' ? revisedIntro : catalog[revisedIntro][language === 'fr' ? 0 : 1])
+            : expected[id];
+          assert.equal(normalized(value),normalized(expectedText),`${label}: changed paragraph ${id}`);
           if (language==='en') records.push({id,placement:label,verified:true});
         }
       }

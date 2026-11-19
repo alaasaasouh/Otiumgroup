@@ -7,6 +7,8 @@
 .site-header .desktop-nav{margin-left:0}
 html[lang=fr] .heading,html[lang=fr] .page-intro h1{overflow-wrap:break-word}
 html[lang=fr] .hero-title{font-size:clamp(44px,6.5vw,92px)}
+html[lang=fr] .home-scroll .hero-title{font-size:clamp(13px,3.6vw,66px)}
+html[lang=ar] .home-scroll .hero-title{font-size:clamp(17px,4.6vw,82px);line-height:1.5;font-style:normal}
 html[lang=ar]{--sans:Tahoma,Arial,sans-serif;--serif:Tahoma,Arial,sans-serif}
 html[lang=ar] body{font-family:Tahoma,Arial,sans-serif}
 html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] p,html[lang=ar] a,html[lang=ar] button,html[lang=ar] label,html[lang=ar] span{letter-spacing:normal}
@@ -14,7 +16,7 @@ html[lang=ar] em,html[lang=ar] .serif,html[lang=ar] .company-line{font-family:Ta
 html[lang=ar] .hero-title{font-size:clamp(42px,6.2vw,88px);line-height:1.5}
 html[lang=ar] .hero-title em{font-size:1em}
 html[lang=ar] .heading,html[lang=ar] .page-intro h1,html[lang=ar] .event-opening h1,html[lang=ar] .intro-inner h2{line-height:1.5}
-html[lang=ar] .body-copy,html[lang=ar] .brand-copy,html[lang=ar] .brand-accordions details p{line-height:2}
+html[lang=ar] .body-copy,html[lang=ar] .brand-copy,html[lang=ar] .brand-accordions details p{line-height:1.75}
 html[lang=ar] .brand,html[lang=ar] .intro-identity,html[lang=ar] .footer-wordmark{direction:ltr}
 html[lang=ar] .brand-name{font-family:'DM Sans',sans-serif;letter-spacing:.21em}
 html[lang=ar] .brand-name small{letter-spacing:.52em}
@@ -36,9 +38,9 @@ html[lang=ar] .company-line{font-size:23px}
 @media(max-width:600px){
  .site-header .menu-label{display:none}.site-header .menu-toggle{padding:10px;min-width:44px;min-height:44px}
  .site-header .language-switch select{width:75px;padding:7px 3px;font-size:10px}.site-header{gap:8px}
- html[lang=fr] .home-scroll .hero-title{font-size:clamp(36px,8.4vw,55px)}
+ html[lang=fr] .home-scroll .hero-title{font-size:clamp(13px,3.6vw,66px)}
  html[lang=fr] .hero .eyebrow{letter-spacing:.04em}
- html[lang=ar] .home-scroll .hero-title{font-size:clamp(32px,8vw,49px);line-height:1.55}
+ html[lang=ar] .home-scroll .hero-title{font-size:clamp(17px,4.6vw,82px);line-height:1.5}
  html[lang=ar] .page-intro h1{font-size:clamp(36px,9vw,60px)}
  html[lang=ar] .intro-inner h2{font-size:30px}
  html[dir=rtl] .cinema-copy{left:7%;right:7%}

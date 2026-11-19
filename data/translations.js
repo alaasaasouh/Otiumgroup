@@ -2075,5 +2075,17 @@ window.OTIUM_TRANSLATIONS = {
   "This brief was prepared locally and has not been submitted to Otium Nexus Group.": [
     "Ce brief a été préparé localement et n’a pas été transmis à Otium Nexus Group.",
     "أُعدّ هذا الموجز محليًا ولم يُرسل إلى مجموعة أوتيوم نيكسوس."
+  ],
+  "Dive in": [
+    "Plongez",
+    "اكتشف"
+  ],
+  "Contact Us": [
+    "Contactez-nous",
+    "تواصل معنا"
+  ],
+  "In Latin, otium means time well spent. That’s what we share with you.": [
+    "En latin, otium signifie du temps bien employé. C’est ce que nous partageons avec vous.",
+    "تعني كلمة «أوتيوم» باللاتينية وقتًا يُقضى فيما يستحق. وهذا ما نشاركه معك."
   ]
 };
